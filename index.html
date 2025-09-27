@@ -105,5 +105,15 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  </script>
+
 </body>
 </html>
