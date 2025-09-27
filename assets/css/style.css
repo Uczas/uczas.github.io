@@ -175,7 +175,7 @@ section h4 {
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-right: 12px; /* small space to the right */
+  margin-right: 12px;
 }
 
 /* three bars */
@@ -188,7 +188,7 @@ section h4 {
   transition: transform .28s ease, opacity .2s ease;
 }
 
-/* header layout helpers */
+/* header layout */
 .header-inner {
   display: flex;
   align-items: center;
@@ -197,7 +197,7 @@ section h4 {
   width: 100%;
 }
 
-/* ensure site-title aligns nicely */
+/* site title with image + name */
 .site-title {
   display: flex;
   align-items: center;
@@ -205,6 +205,7 @@ section h4 {
   margin: 0;
 }
 
+/* nav on desktop */
 .nav-links {
   display: flex;
   gap: 1rem;
@@ -213,13 +214,14 @@ section h4 {
 
 /* ----- mobile behaviour ----- */
 @media (max-width: 768px) {
-  /* show hamburger on mobile (left) */
+  /* show hamburger on mobile (left side) */
   .menu-toggle {
     display: flex;
-    order: 0; /* keep it first so it's at left */
+    order: 0; /* ensures it's always first */
+    margin-right: auto; /* push everything else right */
   }
 
-  /* stack header items and align left (hamburger left) */
+  /* stack header items vertically */
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -230,23 +232,21 @@ section h4 {
     order: 1;
   }
 
-  /* collapse nav using max-height for smooth animation */
+  /* nav collapses */
   .nav-links {
     order: 2;
     width: 100%;
-    display: flex;               /* still flex for layout */
     flex-direction: column;
     gap: 8px;
     overflow: hidden;
-    max-height: 0;               /* collapsed */
+    max-height: 0;
     transition: max-height .35s ease;
     padding-left: 0;
     margin: 0;
   }
 
-  /* visible nav */
   .nav-links.active {
-    max-height: 500px; /* large enough to show links */
+    max-height: 500px;
     padding-top: 8px;
   }
 
@@ -271,5 +271,12 @@ section h4 {
 }
 
 /* small polish */
-.profile-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
-@media (max-width:600px) { .profile-img { width: 32px; height: 32px; } }
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (max-width:600px) {
+  .profile-img { width: 32px; height: 32px; }
+}
