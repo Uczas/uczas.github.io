@@ -23,10 +23,20 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.site-header .wrap {
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+/* site title (image + name) */
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
 }
 
 .profile-img {
@@ -34,15 +44,11 @@ body {
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  vertical-align: middle;
-  margin-right: 10px;
 }
 
 h1 {
   margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-size: 1.5em;
 }
 
 h1 a {
@@ -51,12 +57,13 @@ h1 a {
 }
 
 /* Navigation */
-.site-header nav {
+.nav-links {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
-.site-header nav a {
+.nav-links a {
   text-decoration: none;
   color: #333;
 }
@@ -126,15 +133,53 @@ section h4 {
    RESPONSIVE DESIGN
 ------------------- */
 @media (max-width: 768px) {
-  .site-header .wrap {
+  .header-inner {
+    justify-content: center; /* center site-title */
+    position: relative;
+  }
+
+  .site-title {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .site-header nav {
+  /* hamburger button on the left */
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* nav collapses */
+  .nav-links {
+    position: absolute;
+    top: 100%; /* directly under header */
+    left: 0;
+    right: 0;
+    background: #fff;
     flex-direction: column;
-    margin-top: 10px;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+    border-top: 1px solid #eee;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
   }
 
   .profile-img {
@@ -153,18 +198,13 @@ section h4 {
     font-size: 1.2em;
   }
 
-  .site-header nav {
-    gap: .5rem;
-  }
-
   .btn {
     padding: .4rem .8rem;
     font-size: .9em;
   }
 }
 
-/* ---------- Hamburger & responsive nav ---------- */
-/* hide on desktop by default */
+/* ---------- Hamburger ---------- */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -175,10 +215,8 @@ section h4 {
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-right: 12px;
 }
 
-/* three bars */
 .menu-toggle span {
   display: block;
   height: 3px;
@@ -188,76 +226,7 @@ section h4 {
   transition: transform .28s ease, opacity .2s ease;
 }
 
-/* header layout */
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  width: 100%;
-}
-
-/* site title (image + name) */
-.site-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0;
-}
-
-/* nav on desktop */
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-/* ----- mobile behaviour ----- */
-@media (max-width: 768px) {
-  /* show hamburger on mobile (left side) */
-  .menu-toggle {
-    display: flex;
-    order: 0; /* keep it first */
-    margin-right: 10px;
-  }
-
-  /* keep header in one line */
-  .header-inner {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* nav collapses */
-  .nav-links {
-    position: absolute;
-    top: 60px; /* below header */
-    left: 0;
-    right: 0;
-    background: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 10px 15px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .35s ease;
-    border-top: 1px solid #eee;
-  }
-
-  .nav-links.active {
-    max-height: 500px;
-  }
-
-  .nav-links a {
-    width: 100%;
-    padding: 8px 0;
-    text-decoration: none;
-    color: #333;
-  }
-}
-
-/* ----- hamburger animation to "X" ----- */
+/* hamburger animation to "X" */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translateY(7px);
 }
@@ -268,14 +237,7 @@ section h4 {
   transform: rotate(-45deg) translateY(-7px);
 }
 
-/* small polish */
-.profile-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+/* Small polish */
 @media (max-width:600px) {
   .profile-img { width: 32px; height: 32px; }
 }
-
