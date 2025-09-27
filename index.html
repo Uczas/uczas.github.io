@@ -14,21 +14,25 @@
 <body>
   </head>
 <body>
-  <header class="site-header">
-  <div class="wrap">
-    <h1>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <!-- Hamburger (left) -->
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Site title -->
+    <h1 class="site-title">
       <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img">
       <a href="/">Charles Ugbosu</a>
     </h1>
 
-    <!-- Hamburger Button -->
-    <button class="menu-toggle" aria-label="Toggle menu">
-      ☰
-    </button>
-
     <!-- Navigation -->
-    <nav class="nav-links">
+    <nav id="primary-nav" class="nav-links" role="navigation">
       <a href="/about.html">About</a>
+      <a href="/publications.html">Publications</a>
       <a href="/contact.html">Contact</a>
     </nav>
   </div>
@@ -106,14 +110,21 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 
-  <script>
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav-links');
 
-  toggle.addEventListener('click', () => {
+  if (!toggle || !nav) return; // safety
+
+  toggle.addEventListener('click', function () {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    toggle.classList.toggle('active');
     nav.classList.toggle('active');
   });
-  </script>
+});
+</script>
 
 </body>
 </html>
