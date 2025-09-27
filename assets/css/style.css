@@ -197,7 +197,7 @@ section h4 {
   width: 100%;
 }
 
-/* site title with image + name */
+/* site title (image + name) */
 .site-title {
   display: flex;
   align-items: center;
@@ -217,41 +217,39 @@ section h4 {
   /* show hamburger on mobile (left side) */
   .menu-toggle {
     display: flex;
-    order: 0; /* ensures it's always first */
-    margin-right: auto; /* push everything else right */
+    order: 0; /* keep it first */
+    margin-right: 10px;
   }
 
-  /* stack header items vertically */
+  /* keep header in one line */
   .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .site-title {
-    order: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   /* nav collapses */
   .nav-links {
-    order: 2;
-    width: 100%;
+    position: absolute;
+    top: 60px; /* below header */
+    left: 0;
+    right: 0;
+    background: #fff;
     flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
-    overflow: hidden;
+    padding: 10px 15px;
     max-height: 0;
+    overflow: hidden;
     transition: max-height .35s ease;
-    padding-left: 0;
-    margin: 0;
+    border-top: 1px solid #eee;
   }
 
   .nav-links.active {
     max-height: 500px;
-    padding-top: 8px;
   }
 
   .nav-links a {
-    display: block;
     width: 100%;
     padding: 8px 0;
     text-decoration: none;
@@ -280,3 +278,4 @@ section h4 {
 @media (max-width:600px) {
   .profile-img { width: 32px; height: 32px; }
 }
+
