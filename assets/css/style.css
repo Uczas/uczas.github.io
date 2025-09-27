@@ -8,3 +8,37 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-he
 .hero{padding:2rem 0}
 .btn{display:inline-block;padding:.5rem 1rem;border:1px solid #222;text-decoration:none}
 .site-footer{background:#fafafa;padding:1rem 0;border-top:1px solid #eee;margin-top:2rem}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* circular */
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+h1 {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+h1 a {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* same color as text */
+}
+
+.wrap {
+  display: flex;
+  align-items: center; /* align image + name vertically */
+  gap: 10px;
+}
+
+/* Mobile responsive tweak */
+@media (max-width: 600px) {
+  .profile-img {
+    width: 30px;
+    height: 30px;
+  }
+}
