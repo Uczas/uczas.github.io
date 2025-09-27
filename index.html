@@ -23,13 +23,13 @@
       <span></span>
     </button>
 
-    <!-- Brand: image (not clickable) + clickable name -->
-    <div class="brand">
+    <!-- Site title -->
+    <h1 class="site-title">
       <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img">
-      <a class="site-name" href="/">Charles Ugbosu</a>
-    </div>
+      <a href="/">Charles Ugbosu</a>
+    </h1>
 
-    <!-- Desktop nav (hidden on mobile until opened) -->
+    <!-- Navigation -->
     <nav id="primary-nav" class="nav-links" role="navigation">
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact</a>
@@ -109,28 +109,18 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 
- <script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav-links');
 
-  if (!toggle || !nav) return;
+  if (!toggle || !nav) return; // safety
 
   toggle.addEventListener('click', function () {
-    const isOpen = toggle.classList.toggle('active');
-    nav.classList.toggle('active', isOpen);
-    toggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  /* optional: close menu when clicking outside */
-  document.addEventListener('click', function (e) {
-    if (!nav.classList.contains('active')) return;
-    const inside = e.target.closest('.header-inner');
-    if (!inside) {
-      toggle.classList.remove('active');
-      nav.classList.remove('active');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    toggle.classList.toggle('active');
+    nav.classList.toggle('active');
   });
 });
 </script>
