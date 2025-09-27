@@ -23,20 +23,10 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.header-inner {
+.site-header .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  width: 100%;
-}
-
-/* site title (image + name) */
-.site-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0;
 }
 
 .profile-img {
@@ -44,11 +34,15 @@ body {
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 h1 {
   margin: 0;
-  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 h1 a {
@@ -57,13 +51,12 @@ h1 a {
 }
 
 /* Navigation */
-.nav-links {
+.site-header nav {
   display: flex;
   gap: 1rem;
-  align-items: center;
 }
 
-.nav-links a {
+.site-header nav a {
   text-decoration: none;
   color: #333;
 }
@@ -133,53 +126,15 @@ section h4 {
    RESPONSIVE DESIGN
 ------------------- */
 @media (max-width: 768px) {
-  .header-inner {
-    justify-content: center; /* center site-title */
-    position: relative;
-  }
-
-  .site-title {
+  .site-header .wrap {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  /* hamburger button on the left */
-  .menu-toggle {
-    display: flex;
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  /* nav collapses */
-  .nav-links {
-    position: absolute;
-    top: 100%; /* directly under header */
-    left: 0;
-    right: 0;
-    background: #fff;
+  .site-header nav {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 10px 15px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .35s ease;
-    border-top: 1px solid #eee;
-    z-index: 1000;
-  }
-
-  .nav-links.active {
-    max-height: 500px;
-  }
-
-  .nav-links a {
-    width: 100%;
-    padding: 8px 0;
-    text-decoration: none;
-    color: #333;
+    margin-top: 10px;
   }
 
   .profile-img {
@@ -198,13 +153,18 @@ section h4 {
     font-size: 1.2em;
   }
 
+  .site-header nav {
+    gap: .5rem;
+  }
+
   .btn {
     padding: .4rem .8rem;
     font-size: .9em;
   }
 }
 
-/* ---------- Hamburger ---------- */
+/* ---------- Hamburger & responsive nav ---------- */
+/* hide on desktop by default */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -215,8 +175,10 @@ section h4 {
   border: none;
   cursor: pointer;
   padding: 0;
+  margin-right: 12px; /* small space to the right */
 }
 
+/* three bars */
 .menu-toggle span {
   display: block;
   height: 3px;
@@ -226,7 +188,78 @@ section h4 {
   transition: transform .28s ease, opacity .2s ease;
 }
 
-/* hamburger animation to "X" */
+/* header layout helpers */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+/* ensure site-title aligns nicely */
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* ----- mobile behaviour ----- */
+@media (max-width: 768px) {
+  /* show hamburger on mobile (left) */
+  .menu-toggle {
+    display: flex;
+    order: 0; /* keep it first so it's at left */
+  }
+
+  /* stack header items and align left (hamburger left) */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .site-title {
+    order: 1;
+  }
+
+  /* collapse nav using max-height for smooth animation */
+  .nav-links {
+    order: 2;
+    width: 100%;
+    display: flex;               /* still flex for layout */
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    max-height: 0;               /* collapsed */
+    transition: max-height .35s ease;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  /* visible nav */
+  .nav-links.active {
+    max-height: 500px; /* large enough to show links */
+    padding-top: 8px;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+  }
+}
+
+/* ----- hamburger animation to "X" ----- */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translateY(7px);
 }
@@ -237,7 +270,6 @@ section h4 {
   transform: rotate(-45deg) translateY(-7px);
 }
 
-/* Small polish */
-@media (max-width:600px) {
-  .profile-img { width: 32px; height: 32px; }
-}
+/* small polish */
+.profile-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+@media (max-width:600px) { .profile-img { width: 32px; height: 32px; } }
