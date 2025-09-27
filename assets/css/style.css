@@ -163,36 +163,113 @@ section h4 {
   }
 }
 
-/* Hide button on desktop */
+/* ---------- Hamburger & responsive nav ---------- */
+/* hide on desktop by default */
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
+  margin-right: 12px; /* small space to the right */
 }
 
-/* Mobile styles */
+/* three bars */
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: transform .28s ease, opacity .2s ease;
+}
+
+/* header layout helpers */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+/* ensure site-title aligns nicely */
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* ----- mobile behaviour ----- */
 @media (max-width: 768px) {
+  /* show hamburger on mobile (left) */
   .menu-toggle {
-    display: block;
-    margin-left: auto;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .nav-links.active {
     display: flex;
+    order: 0; /* keep it first so it's at left */
   }
 
-  .site-header .wrap {
+  /* stack header items and align left (hamburger left) */
+  .header-inner {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .site-title {
+    order: 1;
+  }
+
+  /* collapse nav using max-height for smooth animation */
+  .nav-links {
+    order: 2;
+    width: 100%;
+    display: flex;               /* still flex for layout */
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    max-height: 0;               /* collapsed */
+    transition: max-height .35s ease;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  /* visible nav */
+  .nav-links.active {
+    max-height: 500px; /* large enough to show links */
+    padding-top: 8px;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
   }
 }
+
+/* ----- hamburger animation to "X" ----- */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* small polish */
+.profile-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+@media (max-width:600px) { .profile-img { width: 32px; height: 32px; } }
