@@ -15,27 +15,32 @@
   </head>
 <body>
 <header class="site-header">
-  <div class="wrap header-inner">
-    <!-- Hamburger (left) -->
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+        <div class="header-inner">
+            <!-- Hamburger button and site title grouped together for mobile -->
+            <div class="mobile-header-group">
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Site title -->
+                <h1 class="site-title">
+                    <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img">
+                    <a href="/">Ugbosu Charles</a>
+                </h1>
+            </div>
 
-    <!-- Site title -->
-    <h1 class="site-title">
-      <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img">
-      <a href="/">Charles Ugbosu</a>
-    </h1>
-
-    <!-- Navigation -->
-    <nav id="primary-nav" class="nav-links" role="navigation">
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+            <!-- Navigation -->
+            <nav id="primary-nav" class="nav-links" role="navigation">
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
+        
+        <!-- Overlay for mobile menu -->
+        <div class="nav-overlay"></div>
+    </header>
   
 </body>
   <main class="wrap">
