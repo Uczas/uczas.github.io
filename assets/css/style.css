@@ -332,3 +332,58 @@ section h4 {
         padding: 1.5rem 1rem;
     }
 }
+
+/* Contact page specific styles */
+.contact-content {
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.contact-info {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.contact-email {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-email a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+.contact-note {
+    font-style: italic;
+    color: #555;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .contact-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contact-info {
+        padding: 1.5rem;
+    }
+}
