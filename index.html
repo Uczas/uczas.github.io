@@ -114,23 +114,7 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-  <script src="/assets/javascript/hamburger-button.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav-links');
-
-  if (!toggle || !nav) return; // safety
-
-  toggle.addEventListener('click', function () {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
-    toggle.classList.toggle('active');
-    nav.classList.toggle('active');
-  });
-});
-</script>
+  <script src="/assets/javascripts/hamburger-button.js"></script>
 
 </body>
 </html>
