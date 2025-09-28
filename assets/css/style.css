@@ -260,3 +260,75 @@ section h4 {
         display: none;
     }
 }
+
+/* About page specific styles */
+.about-content {
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.interests-section {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.interests-section h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.4rem;
+}
+
+.interests-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.interests-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.interests-list li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #007acc;
+}
+
+.collaboration {
+    background: #f0f7ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #007acc;
+    margin: 2rem 0;
+}
+
+.hobbies {
+    font-style: italic;
+    color: #555;
+    margin-top: 1.5rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 1.5rem 1rem;
+    }
+}
