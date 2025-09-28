@@ -92,7 +92,7 @@ h1 a {
 /* Sections */
 section {
     margin: 40px 0;
-    padding: 10px 15px;
+    padding: 0px 15px 0px 20px;
 }
 
 section h3 {
