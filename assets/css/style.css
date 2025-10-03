@@ -90,6 +90,64 @@ h1 a {
     text-align: center;
 }
 
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #555;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.linkedin:hover {
+    background-color: #0077b5;
+    color: white;
+}
+
+.github:hover {
+    background-color: #333;
+    color: white;
+}
+
+.researchgate:hover {
+    background-color: #00ccbb;
+    color: white;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #666;
+}
+
 /* Sections */
 section {
     margin: 10px 0;
