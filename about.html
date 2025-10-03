@@ -73,7 +73,36 @@
         <p class="hobbies">Outside of work: Play Chess; Analyze Cryptocurrency Market</p>
     </div>
 </main>
-  <footer class="site-footer"><div class="wrap"><small>© <span id="y2"></span> ugbosu.name.ng</small></div></footer>
-  <script>document.getElementById('y2').textContent = new Date().getFullYear();</script>
+  <footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-content">
+            <div class="social-icons">
+                <!-- Replace # with your actual profile URLs -->
+                <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="social-icon researchgate" target="_blank" title="ResearchGate">
+                    <i class="fab fa-researchgate"></i>
+                </a>
+                <a href="https://github.com/Uczas" class="social-icon github" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="social-icon linkedin" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <small class="copyright">© <span id="current-year"></span> ugbosu.name.ng. All rights reserved</small>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    // Update the current year in the copyright notice
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
+  </script>
 </body>
 </html>
