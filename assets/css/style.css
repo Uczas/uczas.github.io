@@ -221,7 +221,7 @@ section h4 {
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
-        padding: 0 1rem;
+        padding: 0;
     }
 
     /* Hamburger button and site title inline */
