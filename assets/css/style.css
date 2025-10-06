@@ -201,6 +201,7 @@ section h4 {
     border: none;
     cursor: pointer;
     padding: 0;
+    margin-left: 10px;
     z-index: 101;
 }
 
