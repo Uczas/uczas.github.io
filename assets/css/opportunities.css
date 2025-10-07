@@ -42,3 +42,21 @@
   background: #f7f7f7;
   border-top: 1px solid #eee;
 }
+.share-btn {
+  margin-top: .5rem;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: .5rem .9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.share-btn i {
+  margin-right: 6px;
+}
+
+.share-btn:hover {
+  background: #005fa3;
+}
