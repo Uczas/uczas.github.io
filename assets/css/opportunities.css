@@ -1,4 +1,22 @@
 /* ====== Opportunities Page ====== */
+.site-header {
+    background: #f5f5f5;
+    padding: .5rem 0;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 .opportunity {
   background: #fff;
   border: 1px solid #eee;
