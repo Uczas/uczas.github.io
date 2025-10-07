@@ -14,20 +14,33 @@
 </head>
 <body>
   <header class="site-header">
-  <div class="wrap" style="display: flex; align-items: center; gap: 8px;">
-    <h1 style="display: flex; align-items: center; gap: 6px; margin: 0;">
-      <a href="/" 
-         style="display: flex; align-items: center; padding: 8px; transition: all 0.3s ease; color: inherit; text-decoration: none;"
-         onmouseover="this.style.opacity='0.7'" 
-         onmouseout="this.style.opacity='1'">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
-          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-        <span style="font-size: 1.1rem; font-weight: 600;">🎓 Opportunities Hub</span>
-      </a>
-    </h1>
-  </div>
-</header>
+        <div class="header-inner">
+            <!-- Hamburger button and site title grouped together for mobile -->
+            <div class="mobile-header-group">
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Site title -->
+                <h1 class="site-title">
+                    <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img">
+                    <a href="/" style="font-family: 'Segoe Print', 'Bradley Hand', cursive;">Ugbosu Charles</a>
+                </h1>
+            </div>
+
+            <!-- Navigation -->
+            <nav id="primary-nav" class="nav-links" role="navigation">
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/opportunities.html">Opportunity Hub</a>
+            </nav>
+        </div>
+        
+        <!-- Overlay for mobile menu -->
+        <div class="nav-overlay"></div>
+    </header>
   
     <h3>Discover scholarships, internships, and job openings shared by <a href="/">Ugbosu Charles</a>.</h3>
  
