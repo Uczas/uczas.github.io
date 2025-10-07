@@ -1,4 +1,3 @@
-<script>
 // === Display Current Date ===
 const today = new Date();
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -15,4 +14,3 @@ const quotes = [
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 document.getElementById('quote-text').textContent = `"${randomQuote.text}"`;
 document.getElementById('quote-author').textContent = `— ${randomQuote.author}`;
-</script>
