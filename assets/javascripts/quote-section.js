@@ -1,26 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // === Display Current Date ===
+document.addEventListener("DOMContentLoaded", async () => {
+  // Display date
   const today = new Date();
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   const dateElement = document.getElementById('quote-date');
-  if (dateElement) {
-    dateElement.textContent = today.toLocaleDateString('en-US', options);
-  }
+  if (dateElement)
+    dateElement.textContent = today.toLocaleDateString('en-US', { 
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
+    });
 
-  // === Display Random Quote ===
-  const quotes = [
-    { text: "Pure mathematics is, in its way, the poetry of logical ideas.", author: "Albert Einstein" },
-    { text: "Mathematics knows no races or geographic boundaries; for mathematics, the cultural world is one country.", author: "David Hilbert" },
-    { text: "Without mathematics, there’s nothing you can do. Everything around you is mathematics.", author: "Shakuntala Devi" },
-    { text: "... Good education polishes the eyes till they see too much. It sharpens the tongue till it questions why the goat must always be led to slaughter.", author: "Majekodunmi 0. Ebhohon" }
-  ];
+  // Fetch quotes from JSON file
+  const response = await fetch('/data/quotes.json');
+  const quotes = await response.json();
 
+  // Pick random quote
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  const quoteText = document.getElementById('quote-text');
-  const quoteAuthor = document.getElementById('quote-author');
 
-  if (quoteText && quoteAuthor) {
-    quoteText.textContent = `"${randomQuote.text}"`;
-    quoteAuthor.textContent = `— ${randomQuote.author}`;
-  }
+  // Display
+  document.getElementById('quote-text').textContent = `"${randomQuote.text}"`;
+  document.getElementById('quote-author').textContent = `— ${randomQuote.author}`;
 });
