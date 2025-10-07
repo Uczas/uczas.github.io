@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
   // Fetch quotes from JSON file
-  const response = await fetch('/data/quotes.json');
+  const response = await fetch('src="/assets/javascripts/quote.json');
   const quotes = await response.json();
 
   // Pick random quote
