@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   { "text": "Man is condemned to be free; because once thrown into the world, he is responsible for everything he does.", "author": "Jean-Paul Sartre" },
   { "text": "The greatest happiness of the greatest number is the foundation of morals and legislation.", "author": "Jeremy Bentham" },
   { "text": "The limits of my language mean the limits of my world.", "author": "Ludwig Wittgenstein" },
-  { "text": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.", "author": "Albert Einstein (commonly attributed)" },
+  { "text": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.", "author": "Albert Einstein" },
   { "text": "Intelligence is the ability to adapt to change.", "author": "Stephen Hawking" },
   { "text": "The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.", "author": "Stephen Hawking" },
   { "text": "I would rather have questions that can’t be answered than answers that can’t be questioned.", "author": "Richard Feynman" },
