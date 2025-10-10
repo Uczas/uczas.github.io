@@ -1,31 +1,39 @@
 /* =========================================
-   GLOBAL VARIABLES
+   GLOBAL VARIABLES (Red Theme)
 ========================================= */
 :root {
   --max: 900px;
-  --accent: #0077ff;
-
+  --accent: #d32f2f;          /* Red accent */
+  
   /* Light Mode */
-  --header-bg: #ffffff;
-  --body-bg: #f5f5f5;
-  --footer-bg: #fafafa;
+  --header-bg: #b71c1c;       /* Crimson */
+  --body-bg: #f9f9f9;
+  --footer-bg: #8b0000;       /* Darker crimson for footer */
   --text-color: #111;
   --card-bg: #ffffff;
   --border-color: #e5e5e5;
+
+  /* Tag colors */
+  --tag-bg: #ffe5e5;
+  --tag-text: #b71c1c;
 }
 
 /* Dark Mode */
 body.dark-theme {
-  --header-bg: #1e1e1e;
+  --header-bg: #2b0000;       /* Deep maroon */
   --body-bg: #121212;
-  --footer-bg: #1e1e1e;
+  --footer-bg: #1a0000;
   --text-color: #f1f1f1;
   --card-bg: #1f1f1f;
   --border-color: #333;
+
+  /* Tag colors for dark mode */
+  --tag-bg: #3d0000;
+  --tag-text: #ff9999;
 }
 
 /* =========================================
-   BASE STYLES
+   BASE STYLES (unchanged)
 ========================================= */
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -37,17 +45,12 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 1rem;
-}
-
 /* =========================================
-   HEADER
+   HEADER & NAVIGATION
 ========================================= */
 .site-header {
   background: var(--header-bg);
+  color: #fff;
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--border-color);
   position: relative;
@@ -55,51 +58,14 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  width: 100%;
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.profile-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  vertical-align: middle;
-}
-
-h1 {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-h1 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* NAVIGATION */
-.site-header nav {
-  display: flex;
-  gap: 1rem;
-}
-
 .site-header nav a {
+  color: #fff;
   text-decoration: none;
-  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
 .site-header nav a:hover {
-  color: var(--accent);
+  color: #ffb3b3;
 }
 
 /* =========================================
@@ -107,6 +73,7 @@ h1 a {
 ========================================= */
 .site-footer {
   background: var(--footer-bg);
+  color: #fff;
   padding: 1rem 0;
   border-top: 1px solid var(--border-color);
   margin-top: 2rem;
@@ -114,275 +81,42 @@ h1 a {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-  gap: 15px;
-}
-
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #e0e0e0;
-  color: #555;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.linkedin:hover {
-  background-color: #0077b5;
-  color: white;
-}
-
-.github:hover {
-  background-color: #333;
-  color: white;
-}
-
-.researchgate:hover {
-  background-color: #00ccbb;
-  color: white;
-}
-
 .copyright {
-  font-size: 0.9rem;
-  color: #666;
+  color: #ffcccc;
 }
 
 /* =========================================
-   HAMBURGER MENU (Responsive)
+   TAGS & READ MORE BUTTON
 ========================================= */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 26px;
-  height: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin-left: 10px;
-  z-index: 101;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: var(--text-color);
-  border-radius: 2px;
-  transition: transform 0.28s ease, opacity 0.2s ease;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0;
-  }
-
-  .mobile-header-group {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex: 1;
-  }
-
-  .menu-toggle {
-    display: flex;
-    order: 0;
-  }
-
-  .site-title {
-    order: 1;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 70%;
-    max-width: 300px;
-    height: 100vh;
-    background: var(--header-bg);
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-    padding: 80px 20px 20px;
-    transition: left 0.3s ease;
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .nav-links.active { left: 0; }
-
-  .nav-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 98;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-
-  .nav-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 12px 0;
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.1rem;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .profile-img {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-/* Hamburger Animation */
-.menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translateY(7px); }
-.menu-toggle.active span:nth-child(2) { opacity: 0; }
-.menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translateY(-7px); }
-
-/* =========================================
-   BLOG HOMEPAGE STYLES
-========================================= */
-.filter-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding: 1.5rem 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.filter-bar input,
-.filter-bar select {
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  background: var(--card-bg);
-  color: var(--text-color);
-  outline: none;
-  transition: border 0.3s ease;
-}
-
-.filter-bar input:focus,
-.filter-bar select:focus {
-  border-color: var(--accent);
-}
-
-.blog-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.blog-card {
-  background: var(--card-bg);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-6px);
-}
-
-.blog-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.blog-content {
-  padding: 1rem;
-}
-
-.blog-content h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.blog-content .date {
-  color: gray;
-  font-size: 0.9rem;
-  margin: 0.4rem 0;
-}
-
-.blog-content p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.tags {
-  margin-top: 0.5rem;
-}
-
 .tags span {
-  background: var(--accent);
-  color: white;
+  background: var(--tag-bg);
+  color: var(--tag-text);
   padding: 0.25rem 0.6rem;
   border-radius: 5px;
   font-size: 0.8rem;
   margin-right: 0.3rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .read-more {
   display: inline-block;
   margin-top: 0.8rem;
-  color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-/* PAGINATION */
-.pagination {
-  text-align: center;
-  padding: 2rem 0;
+.read-more:hover {
+  background-color: #ff5252;
 }
 
+/* =========================================
+   PAGINATION
+========================================= */
 .pagination a {
   margin: 0 0.4rem;
   padding: 0.5rem 0.9rem;
@@ -406,18 +140,19 @@ h1 a {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  background: var(--header-bg);
+  background: var(--accent);
   border: none;
   border-radius: 50%;
   padding: 0.8rem;
   cursor: pointer;
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: #fff;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
   z-index: 999;
 }
 
 .theme-toggle:hover {
   transform: scale(1.1);
+  background: #ff5252;
 }
