@@ -6,15 +6,40 @@
   <title>AlgoMathics Blog</title>
 
   <!-- External Styles -->
-  <link rel="stylesheet" href="../header.css">
-  <link rel="stylesheet" href="../footer.css">
-  <link rel="stylesheet" href="styles/blog.css">
+  <meta name="author" content="Ugbosu Charles">
+  <link rel="canonical" href="https://ugbosu.name.ng/">
+  <link rel="stylesheet" href="/assets/css/blogs.css">
 </head>
 <body>
   <!-- ===== HEADER ===== -->
-  <header>
-    <!-- Your header HTML here -->
-  </header>
+  <header class="site-header">
+        <div class="header-inner">
+            <!-- Hamburger button and site title grouped together for mobile -->
+            <div class="mobile-header-group">
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Site title -->
+                <h1 class="site-title">
+                    <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img">
+                    <a href="/" style="font-family: 'Segoe Print', 'Bradley Hand', cursive;">Ugbosu Charles</a>
+                </h1>
+            </div>
+
+            <!-- Navigation -->
+            <nav id="primary-nav" class="nav-links" role="navigation">
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/opportunities.html">Opportunities Hub</a>
+            </nav>
+        </div>
+        
+        <!-- Overlay for mobile menu -->
+        <div class="nav-overlay"></div>
+    </header>
 
   <!-- ===== THEME TOGGLE ===== -->
   <button class="theme-toggle" id="themeToggle">Switch Theme</button>
@@ -38,12 +63,39 @@
   <div class="pagination" id="pagination"></div>
 
   <!-- ===== FOOTER ===== -->
-  <footer>
-    <!-- Your footer HTML here -->
-  </footer>
+  <footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-content">
+            <div class="social-icons">
+                <!-- Replace # with your actual profile URLs -->
+                <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="social-icon researchgate" target="_blank" title="ResearchGate">
+                    <i class="fab fa-researchgate"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="social-icon linkedin" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <small class="copyright">© <span id="current-year"></span> ugbosu.name.ng. All rights reserved</small>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+    // Update the current year in the copyright notice
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
+    </script>
+
+  <script src="/assets/javascripts/hamburger-button.js"></script>
 
   <!-- External Scripts -->
-  <script src="data/blogs.js"></script>
-  <script src="scripts/blog.js"></script>
+  <script src="/assets/javascript/blog1.css"></script>
+  <script src="/assets/JavaScript/blog2.js"></script>
 </body>
 </html>
