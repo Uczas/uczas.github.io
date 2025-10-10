@@ -109,38 +109,31 @@ function applyFilters() {
   renderBlogs();
 }
 
-// ====== THEME SWITCH ======
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  themeToggle.textContent = document.body.classList.contains("dark")
-    ? "Light Mode"
-    : "Dark Mode";
-});
-
-
+// ====== THEME SWITCH (FINAL FIXED VERSION) ======
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('themeToggle');
   const icon = themeToggle.querySelector('i');
 
-  // Load saved theme (if any)
+  // Load saved theme
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-theme');
-    icon.classList.replace('fa-moon', 'fa-sun');
+    icon.className = 'fa-solid fa-sun';
+  } else {
+    icon.className = 'fa-solid fa-moon';
   }
 
+  // Toggle theme
   themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
     const isDark = document.body.classList.contains('dark-theme');
 
-    // Switch icon
     if (isDark) {
-      icon.classList.replace('fa-moon', 'fa-sun');
+      icon.className = 'fa-solid fa-sun';
       localStorage.setItem('theme', 'dark');
     } else {
-      icon.classList.replace('fa-sun', 'fa-moon');
+      icon.className = 'fa-solid fa-moon';
       localStorage.setItem('theme', 'light');
     }
   });
 });
-
