@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoMathics Blog</title>
+
+  <!-- External Styles -->
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../footer.css">
+  <link rel="stylesheet" href="styles/blog.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <!-- Your header HTML here -->
+  </header>
+
+  <!-- ===== THEME TOGGLE ===== -->
+  <button class="theme-toggle" id="themeToggle">Switch Theme</button>
+
+  <!-- ===== FILTER BAR ===== -->
+  <section class="filter-bar">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search blog posts..."
+    />
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+    </select>
+  </section>
+
+  <!-- ===== BLOG POSTS CONTAINER ===== -->
+  <section class="blog-container" id="blogContainer"></section>
+
+  <!-- ===== PAGINATION ===== -->
+  <div class="pagination" id="pagination"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <!-- Your footer HTML here -->
+  </footer>
+
+  <!-- External Scripts -->
+  <script src="data/blogs.js"></script>
+  <script src="scripts/blog.js"></script>
+</body>
+</html>
