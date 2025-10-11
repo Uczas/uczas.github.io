@@ -607,3 +607,23 @@ body.dark-theme .collaboration {
 body.dark-theme .hobbies {
   color: #ccc;
 }
+
+/* CONTACT PAGE DARK THEME */
+body.dark-theme .contact-content h2 {
+  color: var(--text-color);
+  border-bottom-color: var(--border-color);
+}
+
+body.dark-theme .contact-info {
+  background: #2a2a2a;
+  color: var(--text-color);
+}
+
+body.dark-theme .contact-email a {
+  color: #4da6ff;
+}
+
+body.dark-theme .contact-note {
+  color: #ccc;
+  border-top-color: var(--border-color);
+}
