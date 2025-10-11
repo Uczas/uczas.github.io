@@ -48,16 +48,20 @@
 </button>
 
   <!-- ===== FILTER BAR ===== -->
-  <section class="filter-bar">
+<section class="filter-bar">
+  <div class="search-input-wrapper">
+    <i class="fas fa-search search-icon"></i>
     <input
       type="text"
       id="searchInput"
       placeholder="Search blog posts..."
     />
-    <select id="categoryFilter">
-      <option value="all">All Categories</option>
-    </select>
-  </section>
+  </div>
+  
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+  </select>
+</section>
 
   <!-- ===== BLOG POSTS CONTAINER ===== -->
   <section class="blog-container" id="blogContainer"></section>
