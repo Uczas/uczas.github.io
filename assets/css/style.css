@@ -574,3 +574,36 @@ body {
               border-color 0.4s ease,
               background 0.4s ease;
 }
+
+/* ABOUT PAGE DARK THEME */
+body.dark-theme .about-content h2 {
+  color: var(--text-color);
+  border-bottom-color: var(--border-color);
+}
+
+body.dark-theme .about-intro {
+  color: var(--text-color);
+}
+
+body.dark-theme .interests-section {
+  background: #2a2a2a;
+  color: var(--text-color);
+}
+
+body.dark-theme .interests-section h3 {
+  color: var(--text-color);
+}
+
+body.dark-theme .interests-list li:before {
+  color: #4da6ff;
+}
+
+body.dark-theme .collaboration {
+  background: #1a2a3a;
+  border-left-color: #4da6ff;
+  color: var(--text-color);
+}
+
+body.dark-theme .hobbies {
+  color: #ccc;
+}
