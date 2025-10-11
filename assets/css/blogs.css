@@ -3,7 +3,8 @@
 ========================================= */
 :root {
   --max: 900px;
-  --accent: #0077ff;
+  --accent: #008751; /* Nigerian Green */
+  --accent-alt: #0077ff;
 
   /* Light Mode */
   --header-bg: #ffffff;
@@ -44,14 +45,15 @@ body {
 }
 
 /* =========================================
-   HEADER
+   HEADER (Site + Article)
 ========================================= */
+header,
 .site-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--accent);
   background: var(--header-bg);
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border-color);
-  position: relative;
-  z-index: 100;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -66,15 +68,9 @@ body {
   padding: 0 1rem;
 }
 
-.profile-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  vertical-align: middle;
-}
-
 h1 {
+  color: var(--accent);
+  font-size: 2.2rem;
   margin: 0;
   display: flex;
   align-items: center;
@@ -86,7 +82,15 @@ h1 a {
   color: inherit;
 }
 
-/* NAVIGATION */
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
 .site-header nav {
   display: flex;
   gap: 1rem;
@@ -99,7 +103,35 @@ h1 a {
 }
 
 .site-header nav a:hover {
+  color: var(--accent-alt);
+}
+
+/* =========================================
+   ARTICLE ELEMENTS
+========================================= */
+.article-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.section-title {
   color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+  margin-top: 30px;
+}
+
+.conclusion {
+  background-color: #f0f8f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  border-left: 4px solid var(--accent);
 }
 
 /* =========================================
@@ -152,20 +184,9 @@ h1 a {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.linkedin:hover {
-  background-color: #0077b5;
-  color: white;
-}
-
-.github:hover {
-  background-color: #333;
-  color: white;
-}
-
-.researchgate:hover {
-  background-color: #00ccbb;
-  color: white;
-}
+.linkedin:hover { background-color: #0077b5; color: white; }
+.github:hover { background-color: #333; color: white; }
+.researchgate:hover { background-color: #00ccbb; color: white; }
 
 .copyright {
   font-size: 0.9rem;
@@ -306,7 +327,7 @@ h1 a {
 
 .filter-bar input:focus,
 .filter-bar select:focus {
-  border-color: var(--accent);
+  border-color: var(--accent-alt);
 }
 
 .blog-container {
@@ -326,9 +347,7 @@ h1 a {
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.blog-card:hover {
-  transform: translateY(-6px);
-}
+.blog-card:hover { transform: translateY(-6px); }
 
 .blog-card img {
   width: 100%;
@@ -372,7 +391,7 @@ h1 a {
 .read-more {
   display: inline-block;
   margin-top: 0.8rem;
-  color: var(--accent);
+  color: var(--accent-alt);
   text-decoration: none;
   font-weight: 500;
 }
@@ -386,16 +405,16 @@ h1 a {
 .pagination a {
   margin: 0 0.4rem;
   padding: 0.5rem 0.9rem;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--accent-alt);
   border-radius: 6px;
   text-decoration: none;
-  color: var(--accent);
+  color: var(--accent-alt);
   transition: 0.3s;
 }
 
 .pagination a.active,
 .pagination a:hover {
-  background: var(--accent);
+  background: var(--accent-alt);
   color: white;
 }
 
@@ -418,7 +437,4 @@ h1 a {
   z-index: 999;
 }
 
-.theme-toggle:hover {
-  transform: scale(1.1);
-}
-
+.theme-toggle:hover { transform: scale(1.1); }
