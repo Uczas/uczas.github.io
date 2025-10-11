@@ -540,6 +540,25 @@ body.dark-theme .publications li {
   color: var(--text-color);
 }
 
+/* MOBILE NAVIGATION DARK THEME */
+body.dark-theme .nav-links {
+  background: var(--header-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+body.dark-theme .nav-links a {
+  color: var(--text-color);
+  border-bottom-color: var(--border-color);
+}
+
+body.dark-theme .menu-toggle span {
+  background: var(--text-color);
+}
+
+body.dark-theme .nav-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 /* Smooth transitions */
 body {
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -547,6 +566,11 @@ body {
 
 .site-header,
 .site-footer,
-.quote-section {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+.quote-section,
+.nav-links,
+.menu-toggle span {
+  transition: background-color 0.4s ease, 
+              color 0.4s ease, 
+              border-color 0.4s ease,
+              background 0.4s ease;
 }
