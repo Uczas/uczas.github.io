@@ -19,30 +19,48 @@
   <link rel="canonical" href="https://ugbosu.name.ng/">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/blogs.css">
+
 <style>
-        .article-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .section-title {
-            color: #008751;
-            border-left: 4px solid #008751;
-            padding-left: 10px;
-            margin-top: 30px;
-        }
-        .conclusion {
-            background-color: #f0f8f4;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-            border-left: 4px solid #008751;
-        }
-    </style>
+    .article-image {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .section-title {
+        color: #008751;
+        border-left: 4px solid #008751;
+        padding-left: 10px;
+        margin-top: 30px;
+    }
+    .conclusion {
+        background-color: #f0f8f4;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+        border-left: 4px solid #008751;
+    }
+    
+    /* Dark theme support for conclusion */
+    body.dark-theme .conclusion {
+        background-color: #1a2a24;
+        border-left-color: #00a86b;
+    }
+/* Add this to your blogs.css file */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+article {
+    max-width: 100%;
+    overflow: hidden;
+}
+</style>
+
 </head>
 <body>
   <!-- ===== HEADER ===== -->
@@ -142,5 +160,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <!-- External Scripts -->
   <script src="/assets/javascripts/blogs2.js"></script>
+
+<script>
+    // Theme toggle for this specific page
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        
+        // Check if theme is already set
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            icon.className = 'fas fa-sun';
+        } else {
+            icon.className = 'fas fa-moon';
+        }
+        
+        // Toggle theme
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            
+            if (isDark) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Update current year
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    });
+</script>
+
 </body>
 </html>
