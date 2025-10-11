@@ -421,3 +421,45 @@ h1 a {
 .theme-toggle:hover {
   transform: scale(1.1);
 }
+
+/* ===== SEARCH INPUT WITH ICON ===== */
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: #666;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+.filter-bar input {
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  outline: none;
+  transition: border 0.3s ease;
+  width: 100%;
+}
+
+.filter-bar input:focus {
+  border-color: var(--accent);
+}
+
+/* Dark theme support */
+body.dark-theme .search-icon {
+  color: #aaa;
+}
+
+.filter-bar input:focus + .search-icon {
+  color: var(--accent);
+}
