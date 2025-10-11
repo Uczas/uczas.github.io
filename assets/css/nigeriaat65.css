@@ -3,7 +3,9 @@
 ========================================= */
 :root {
   --max: 900px;
-  --accent: #008751; /* Nigerian Green */
+
+  /* Accents */
+  --accent: #008751; /* Nigerian green */
   --accent-alt: #0077ff;
 
   /* Light Mode */
@@ -13,6 +15,7 @@
   --text-color: #111;
   --card-bg: #ffffff;
   --border-color: #e5e5e5;
+  --section-bg: #f0f8f4;
 }
 
 /* Dark Mode */
@@ -23,6 +26,7 @@ body.dark-theme {
   --text-color: #f1f1f1;
   --card-bg: #1f1f1f;
   --border-color: #333;
+  --section-bg: #1a3322; /* soft dark greenish tone for dark mode */
 }
 
 /* =========================================
@@ -54,7 +58,7 @@ header,
   padding-bottom: 20px;
   border-bottom: 2px solid var(--accent);
   background: var(--header-bg);
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 .header-inner {
@@ -75,6 +79,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: color 0.4s ease;
 }
 
 h1 a {
@@ -84,8 +89,9 @@ h1 a {
 
 .subtitle {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--text-color);
   font-style: italic;
+  opacity: 0.8;
 }
 
 /* =========================================
@@ -107,7 +113,7 @@ h1 a {
 }
 
 /* =========================================
-   ARTICLE ELEMENTS
+   ARTICLE ELEMENTS (Theme-aware)
 ========================================= */
 .article-image {
   width: 100%;
@@ -117,6 +123,7 @@ h1 a {
   display: block;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.4s ease;
 }
 
 .section-title {
@@ -124,14 +131,17 @@ h1 a {
   border-left: 4px solid var(--accent);
   padding-left: 10px;
   margin-top: 30px;
+  transition: color 0.4s ease, border-color 0.4s ease;
 }
 
 .conclusion {
-  background-color: #f0f8f4;
+  background-color: var(--section-bg);
   padding: 20px;
   border-radius: 8px;
   margin-top: 30px;
   border-left: 4px solid var(--accent);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 /* =========================================
@@ -144,12 +154,6 @@ h1 a {
   margin-top: 2rem;
   text-align: center;
   transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .footer-content {
@@ -177,6 +181,11 @@ h1 a {
   font-size: 1.2rem;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+body.dark-theme .social-icon {
+  background-color: #333;
+  color: #ddd;
 }
 
 .social-icon:hover {
@@ -216,7 +225,7 @@ h1 a {
   width: 100%;
   background: var(--text-color);
   border-radius: 2px;
-  transition: transform 0.28s ease, opacity 0.2s ease;
+  transition: transform 0.28s ease, opacity 0.2s ease, background 0.4s ease;
 }
 
 /* Mobile */
@@ -235,14 +244,7 @@ h1 a {
     flex: 1;
   }
 
-  .menu-toggle {
-    display: flex;
-    order: 0;
-  }
-
-  .site-title {
-    order: 1;
-  }
+  .menu-toggle { display: flex; }
 
   .nav-links {
     position: fixed;
@@ -286,11 +288,6 @@ h1 a {
     color: var(--text-color);
     font-size: 1.1rem;
     border-bottom: 1px solid var(--border-color);
-  }
-
-  .profile-img {
-    width: 32px;
-    height: 32px;
   }
 }
 
@@ -437,4 +434,6 @@ h1 a {
   z-index: 999;
 }
 
-.theme-toggle:hover { transform: scale(1.1); }
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
