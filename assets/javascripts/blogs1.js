@@ -8,7 +8,8 @@ const blogs = [
     image: "/images/new-pathway.png",
     tags: ["Nigeria at 65", "Independence", " Artificial Intelligence"],
     link: "https://ugbosu.name.ng/blogs/nigeria-at-65-a-new-path-to-sustainability-powered-by-AI"
-  },
+  }
+/*,
   
   {
     title: "Applying Markov Decision Processes to Seasonal Demand",
@@ -19,14 +20,5 @@ const blogs = [
     tags: ["MDP", "Seasonal"],
     link: "post3.html"
   } 
-/*,
-  {
-    title: "Dynamic Ordering Policies Using Reinforcement Learning",
-    date: "August 18, 2025",
-    description:
-      "An introduction to reinforcement learning approaches for improving inventory control in uncertain environments.",
-    image: "images/blog4.jpg",
-    tags: ["AI", "Inventory", "Reinforcement Learning"],
-    link: "post4.html"
-  } */
+*/
 ];
