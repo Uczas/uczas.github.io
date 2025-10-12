@@ -1,5 +1,14 @@
 // ====== BLOG DATA ======
 const blogs = [
+   {
+    title: "FUMHSK Kwale Opens Admissions for 2025/2026 Academic Session",
+    date: "October 12, 2025",
+    description:
+      "The Federal University of Medical and Health Sciences (FUMHSK), Kwale, Delta State, has officially announced the commencement of its admission screening exercise for the 2025/2026 academic session. This specialized institution dedicated to healthcare education is now inviting applications from qualified UTME candidates who aspire to build careers in the medical and health sciences fields.",
+    image: "/images/fumhsk.jpg",
+   /* tags: ["MDP", "Seasonal"],*/
+    link: "https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Opens-Admissions-for-2025-2026-Academic-Session"
+  } ,
   {
     title: "Nigeria at 65: A New Path to Sustainability Powered by AI",
     date: "October 1, 2025",
@@ -9,16 +18,4 @@ const blogs = [
     tags: ["Nigeria at 65", " Artificial Intelligence"],
     link: "https://ugbosu.name.ng/blogs/nigeria-at-65-a-new-path-to-sustainability-powered-by-AI"
   }
-/*,
-  
-  {
-    title: "Applying Markov Decision Processes to Seasonal Demand",
-    date: "September 5, 2025",
-    description:
-      "A deep dive into how MDPs can optimize ordering decisions across multiple seasons with uncertain demand.",
-    image: "images/blog3.jpg",
-    tags: ["MDP", "Seasonal"],
-    link: "post3.html"
-  } 
-*/
 ];
