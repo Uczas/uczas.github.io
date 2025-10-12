@@ -6,7 +6,7 @@ const blogs = [
     description:
       "The Federal University of Medical and Health Sciences (FUMHSK), Kwale, Delta State, has officially announced the commencement of its admission screening exercise for the 2025/2026 academic session. This specialized institution dedicated to healthcare education is now inviting applications from qualified UTME candidates who aspire to build careers in the medical and health sciences fields.",
     image: "/images/fumhsk.jpg",
-   tags: ["MDP", "Seasonal"],
+   tags: ["", ""],
     link: "https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Opens-Admissions-for-2025-2026-Academic-Session"
   },
   {
