@@ -367,9 +367,8 @@ h1 a {
 
 .tags span {
   background: var(--accent);
-  color: white;
+  color: black;
   padding: 0.25rem 0.6rem;
-  border-radius: 5px;
   font-size: 0.8rem;
   margin-right: 0.3rem;
 }
