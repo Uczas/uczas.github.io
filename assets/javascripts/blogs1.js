@@ -7,7 +7,7 @@ const blogs = [
       "Michael Okpara University of Agriculture, Umudike (MOUAU) has announced massive recruitment for the 2025/2026 academic session. The university is inviting applications from suitably qualified candidates to fill numerous teaching and non-teaching positions across various departments and colleges.",
     image: "/images/michael-okpara-vacancy.jpg",
 tags: ["Vacancy"],
-   link: "https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Opens-Admissions-for-2025-2026-Academic-Session"
+   link: "https://ugbosu.name.ng/blogs/michael-okpara-university-job-vacancies-2025"
    },
    {
     title: "FUMHSK Kwale Opens Admissions for 2025/2026 Academic Session",
