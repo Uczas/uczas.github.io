@@ -1,12 +1,21 @@
 // ====== BLOG DATA ======
 const blogs = [
+{
+    title: "Michael Okpara University of Agriculture Umudike Job Vacancies 2025 - Academic & Non-Academic Positions",
+    date: "October 13, 2025",
+    description:
+      "Michael Okpara University of Agriculture, Umudike (MOUAU) has announced massive recruitment for the 2025/2026 academic session. The university is inviting applications from suitably qualified candidates to fill numerous teaching and non-teaching positions across various departments and colleges.",
+    image: "/images/michael-okpara-vacancy.jpeg",
+   link: "https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Opens-Admissions-for-2025-2026-Academic-Session",
+   tags: ["Vacancy"],
+  },
    {
     title: "FUMHSK Kwale Opens Admissions for 2025/2026 Academic Session",
     date: "October 12, 2025",
     description:
       "The Federal University of Medical and Health Sciences (FUMHSK), Kwale, Delta State, has officially announced the commencement of its admission screening exercise for the 2025/2026 academic session. This specialized institution dedicated to healthcare education is now inviting applications from qualified UTME candidates who aspire to build careers in the medical and health sciences fields.",
     image: "/images/fumhsk.jpeg",
-   tags: ["", ""],
+   tags: [],
     link: "https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Opens-Admissions-for-2025-2026-Academic-Session"
   },
   {
