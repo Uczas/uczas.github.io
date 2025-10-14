@@ -48,10 +48,10 @@ function renderBlogs() {
         <h3>${post.title}</h3>
         <p class="date">${post.date}</p>
         <p>${post.description}</p>
+<a href="${post.link}" class="read-more">Read more →</a>
         <div class="tags">
           ${post.tags.map((tag) => `<span>${tag}</span>`).join("")}
         </div>
-        <a href="${post.link}" class="read-more">Read more →</a>
       </div>
     `;
     blogContainer.appendChild(card);
