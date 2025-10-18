@@ -4,7 +4,7 @@ const blogs = [
     title: "Federal University of Medical and Health Sciences, Kwale Admission Portal Now Fully Functional",
     date: "October 17, 2025",
     description:
-      "The admission portal of the Federal University of Medical and Health Sciences, Kwale (FUMHSK) has now stabilized and is fully operational. If you have been trying to apply without success in recent days, you are advised to revisit the school’s website to complete your registration. Follow the link below for a step-by-step oh how to apply",
+      "The admission portal of the Federal University of Medical and Health Sciences, Kwale (FUMHSK) has now stabilized and is fully operational. If you have been trying to apply without success in recent days, you are advised to revisit the school’s website to complete your registration. Follow the link below for a step-by-step guide on how to apply",
     image: "/images/fumhsk.jpeg",
    tags: ["Amission"],
     link: "https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Admission-Portal-Now-Fully-Functional"
