@@ -74,7 +74,182 @@ document.addEventListener("DOMContentLoaded", async () => {
 { "text": "No, no, you're not thinking; you're just being logical.", "author": "Niels Bohr" },
 { "text": "If I have seen further it is by standing on the shoulders of Giants.", "author": "Isaac Newton" },
 { "text": "Science is the great antidote to the poison of enthusiasm and superstition.", "author": "Adam Smith" },
-{ "text": "The scientist is not a person who gives the right answers, but the one who asks the right questions.", "author": "Claude Lévi-Strauss" }
+{ "text": "The scientist is not a person who gives the right answers, but the one who asks the right questions.", "author": "Claude Lévi-Strauss" },
+
+// Added 18th October, 2025
+
+    { "text": "The creation of a thousand forests is in one acorn.", "author": "Ralph Waldo Emerson" },
+
+    { "text": "Do not go where the path may lead, go instead where there is no path and leave a trail.", "author": "Ralph Waldo Emerson" },
+
+    { "text": "For what shall it profit a man, if he shall gain the whole world, and lose his own soul?", "author": "Mark 8:36" },
+
+    { "text": "The supreme art of war is to subdue the enemy without fighting.", "author": "Sun Tzu" },
+
+    { "text": "The obstacle in the path becomes the path. Never forget, within every obstacle is an opportunity to improve our condition.", "author": "Ryan Holiday (interpreting Marcus Aurelius)" },
+
+    { "text": "And those who were seen dancing were thought to be insane by those who could not hear the music.", "author": "Friedrich Nietzsche" },
+
+    { "text": "The function of prayer is not to influence God, but rather to change the nature of the one who prays.", "author": "Søren Kierkegaard" },
+
+    { "text": "The beginning of wisdom is the definition of terms.", "author": "Socrates" },
+
+    { "text": "When the student is ready, the teacher will appear.", "author": "Buddhist Proverb" },
+
+    { "text": "The wound is the place where the Light enters you.", "author": "Rumi" },
+
+    { "text": "This is the real secret of life — to be completely engaged with what you are doing in the here and now. And instead of calling it work, realize it is play.", "author": "Alan Watts" },
+
+    { "text": "The price of anything is the amount of life you exchange for it.", "author": "Henry David Thoreau" },
+
+    { "text": "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.", "author": "Maya Angelou" },
+
+    { "text": "The most common way people give up their power is by thinking they don't have any.", "author": "Alice Walker" },
+
+    { "text": "You have power over your mind — not outside events. Realize this, and you will find strength.", "author": "Marcus Aurelius" },
+
+    { "text": "The bamboo that bends is stronger than the oak that resists.", "author": "Japanese Proverb" },
+
+    { "text": "A bird does not sing because it has an answer. It sings because it has a song.", "author": "Chinese Proverb" },
+
+    { "text": "He who knows all the answers has not been asked all the questions.", "author": "Confucius" },
+
+    { "text": "Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.", "author": "Proverbs 3:5-6" },
+
+    { "text": "The sun is new each day.", "author": "Heraclitus" },
+
+    { "text": "No man ever steps in the same river twice, for it's not the same river and he's not the same man.", "author": "Heraclitus" },
+
+    { "text": "We are like butterflies who flutter for a day and think it is forever.", "author": "Carl Sagan" },
+
+    { "text": "For small creatures such as we the vastness is bearable only through love.", "author": "Carl Sagan" },
+
+    { "text": "The nitrogen in our DNA, the calcium in our teeth, the iron in our blood, the carbon in our apple pies were made in the interiors of collapsing stars. We are made of starstuff.", "author": "Carl Sagan" },
+
+    { "text": "The universe is not only queerer than we suppose, but queerer than we *can* suppose.", "author": "J.B.S. Haldane" },
+
+    { "text": "Not everything that can be counted counts, and not everything that counts can be counted.", "author": "William Bruce Cameron" },
+
+    { "text": "The greatest danger for most of us is not that our aim is too high and we miss it, but that it is too low and we reach it.", "author": "Michelangelo" },
+
+    { "text": "The person who says it cannot be done should not interrupt the person who is doing it.", "author": "Chinese Proverb" },
+
+    { "text": "A ship in harbor is safe, but that is not what ships are built for.", "author": "John A. Shedd" },
+
+    { "text": "The act of observation is an act of creation, and the consciousness of the observer is the only true reality.", "author": "Max Planck" },
+
+    { "text": "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration.", "author": "Nikola Tesla" },
+
+    { "text": "The future is already here — it's just not very evenly distributed.", "author": "William Gibson" },
+
+    { "text": "Your time is limited, so don't waste it living someone else's life.", "author": "Steve Jobs" },
+
+    { "text": "Stay hungry, stay foolish.", "author": "Steve Jobs" },
+
+    { "text": "The only way to do great work is to love what you do.", "author": "Steve Jobs" },
+
+    { "text": "The fool doth think he is wise, but the wise man knows himself to be a fool.", "author": "William Shakespeare" },
+
+    { "text": "To be, or not to be, that is the question.", "author": "William Shakespeare" },
+
+    { "text": "We know what we are, but know not what we may be.", "author": "William Shakespeare" },
+
+    { "text": "The first and greatest victory is to conquer yourself.", "author": "Plato" },
+
+    { "text": "At the center of your being you have the answer; you know who you are and you know what you want.", "author": "Lao Tzu" },
+
+    { "text": "When I let go of what I am, I become what I might be.", "author": "Lao Tzu" },
+
+    { "text": "The wise man does not lay up his own treasures. The more he gives to others, the more he has for his own.", "author": "Lao Tzu" },
+
+    { "text": "Do not be daunted by the enormity of the world's grief. Do justly, now. Love mercy, now. Walk humbly, now. You are not obligated to complete the work, but neither are you free to abandon it.", "author": "The Talmud" },
+
+    { "text": "The wound is the place where the Light enters you.", "author": "Rumi" },
+
+    { "text": "You were born with wings, why prefer to crawl through life?", "author": "Rumi" },
+
+    { "text": "The quieter you become, the more you are able to hear.", "author": "Rumi" },
+
+    { "text": "The eye with which I see God is the same eye with which God sees me.", "author": "Meister Eckhart" },
+
+    { "text": "The soul always knows what to do to heal itself. The challenge is to silence the mind.", "author": "Caroline Myss" },
+
+    { "text": "Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality.", "author": "Lao Tzu" },
+
+    { "text": "Mathematics reveals the order hidden beneath chaos.", "author": "Henri Poincaré" },
+
+    { "text": "The essence of mathematics lies in its freedom.", "author": "Georg Cantor" },
+
+    { "text": "In mathematics, the art of proposing a question must be held of higher value than solving it.", "author": "Georg Cantor" },
+
+    { "text": "Mathematics is the music of reason.", "author": "James Joseph Sylvester" },
+
+    { "text": "Numbers rule the universe.", "author": "Pythagoras" },
+
+    { "text": "It is not knowledge, but the act of learning, that grants the greatest pleasure.", "author": "Carl Friedrich Gauss" },
+
+    { "text": "Pure mathematics is the world’s best game. It is more absorbing than chess, more of a gamble than poker, and lasts longer than Monopoly.", "author": "Richard J. Trudeau" },
+
+    { "text": "Every formula which expresses a law of nature is a hymn of praise to God.", "author": "Maria Mitchell" },
+
+    { "text": "When mathematics loses its connection to truth, it becomes only arithmetic.", "author": "Roger Penrose" },
+
+    { "text": "The price of greatness is responsibility.", "author": "Winston Churchill" },
+
+    { "text": "The soul becomes dyed with the color of its thoughts.", "author": "Marcus Aurelius" },
+
+    { "text": "When you change the way you look at things, the things you look at change.", "author": "Wayne Dyer" },
+
+    { "text": "We must be willing to let go of the life we planned so as to have the life that is waiting for us.", "author": "Joseph Campbell" },
+
+    { "text": "He who conquers himself is the mightiest warrior.", "author": "Confucius" },
+
+    { "text": "The world breaks everyone, and afterward, some are strong at the broken places.", "author": "Ernest Hemingway" },
+
+    { "text": "To be wrong is nothing, unless you continue to remember it.", "author": "Confucius" },
+
+    { "text": "A wise man changes his mind, a fool never will.", "author": "Spanish Proverb" },
+  
+    { "text": "The wound is the place where the Light enters you.", "author": "Rumi" },
+
+    { "text": "Courage is grace under pressure.", "author": "Ernest Hemingway" },
+  
+    { "text": "Adversity introduces a man to himself.", "author": "Albert Einstein" },
+  
+    { "text": "The tallest trees grow from the deepest roots.", "author": "African Proverb" },
+  
+    { "text": "When the heart is full of gratitude, there is no room for fear.", "author": "James Faust" },
+  
+    { "text": "No rain, no flowers.", "author": "Anonymous (Modern Proverb)" },
+
+    { "text": "Even the finest sword plunged into salt water will rust.", "author": "Sun Tzu" },
+  
+    { "text": "Do not let what you cannot do interfere with what you can do.", "author": "John Wooden" },
+  
+    { "text": "Life is a mirror and will reflect back to the thinker what he thinks into it.", "author": "Ernest Holmes" },
+  
+    { "text": "Faith is taking the first step even when you don’t see the whole staircase.", "author": "Martin Luther King Jr." },
+
+    { "text": "For as he thinketh in his heart, so is he.", "author": "Proverbs 23:7" },
+  
+  { "text": "With God all things are possible.", "author": "Matthew 19:26 " },
+  
+    { "text": "Wisdom is the principal thing; therefore get wisdom: and with all thy getting get understanding.", "author": "Proverbs 4:7" },
+  
+    { "text": "In quietness and confidence shall be your strength.", "author": "Isaiah 30:15" },
+  
+    { "text": "The fear of the Lord is the beginning of knowledge.", "author": "Proverbs 1:7" },
+  
+    { "text": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.", "author": "2 Timothy 1:7 " },
+    
+    { "text": "Be still, and know that I am God.", "author": "Psalm 46:10" },
+  
+    { "text": "Whatever you sow is what you will reap.", "author": "Galatians 6:7" },
+  
+    { "text": "To everything there is a season, and a time to every purpose under the heaven.", "author": "Ecclesiastes 3:1" },
+  
+    { "text": "For wisdom is better than rubies; and all the things that may be desired are not to be compared to it.", "author": "Proverbs 8:11 " }
+
 ];
 
   // Pick random quote
