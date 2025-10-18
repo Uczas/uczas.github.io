@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
-{
+    {
+    title: "Federal University of Medical and Health Sciences, Kwale Admission Portal Now Fully Functional",
+    date: "October 12, 2025",
+    description:
+      "The admission portal of the Federal University of Medical and Health Sciences, Kwale (FUMHSK) has now stabilized and is fully operational. If you have been trying to apply without success in recent days, you are advised to revisit the school’s website to complete your registration. Follow the link below for a step-by-step oh how to apply",
+    image: "/images/fumhsk.jpeg",
+   tags: ["Amission"],
+    link: "https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Admission-Portal-Now-Fully-Functional"
+  },
+    {
     title: "Michael Okpara University of Agriculture Umudike Job Vacancies 2025 - Academic & Non-Academic Positions",
     date: "October 13, 2025",
     description:
@@ -15,7 +24,7 @@ tags: ["Vacancy"],
     description:
       "The Federal University of Medical and Health Sciences (FUMHSK), Kwale, Delta State, has officially announced the commencement of its admission screening exercise for the 2025/2026 academic session. This specialized institution dedicated to healthcare education is now inviting applications from qualified UTME candidates who aspire to build careers in the medical and health sciences fields.",
     image: "/images/fumhsk.jpeg",
-   tags: [],
+   tags: ["Admission"],
     link: "https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Opens-Admissions-for-2025-2026-Academic-Session"
   },
   {
