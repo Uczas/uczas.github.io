@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   
     { "text": "In quietness and confidence shall be your strength.", "author": "Isaiah 30:15" },
   
-    { "text": "The fear of the Lord is the beginning of knowledge.", "author": "Proverbs 1:7" },
+    { "text": "The fear of the Lord is the beginning of wisdom.", "author": "Proverbs 1:7" },
   
     { "text": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.", "author": "2 Timothy 1:7 " },
     
