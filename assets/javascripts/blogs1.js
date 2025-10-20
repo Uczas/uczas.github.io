@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
     {
+    title: "Should Mathematics Be Optional for Arts Students?",
+    date: "October 20, 2025",
+    description:
+      "For days now, I have been thinking about how to approach this matter without sounding biased to my readers, especially since all of my degrees are in Mathematics. That being said, concealing the truth due to a fear of appearing prejudiced is also a dangerous path. We may have stumbled either on the news, web blogs, Whatsapp, Facebook, or other social media platforms on the recent announcement by the Federal Ministry of Education regarding the removal of Mathematics as a compulsory admission requirement for Arts and Humanities students which has stirred both excitement and concern across Nigeria’s education community. For some...",
+    image: "/images/maths.jpg",
+   tags: ["Blogs"],
+    link: "https://ugbosu.name.ng/blogs/should-mathematics-be-optional-for-arts-students"
+  },
+    {
     title: "Federal University of Medical and Health Sciences, Kwale Admission Portal Now Fully Functional",
     date: "October 17, 2025",
     description:
@@ -33,7 +42,7 @@ tags: ["Vacancy"],
     description:
       "Nigeria stands at a pivotal moment in its history. As a nation teeming with vibrant human capital and abundant natural resources, the quest for sustainable development is more urgent than ever. The challenges are well-known: a volatile economy, an agricultural sector yearning for modernization, an educational system in need of reinvention, and the profound environmental and economic paradox of its crude oil wealth. Layer onto this the escalating threats of climate change, seen in devastating annual floods, and a transportation network struggling to keep pace with urbanization. In the face of such complexity, a new, powerful tool is emerging that could redefine Nigeria's developmental trajectory - Artificial Intelligence.",
     image: "/images/new-pathway.png",
-    tags: ["Nigeria at 65", " Artificial Intelligence"],
+    tags: ["Blogs"],
     link: "https://ugbosu.name.ng/blogs/nigeria-at-65-a-new-path-to-sustainability-powered-by-AI"
   }
 ];
