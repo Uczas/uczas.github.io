@@ -4,7 +4,7 @@ const blogs = [
     title: "Automation Is Coming - Are We Ready?",
     date: "December 2, 2025",
     description:
-      "At this point, it is time we quit the debate of whether AI is better at reasoning or solving problems than human beings or vice versa. No single human currently can outperform the technology generally, except for some very specific and deep areas not fed to it yet. Most people, especially the young folks, now rely on AI chatbots to do even the littlest things like generating a birthday wish, new month messages, love texts, and so on. Then at the workplace, chatbots are the new letter-writing tools. The so-called Gen Z, and even people from previous generations who are aware of the technology, no longer",
+      "At this point, it is time we quit the debate of whether AI is better at reasoning or solving problems than human beings or vice versa. No single human currently can outperform the technology generally, except for some very specific and deep areas not fed to it yet. Most people, especially the young folks, now rely on AI chatbots to do even the littlest things like generating a birthday wish, new month messages, love texts, and so on. Then at the workplace, chatbots are the new letter-writing tools. The so-called Gen Z, and even people from previous generations who are aware of the technology, no longer ...",
     image: "/images/humanoids.png",
    tags: ["Blogs"],
     link: "https://ugbosu.name.ng/blogs/automation-is-coming"
