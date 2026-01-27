@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
 	{
+    title: "When AI and Quantum Computing Meet Blockchain Security",
+    date: "January 27, 2026",
+    description:
+      "For a long time, blockchain has been celebrated as one of the most secure digital innovations of our era. Its promise rests on strong cryptography, decentralization, and incentive driven consensus mechanisms that make tampering extremely difficult. As someone who follows developments in blockchain and emerging technologies closely, I find it increasingly clear that this sense of long term security deserves a more careful re-examination. Two rapidly advancing fields, artificial intelligence and quantum computing, are beginning to challenge some of the core assumptions on which modern blockchains are built. ...",
+    image: "/images/qc-ai.png",
+   tags: ["Blogs"],
+    link: "https://ugbosu.name.ng/blogs/When-AI-and-Quantum-Computing-Meet-Blockchain-Security"
+  },
+	{
     title: "Automation Is Coming - Are We Ready?",
     date: "December 2, 2025",
     description:
