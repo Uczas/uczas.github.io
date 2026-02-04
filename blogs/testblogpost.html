@@ -58,6 +58,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/blogs.css">
+  <link rel="stylesheet" href="/assets/css/testblogpost.css">
 
 <style>
     .article-image {
@@ -163,9 +164,13 @@ body.dark-theme .subtitle {
   </h2>
 </div>
 
- <div style="text-align: center;">
-    <p class="subtitle" style="margin: 10px auto 0; display: block; text-align: center;">How secure is blockchain in the age of AI and quantum computing?
-</p>
+<div style="text-align: center;">
+    <p class="subtitle" style="margin: 10px auto 0; display: block; text-align: center;">
+        How secure is blockchain in the age of AI and quantum computing?
+    </p>
+    <div class="reading-time" id="readingTime">
+        <i class="far fa-clock"></i> Estimated reading time: <span id="timeValue">3 minutes</span>
+    </div>
 </div>
 
  <main>
@@ -186,6 +191,34 @@ body.dark-theme .subtitle {
 <p>If blockchain is to remain a foundation for trust in a rapidly changing digital world, it must become not just decentralized, but forward looking, adaptive, and resilient by design.</p>
     </article>
 </main>
+
+<!-- ===== ABOUT THE AUTHOR ===== -->
+<section class="author-section">
+    <div class="author-header">
+        <img src="/images/site-logo.jpg" alt="Ugbosu Charles" class="author-avatar">
+        <div class="author-info">
+            <h3>Ugbosu Charles</h3>
+            <p class="author-title">Blockchain & Emerging Tech Researcher</p>
+        </div>
+    </div>
+    
+    <p class="author-bio">
+        Charles is a passionate technology researcher and writer with a focus on blockchain, 
+        quantum computing, and artificial intelligence. He explores how emerging technologies 
+        intersect and shape our digital future. With a background in computer science and 
+        cybersecurity, he breaks down complex technical concepts into accessible insights 
+        for both technical and non-technical audiences.
+    </p>
+    
+    <div class="author-links">
+        <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="author-link" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="author-link" target="_blank">
+            <i class="fab fa-researchgate"></i> ResearchGate
+        </a>
+    </div>
+</section>
 
 
   <!-- ===== FOOTER ===== -->
@@ -256,6 +289,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const yearElement = document.getElementById('current-year');
         if (yearElement) {
             yearElement.textContent = new Date().getFullYear();
+        }
+    });
+</script>
+
+<script>
+    // Calculate and display estimated reading time
+    document.addEventListener('DOMContentLoaded', function() {
+        const article = document.querySelector('article');
+        if (article) {
+            const text = article.textContent;
+            const wordCount = text.trim().split(/\s+/).length;
+            const readingTime = Math.ceil(wordCount / 200); // 200 words per minute
+            
+            const timeElement = document.getElementById('timeValue');
+            if (timeElement) {
+                timeElement.textContent = `${readingTime} minute${readingTime !== 1 ? 's' : ''}`;
+            }
         }
     });
 </script>
