@@ -1,0 +1,109 @@
+/* =========================================
+   ESTIMATED READING TIME STYLES
+========================================= */
+.reading-time {
+    text-align: center;
+    margin: 5px auto 30px;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+.reading-time i {
+    margin-right: 5px;
+}
+
+/* Dark theme support for reading time */
+body.dark-theme .reading-time {
+    color: #aaa;
+}
+
+/* =========================================
+   ABOUT THE AUTHOR SECTION
+========================================= */
+.author-section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.author-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+}
+
+.author-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.author-title {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+body.dark-theme .author-title {
+    color: #aaa;
+}
+
+.author-bio {
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.author-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.author-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.author-link:hover {
+    color: #0055cc;
+    text-decoration: underline;
+}
+
+.author-link i {
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .author-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .author-avatar {
+        width: 70px;
+        height: 70px;
+    }
+}
