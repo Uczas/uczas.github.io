@@ -4,7 +4,7 @@ const blogs = [
     title: "The Mathematics of Ruin: Why Retail Traders Are Destined to Lose Against the House",
     date: "February 12, 2026",
     description:
-      "If you have ever lost money in the stock market, you have likely blamed bad luck, poor timing, or maybe a bad indicator. But the real reason you lost money may have been decided 368 years ago, by two Frenchmen arguing about dice. This is the story of the Gambler’s Ruin problem, and why it acts as an invisible tax on retail traders that simply does not apply to institutional investors. By the end of this post, you will understand the exact mathematical formula that determines whether you go broke—and why the "house" (or the institution) almost never does...",
+      "If you have ever lost money in the stock market, you have likely blamed bad luck, poor timing, or maybe a bad indicator. But the real reason you lost money may have been decided 368 years ago, by two Frenchmen arguing about dice. This is the story of the Gambler’s Ruin problem, and why it acts as an invisible tax on retail traders that simply does not apply to institutional investors. By the end of this post, you will understand the exact mathematical formula that determines whether you go broke—and why the house (or the institution) almost never does...",
     image: "/images/gambler.png",
    tags: ["Blog"],
     link: "https://ugbosu.name.ng/blogs/mathematics-of-ruin"
