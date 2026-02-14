@@ -1,5 +1,14 @@
 // ====== BLOG DATA ======
 const blogs = [
+	{
+    title: "The Man Who Knew Infinity: The Enduring Legacy of Srinivasa Ramanujan",
+    date: "February 14, 2026",
+    description:
+      "Srinivasa Ramanujan Aiyangar was born on December 22, 1887, in the small town of Erode in Tamil Nadu, South India. His father, K. Srinivasa Aiyangar, worked as a clerk in a sari shop, earning a modest wage, while his mother, Komalatammal, was a homemaker who also sang at the local temple. It was a humble, orthodox Brahmin household—the last place one might expect to find a revolutionary mathematician. Ramanujan's genius announced itself quietly but unmistakably. By the age of 11, he had already exhausted the mathematical knowledge of the college students who ...",
+    image: "/images/Ramanujan.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.name.ng/blogs/man-who-knew-infinity"
+  },
 {
     title: "The Mathematics of Ruin: Why Retail Traders Are Destined to Lose Against the House",
     date: "February 12, 2026",
