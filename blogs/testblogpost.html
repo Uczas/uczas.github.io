@@ -495,9 +495,16 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
     // Calculate and display estimated reading time
     document.addEventListener('DOMContentLoaded', function() {
-        const article = document.querySelector('article');
-        if (article) {
-            const text = article.textContent;
+        // Look for the main content container instead of article tag
+        const contentContainer = document.querySelector('.container') || document.querySelector('main') || document.body;
+        
+        if (contentContainer) {
+            // Get all text content, excluding script and style tags
+            const clone = contentContainer.cloneNode(true);
+            const scripts = clone.querySelectorAll('script, style, .reading-time, .author-section, .site-header, .site-footer');
+            scripts.forEach(el => el.remove());
+            
+            const text = clone.textContent || '';
             const wordCount = text.trim().split(/\s+/).length;
             const readingTime = Math.ceil(wordCount / 200); // 200 words per minute
             
@@ -505,9 +512,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (timeElement) {
                 timeElement.textContent = `${readingTime} minute${readingTime !== 1 ? 's' : ''}`;
             }
+        } else {
+            // Fallback: set a default reading time
+            const timeElement = document.getElementById('timeValue');
+            if (timeElement) {
+                timeElement.textContent = '9 minutes';
+            }
         }
     });
 </script>
-
 </body>
 </html>
