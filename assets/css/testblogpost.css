@@ -77,25 +77,11 @@ body {
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   line-height: 1.7;
   margin: 0;
+  padding: 0; /* Removed padding to allow edge-to-edge header/footer */
   color: var(--text-color);
   background: var(--body-bg);
-  padding: 0 1rem;
   transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  background-color: var(--blog-container-bg);
-  padding: 2.5rem 3rem;
-  border-radius: 4px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
-  border: 1px solid var(--blog-container-border);
-  transition: background-color 0.4s ease, border-color 0.4s ease;
-}
-
-body.dark-theme .container {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  overflow-x: hidden;
 }
 
 img {
@@ -109,7 +95,7 @@ article {
 }
 
 /* =========================================
-   HEADER
+   HEADER - Edge to edge
 ========================================= */
 .site-header {
   background: var(--header-bg);
@@ -118,6 +104,13 @@ article {
   position: relative;
   z-index: 100;
   transition: background-color 0.4s ease, color 0.4s ease;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
 }
 
 .header-inner {
@@ -129,6 +122,7 @@ article {
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .profile-img {
@@ -161,7 +155,25 @@ article {
 }
 
 /* =========================================
-   FOOTER
+   MAIN CONTENT CONTAINER - Spacing from header
+========================================= */
+.container {
+  max-width: var(--max);
+  margin: 2rem auto 0; /* Added top margin to create space from header */
+  background-color: var(--blog-container-bg);
+  padding: 2.5rem 3rem;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+  border: 1px solid var(--blog-container-border);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+body.dark-theme .container {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* =========================================
+   FOOTER - Edge to edge
 ========================================= */
 .site-footer {
   background: var(--footer-bg);
@@ -170,12 +182,21 @@ article {
   margin-top: 2rem;
   text-align: center;
   transition: background-color 0.4s ease, color 0.4s ease;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
 }
 
 .wrap {
-  max-width: 1200px;
+  max-width: var(--max);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -225,7 +246,7 @@ body.dark-theme .copyright {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 0;
+    padding: 0 1rem;
   }
 
   .mobile-header-group {
@@ -291,6 +312,12 @@ body.dark-theme .copyright {
   .profile-img {
     width: 32px;
     height: 32px;
+  }
+  
+  /* Adjust container margin for mobile */
+  .container {
+    margin: 1.5rem auto 0;
+    padding: 1.5rem 1.5rem;
   }
 }
 
@@ -417,7 +444,7 @@ body.dark-theme .author-title {
   font-size: 1rem;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for author section */
 @media (max-width: 600px) {
   .author-header {
     flex-direction: column;
@@ -628,10 +655,11 @@ body.dark-theme mjx-container {
 ========================================= */
 @media (max-width: 768px) {
   body {
-    padding: 1rem 0.5rem;
+    padding: 0; /* Ensure no padding on mobile */
   }
   
   .container {
+    margin: 1.5rem auto 0;
     padding: 1.5rem 1.5rem;
   }
   
@@ -659,6 +687,7 @@ body.dark-theme mjx-container {
 
 @media (max-width: 480px) {
   .container {
+    margin: 1rem auto 0;
     padding: 1rem 1rem;
   }
   
