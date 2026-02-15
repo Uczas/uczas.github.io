@@ -1,7 +1,7 @@
 /* ====== Quote of the Day Styles ====== */
 .quote-section {
   /* Replace the solid background with image */
-  background-image: url('/images/quote1.jpg'); /* Update this path */
+  background-image: url('/images/Quote1.jpeg'); /* Update this path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
