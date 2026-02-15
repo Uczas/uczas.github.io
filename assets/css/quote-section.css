@@ -18,7 +18,7 @@
 
 .quote-date {
   font-size: 1rem;
-  color: #555;
+  color: #F5F5F5;
   font-weight: 500;
   margin-bottom: 0.3rem;
 }
@@ -26,10 +26,10 @@
 #quote-text {
   font-size: 1.1rem;
   font-style: italic;
-  color: #333;
+  color: #FFFFFF;
 }
 
 #quote-author {
   font-size: 1.0rem;
-  color: #777;
+  color: #FFFFFF;
 }
