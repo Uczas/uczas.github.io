@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const overlay = document.querySelector('.nav-overlay');
+    const navThemeToggle = document.getElementById('navThemeToggle');
     
     if (!menuToggle || !navLinks || !overlay) return;
     
@@ -35,10 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close menu when clicking overlay
     overlay.addEventListener('click', closeMenu);
     
-    // Close menu when clicking a link
+    // Close menu when clicking a link (except theme toggle)
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
+    
+    // Don't close menu when clicking theme toggle on mobile
+    if (navThemeToggle) {
+        navThemeToggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.stopPropagation();
+            }
+        });
+    }
     
     // Close menu on escape key
     document.addEventListener('keydown', function(e) {
