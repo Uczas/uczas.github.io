@@ -50,13 +50,13 @@ body {
 /* Modern Header */
 .site-header {
     background: var(--bg-light);
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: var(--shadow-sm);
     backdrop-filter: blur(10px);
-    background: rgba(var(--bg-light-rgb), 0.9);
+    background: rgba(var(--bg-light-rgb), 0.95);
 }
 
 /* Add RGB variables for backdrop blur */
@@ -83,8 +83,8 @@ body.dark-theme {
 }
 
 .profile-img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--primary-color);
@@ -92,24 +92,30 @@ body.dark-theme {
     background: var(--bg-light);
 }
 
-h1 {
+.site-title {
+    display: flex;
+    align-items: center;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
+    gap: 0.75rem;
 }
 
-h1 a {
+.site-title a {
     text-decoration: none;
     color: var(--text-dark);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    line-height: 1;
+    display: inline-block;
 }
 
 /* Navigation */
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -119,6 +125,7 @@ h1 a {
     font-weight: 500;
     position: relative;
     padding: 0.5rem 0;
+    font-size: 1rem;
 }
 
 .nav-links a::after {
@@ -134,6 +141,27 @@ h1 a {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+/* Theme Toggle in Menu */
+.nav-theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: var(--transition);
+    margin-left: 0.5rem;
+}
+
+.nav-theme-toggle:hover {
+    background: var(--bg-gray);
+    transform: rotate(45deg);
 }
 
 /* Mobile Menu Toggle */
@@ -213,6 +241,15 @@ h1 a {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
     color: var(--secondary-color);
+}
+
+.btn i {
+    margin-left: 0.5rem;
+    transition: var(--transition);
+}
+
+.btn:hover i {
+    transform: translateX(5px);
 }
 
 /* Publications Section */
@@ -350,41 +387,35 @@ h1 a {
     filter: brightness(1.1);
 }
 
-/* Theme Toggle */
-.theme-toggle {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--bg-light);
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: var(--text-dark);
-    box-shadow: var(--shadow-lg);
-    transition: var(--transition);
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.theme-toggle:hover {
-    transform: rotate(45deg) scale(1.1);
-}
-
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .header-inner {
         padding: 0 1rem;
+        position: relative;
+    }
+
+    .mobile-header-group {
+        width: 100%;
+        justify-content: space-between;
     }
 
     .menu-toggle {
         display: flex;
+        order: 0;
     }
 
+    .site-title {
+        order: 1;
+        margin: 0;
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .site-title a {
+        font-size: 1.2rem;
+    }
+
+    /* Hide desktop nav by default on mobile */
     .nav-links {
         position: fixed;
         top: 0;
@@ -394,14 +425,47 @@ h1 a {
         height: 100vh;
         background: var(--bg-light);
         flex-direction: column;
+        align-items: flex-start;
         padding: 5rem 2rem 2rem;
         transition: left 0.3s ease;
         box-shadow: var(--shadow-lg);
         z-index: 99;
+        gap: 1.5rem;
     }
 
     .nav-links.active {
         left: 0;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 0.75rem 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid var(--bg-gray);
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    /* Theme toggle in mobile menu */
+    .nav-theme-toggle {
+        margin: 1rem 0 0;
+        padding: 0.75rem;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 1rem;
+        border-radius: 8px;
+        background: var(--bg-gray);
+    }
+
+    .nav-theme-toggle i {
+        font-size: 1.2rem;
+    }
+
+    .nav-theme-toggle span {
+        display: inline-block;
+        font-size: 1.1rem;
     }
 
     .nav-overlay {
