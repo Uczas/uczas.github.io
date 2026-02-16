@@ -2,77 +2,93 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-45W1075T2G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-45W1075T2G');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-45W1075T2G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-45W1075T2G');
+  </script>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ugbosu blogs</title>
-
-  <!-- External Styles -->
+  <title>Blog | Charles Ugbosu</title>
+  <meta name="description" content="Read insightful articles on mathematics, optimization, operations research, and more.">
   <meta name="author" content="Ugbosu Charles">
   <link rel="canonical" href="https://ugbosu.name.ng/blogs.html">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/blogs.css">
+  <link rel="icon" href="/images/site-logo.jpg" type="image/jpg">
 </head>
+
 <body>
-  <!-- ===== HEADER ===== -->
+  <!-- ===== HEADER ( matching main site ) ===== -->
   <header class="site-header">
-        <div class="header-inner">
-            <!-- Hamburger button and site title grouped together for mobile -->
-            <div class="mobile-header-group">
-                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <!-- Site title -->
-                <h1 class="site-title">
-                    <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img">
-                    <a href="/" style="font-family: 'Segoe Print', 'Bradley Hand', cursive;">Knowledge Base</a>
-                </h1>
-            </div>
-
-            <!-- Navigation -->
-            <nav id="primary-nav" class="nav-links" role="navigation">
-               <a href="/">Home</a>
-                <a href="/blogs.html">Blog</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a> 
-            </nav>
-        </div>
+    <div class="header-inner">
+      <div class="mobile-header-group">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         
-        <!-- Overlay for mobile menu -->
-        <div class="nav-overlay"></div>
-    </header>
+        <div class="site-title">
+          <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img">
+          <a href="/">Ugbosu Charles</a>
+        </div>
+      </div>
 
-  <!-- ===== THEME TOGGLE ===== -->
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-  <i class="fas fa-moon"></i>
-</button>
+      <nav id="primary-nav" class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blogs.html" class="active">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        
+        <!-- Theme Toggle as 5th menu item -->
+        <button class="nav-theme-toggle" id="navThemeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+          <span class="theme-text">Dark Mode</span>
+        </button>
+      </nav>
+    </div>
+    
+    <div class="nav-overlay"></div>
+  </header>
+
+  <!-- ===== BLOG HERO SECTION ===== -->
+  <section class="blog-hero">
+    <div class="blog-hero-content">
+      <h1>Knowledge Base</h1>
+      <p>Insights on mathematics, optimization, operations research, and data science</p>
+    </div>
+  </section>
 
   <!-- ===== FILTER BAR ===== -->
-<section class="filter-bar">
-  <div class="search-input-wrapper">
-    <i class="fas fa-search search-icon"></i>
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Search blog posts..."
-    />
-  </div>
-  
-  <select id="categoryFilter">
-    <option value="all">All Categories</option>
-  </select>
-</section>
+  <section class="filter-bar">
+    <div class="search-input-wrapper">
+      <i class="fas fa-search search-icon"></i>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search blog posts..."
+      />
+    </div>
+    
+    <div class="filter-wrapper">
+      <i class="fas fa-filter filter-icon"></i>
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+      </select>
+    </div>
+  </section>
 
   <!-- ===== BLOG POSTS CONTAINER ===== -->
   <section class="blog-container" id="blogContainer"></section>
@@ -80,39 +96,43 @@
   <!-- ===== PAGINATION ===== -->
   <div class="pagination" id="pagination"></div>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== FOOTER ( matching main site ) ===== -->
   <footer class="site-footer">
     <div class="wrap">
-        <div class="footer-content">
-            <div class="social-icons">
-                <!-- Replace # with your actual profile URLs -->
-                <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="social-icon researchgate" target="_blank" title="ResearchGate">
-                    <i class="fab fa-researchgate"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="social-icon linkedin" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-            <small class="copyright">© <span id="current-year"></span> ugbosu.name.ng. All rights reserved</small>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" 
+             class="social-icon researchgate" 
+             target="_blank" 
+             title="ResearchGate">
+            <i class="fab fa-researchgate"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" 
+             class="social-icon linkedin" 
+             target="_blank" 
+             title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
         </div>
+        <small class="copyright">
+          © <span id="current-year"></span> ugbosu.name.ng. All rights reserved
+        </small>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script>
-    // Update the current year in the copyright notice
-document.addEventListener('DOMContentLoaded', function() {
-    const yearElement = document.getElementById('current-year');
-    if (yearElement) {
+  <script>
+    // Update copyright year
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
-    }
-});
-    </script>
+      }
+    });
+  </script>
 
   <script src="/assets/javascripts/hamburger-button.js"></script>
-
-  <!-- External Scripts -->
+  <script src="/assets/javascripts/theme-toggle.js"></script>
   <script src="/assets/javascripts/blogs1.js"></script>
   <script src="/assets/javascripts/blogs2.js"></script>
 </body>
