@@ -35,7 +35,7 @@
   <meta name="author" content="Ugbosu Charles" />
   <link rel="canonical" href="https://ugbosu.name.ng/blogs/man-who-knew-infinity" />
 
-  <!-- 🌐 Open Graph (for Facebook, X, WhatsApp, etc.) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="The Man Who Knew Infinity: The Enduring Legacy of Srinivasa Ramanujan" />
   <meta property="og:description" content="'An equation has no meaning unless it expresses a thought of God.' The inspiring journey of Srinivasa Ramanujan, the man who transformed number theory forever." />
   <meta property="og:image" content="https://ugbosu.name.ng/images/Ramanujan.jpg"/>
@@ -43,7 +43,7 @@
   <meta property="og:type" content="article"/>
   <meta property="og:site_name" content="Ugbosu.name.ng"/>
 
-  <!-- 🧠 Schema.org BlogPosting (for Google rich snippets) -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,8 +77,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- SINGLE stylesheet - consolidated blog styles -->
   <link rel="stylesheet" href="/assets/css/blogs2.css">
   <link rel="icon" href="/images/site-logo.jpg" type="image/jpg">
 </head>
@@ -117,7 +116,8 @@
     <div class="nav-overlay"></div>
   </header>
 
-  <div class="container">
+  <!-- Blog Post Content - using blog-post-content class for specific styling -->
+  <div class="blog-post-content">
     <h1>The Man Who Knew Infinity: The Enduring Legacy of Srinivasa Ramanujan</h1>
 
     <img src="/images/Ramanujan.jpg" alt="Srinivasa Ramanujan" class="article-image">
@@ -228,7 +228,7 @@
       <p>– <span class="author-credit">Krishnamurthy, V. "The Life and Work of Srinivasa Ramanujan."</span> <em>Current Science</em>, vol. 79, no. 8, Indian Academy of Sciences, 25 Oct. 2000, pp. 1159-1165, www.currentscience.ac.in/</p>
       <p>– <span class="author-credit">Ono, Ken. "The Legacy of Ramanujan."</span> <em>Notices of the American Mathematical Society</em>, vol. 67, no. 4, April 2020, pp. 514-523, www.ams.org/journals/notices/202004/rnoti-p514.pdf.</p>
     </div>
-  </div> <!-- end container -->
+  </div> <!-- end blog-post-content -->
     
   <!-- ===== ABOUT THE AUTHOR ===== -->
   <section class="author-section">
@@ -241,8 +241,7 @@
     </div>
 
     <p class="author-bio">
-      Charles is a passionate researcher and writer with a focus on optimization, operations research, and artificial intelligence. He explores how emerging technologies 
-      intersect and shape our digital future.
+      Charles is a passionate researcher and writer with a focus on optimization, operations research, and artificial intelligence. He explores how emerging technologies intersect and shape our digital future.
     </p>
 
     <div class="author-links">
@@ -299,13 +298,13 @@
   <script>
     // Calculate and display estimated reading time
     document.addEventListener('DOMContentLoaded', function() {
-      // Look for the main content container instead of article tag
-      const contentContainer = document.querySelector('.container') || document.querySelector('main') || document.body;
+      // Look for the blog-post-content container
+      const contentContainer = document.querySelector('.blog-post-content');
       
       if (contentContainer) {
         // Get all text content, excluding script and style tags
         const clone = contentContainer.cloneNode(true);
-        const scripts = clone.querySelectorAll('script, style, .reading-time, .author-section, .site-header, .site-footer');
+        const scripts = clone.querySelectorAll('script, style, .reading-time');
         scripts.forEach(el => el.remove());
         
         const text = clone.textContent || '';
