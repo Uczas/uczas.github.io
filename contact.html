@@ -2,84 +2,375 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-45W1075T2G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-45W1075T2G');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-45W1075T2G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-45W1075T2G');
+  </script>
+  
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Contact — Charles Ugbosu</title>
 
-  <meta name="description" content="Get in touch with Ugbosu Charles. Contact information, collaborations, and inquiries.">
-  <meta name="keywords" content="Mathematics, Research, Tutorials, Ugbosu, Portfolio, Contact">
-  <meta name="author" content="Ugbosu Charles">
+  <meta name="description" content="Get in touch with Ugbosu Charles. Contact information, collaborations, and inquiries." />
+  <meta name="keywords" content="Mathematics, Research, Optimization, Operations Research, AI, Writer, Contact" />
+  <meta name="author" content="Ugbosu Charles" />
 
-  <link rel="canonical" href="https://ugbosu.name.ng/contact">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="canonical" href="https://ugbosu.name.ng/contact" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" href="/images/site-logo.jpg" type="image/jpg" />
+
+  <style>
+    /* Contact Page Enhanced Styles */
+    .contact-content {
+      max-width: var(--max);
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .contact-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+    }
+
+    .contact-info {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      background: var(--bg-light);
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .contact-icon i {
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .contact-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .email-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-gray);
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      transition: background-color 0.4s ease;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .contact-email-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      word-break: break-all;
+      transition: color 0.3s ease;
+    }
+
+    .contact-email-link:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    .response-time {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .contact-social {
+      background: var(--bg-light);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+      text-align: center;
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-social h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .social-links-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-link i {
+      font-size: 1.2rem;
+    }
+
+    .social-link span {
+      font-size: 1rem;
+    }
+
+    .social-link.researchgate {
+      background: #00ccbb;
+      box-shadow: 0 4px 10px rgba(0, 204, 187, 0.3);
+    }
+
+    .social-link.linkedin {
+      background: #0077b5;
+      box-shadow: 0 4px 10px rgba(0, 119, 181, 0.3);
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px) scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    .collaboration-note {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      text-align: center;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .collaboration-note p {
+      color: var(--text-dark);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Active navigation link */
+    .nav-links a.active {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .contact-content {
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      
+      .contact-content h2 {
+        font-size: 2rem;
+      }
+      
+      .contact-card {
+        padding: 2rem 1.5rem;
+      }
+      
+      .email-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 1rem;
+      }
+      
+      .contact-email-link {
+        font-size: 1rem;
+      }
+      
+      .social-links-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .social-link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Dark theme adjustments */
+    body.dark-theme .contact-card,
+    body.dark-theme .contact-social {
+      background: var(--bg-light);
+    }
+    
+    body.dark-theme .collaboration-note {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(124, 58, 237, 0.2));
+    }
+  </style>
 </head>
   
 <body>
-  <header class="site-header"><div class="wrap"><h1><a href="/" style="display: inline-block; padding: 8px; transition: all 0.3s ease;" 
-      onmouseover="this.style.opacity='0.7'" 
-      onmouseout="this.style.opacity='1'">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
-    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-  </svg>
-</a></h1>
-  </div></header>
-
-  <!-- ===== THEME TOGGLE ===== -->
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <main class="wrap">
-    <div class="contact-content">
-        <h2>Contact</h2>
+  <!-- ===== HEADER (matching main site) ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="mobile-header-group">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         
-        <div class="contact-info">
-            <p class="contact-email">Email: <a href="mailto:ugbosucharles@gmail.com">ugbosucharles@gmail.com</a></p>
-            
-            <p class="contact-note">I typically respond within 24-48 hours. Looking forward to connecting!</p>
+        <div class="site-title">
+          <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img" />
+          <a href="/">Charles Ugbosu</a>
         </div>
-    </div>
-</main>
+      </div>
 
-    <footer class="site-footer">
-    <div class="wrap">
-        <div class="footer-content">
-            <div class="social-icons">
-                <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="social-icon researchgate" target="_blank" title="ResearchGate">
-                    <i class="fab fa-researchgate"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="social-icon linkedin" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-            <small class="copyright">© <span id="current-year"></span> ugbosu.name.ng. All rights reserved</small>
+      <nav id="primary-nav" class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blogs.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html" class="active">Contact</a>
+        
+        <!-- Theme Toggle as 5th menu item -->
+        <button class="nav-theme-toggle" id="navThemeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+          <span class="theme-text">Dark Mode</span>
+        </button>
+      </nav>
+    </div>
+    
+    <div class="nav-overlay"></div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="contact-content">
+    <h2>Get in Touch</h2>
+    
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope-open-text"></i>
         </div>
+        <h3>Email Me</h3>
+        <div class="email-container">
+          <i class="fab fa-google" style="color: #DB4437; font-size: 1.8rem;"></i>
+          <a href="mailto:ugbosucharles@gmail.com" class="contact-email-link">ugbosucharles@gmail.com</a>
+        </div>
+        <p class="response-time">
+          <i class="fas fa-clock" style="color: var(--primary-color);"></i>
+          I typically respond within 24-48 hours
+        </p>
+      </div>
+      
+      <div class="contact-social">
+        <h3>Connect With Me</h3>
+        <div class="social-links-container">
+          <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="social-link researchgate" target="_blank">
+            <i class="fab fa-researchgate"></i>
+            <span>ResearchGate</span>
+          </a>
+          <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="social-link linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="collaboration-note">
+        <i class="fas fa-handshake" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px; display: block;"></i>
+        <p>Open to research collaborations, speaking engagements, and academic discussions. Feel free to reach out!</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (matching main site) ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" 
+             class="social-icon researchgate" 
+             target="_blank" 
+             title="ResearchGate">
+            <i class="fab fa-researchgate"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" 
+             class="social-icon linkedin" 
+             target="_blank" 
+             title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        <small class="copyright">
+          © <span id="current-year"></span> ugbosu.name.ng. All rights reserved
+        </small>
+      </div>
     </div>
   </footer>
 
-    <script>
+  <script>
     // Update the current year in the copyright notice
     document.addEventListener('DOMContentLoaded', function() {
-        const yearElement = document.getElementById('current-year');
-        if (yearElement) {
-            yearElement.textContent = new Date().getFullYear();
-        }
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
     });
   </script>
 
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <script src="/assets/javascripts/hamburger-button.js"></script>
   <script src="/assets/javascripts/theme-toggle.js"></script>
-
 </body>
 </html>
