@@ -202,9 +202,9 @@ body {
     transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Hero Section */
+/* ===== HERO SECTION ENHANCEMENTS ===== */
 .hero {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem 4rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: var(--border-radius);
     margin: 2rem auto;
@@ -225,23 +225,100 @@ body {
     background-size: 30px 30px;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.hero-greeting {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
     position: relative;
-    font-weight: 700;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin-bottom: 2rem;
+.hero-name {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+}
+
+.hero-tagline {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
     position: relative;
     opacity: 0.95;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 1rem;
+    display: inline-block;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    opacity: 0.95;
+    line-height: 1.6;
+    color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+    position: relative;
+}
+
+.service-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.service-item i {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+    line-height: 1.5;
+    color: white;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.75rem 2rem;
     background: white;
     color: var(--primary-color);
@@ -250,7 +327,7 @@ body {
     font-weight: 600;
     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
     box-shadow: var(--shadow-md);
-    position: relative;
+    border: 2px solid transparent;
 }
 
 .btn:hover {
@@ -259,12 +336,29 @@ body {
     color: var(--secondary-color);
 }
 
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
 .btn i {
     margin-left: 0.5rem;
     transition: transform 0.3s ease;
 }
 
 .btn:hover i {
+    transform: translateX(5px);
+}
+
+.btn-outline:hover i {
     transform: translateX(5px);
 }
 
@@ -510,13 +604,37 @@ body {
         opacity: 1;
     }
 
+    /* Hero mobile styles */
     .hero {
-        padding: 3rem 1.5rem;
+        padding: 2rem 1.5rem 3rem;
         margin: 1rem;
     }
-
-    .hero h2 {
-        font-size: 2rem;
+    
+    .hero-name {
+        font-size: 2.2rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .publications {
