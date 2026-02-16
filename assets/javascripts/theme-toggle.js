@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (themeText) themeText.textContent = 'Light Mode';
     }
     
-    // Toggle theme on button click
+    // Toggle theme on button click - no rotation, just icon swap
     navThemeToggle.addEventListener('click', function() {
         document.body.classList.toggle('dark-theme');
         
