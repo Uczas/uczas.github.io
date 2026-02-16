@@ -13,13 +13,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>About — Charles Ugbosu</title>
+  <title>Contact — Charles Ugbosu</title>
 
-  <meta name="description" content="Learn more about Ugbosu Charles, his background, mathematics research, and projects." />
-  <meta name="keywords" content="Mathematics, Research, Optimization, Operations Research, AI, About" />
-  <meta name="author" content="Charles Ugbosu" />
+  <meta name="description" content="Get in touch with Ugbosu Charles. Contact information, collaborations, and inquiries." />
+  <meta name="keywords" content="Mathematics, Research, Optimization, Operations Research, AI, Writer, Contact" />
+  <meta name="author" content="Ugbosu Charles" />
 
-  <link rel="canonical" href="https://ugbosu.name.ng/about" />
+  <link rel="canonical" href="https://ugbosu.name.ng/contact" />
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,8 +30,236 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="icon" href="/images/site-logo.jpg" type="image/jpg" />
-</head>
 
+  <style>
+    /* Contact Page Enhanced Styles */
+    .contact-content {
+      max-width: var(--max);
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .contact-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+    }
+
+    .contact-info {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      background: var(--bg-light);
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .contact-icon i {
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .contact-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .email-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-gray);
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      transition: background-color 0.4s ease;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .contact-email-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      word-break: break-all;
+      transition: color 0.3s ease;
+    }
+
+    .contact-email-link:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    .response-time {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .contact-social {
+      background: var(--bg-light);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+      text-align: center;
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-social h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .social-links-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-link i {
+      font-size: 1.2rem;
+    }
+
+    .social-link span {
+      font-size: 1rem;
+    }
+
+    .social-link.researchgate {
+      background: #00ccbb;
+      box-shadow: 0 4px 10px rgba(0, 204, 187, 0.3);
+    }
+
+    .social-link.linkedin {
+      background: #0077b5;
+      box-shadow: 0 4px 10px rgba(0, 119, 181, 0.3);
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px) scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    .collaboration-note {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      text-align: center;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .collaboration-note p {
+      color: var(--text-dark);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Active navigation link */
+    .nav-links a.active {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .contact-content {
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      
+      .contact-content h2 {
+        font-size: 2rem;
+      }
+      
+      .contact-card {
+        padding: 2rem 1.5rem;
+      }
+      
+      .email-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 1rem;
+      }
+      
+      .contact-email-link {
+        font-size: 1rem;
+      }
+      
+      .social-links-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .social-link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Dark theme adjustments */
+    body.dark-theme .contact-card,
+    body.dark-theme .contact-social {
+      background: var(--bg-light);
+    }
+    
+    body.dark-theme .collaboration-note {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(124, 58, 237, 0.2));
+    }
+  </style>
+</head>
+  
 <body>
   <!-- ===== HEADER (matching main site) ===== -->
   <header class="site-header">
@@ -52,8 +280,8 @@
       <nav id="primary-nav" class="nav-links">
         <a href="/">Home</a>
         <a href="/blogs.html">Blog</a>
-        <a href="/about.html" class="active">About</a>
-        <a href="/contact.html">Contact</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html" class="active">Contact</a>
         
         <!-- Theme Toggle as 5th menu item -->
         <button class="nav-theme-toggle" id="navThemeToggle" aria-label="Toggle theme">
@@ -67,53 +295,44 @@
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <main class="about-content">
-    <h2>About Me</h2>
+  <main class="contact-content">
+    <h2>Get in Touch</h2>
     
-    <p class="about-intro">
-      Researcher · Graduate Assistant at Southern Delta University, Ozoro, Nigeria.
-    </p>
-    
-    <div class="interests-section">
-      <h3><i class="fas fa-heart" style="color: var(--primary-color); margin-right: 10px;"></i>Key Interests</h3>
-      <ul class="interests-list">
-        <li><i class="fas fa-chart-line"></i> Optimization & Operations Research</li>
-        <li><i class="fas fa-calculator"></i> Mathematical & Statistical Modeling</li>
-        <li><i class="fas fa-robot"></i> AI/ML Research</li>
-      </ul>
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <h3>Email Me</h3>
+        <div class="email-container">
+          <i class="fab fa-google" style="color: #DB4437; font-size: 1.8rem;"></i>
+          <a href="mailto:ugbosucharles@gmail.com" class="contact-email-link">ugbosucharles@gmail.com</a>
+        </div>
+        <p class="response-time">
+          <i class="fas fa-clock" style="color: var(--primary-color);"></i>
+          I typically respond within 24-48 hours
+        </p>
+      </div>
+      
+      <div class="contact-social">
+        <h3>Connect With Me</h3>
+        <div class="social-links-container">
+          <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="social-link researchgate" target="_blank">
+            <i class="fab fa-researchgate"></i>
+            <span>ResearchGate</span>
+          </a>
+          <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="social-link linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="collaboration-note">
+        <i class="fas fa-handshake" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 15px; display: block;"></i>
+        <p>Open to research collaborations, speaking engagements, and academic discussions. Feel free to reach out!</p>
+      </div>
     </div>
-    
-    <div class="interests-section">
-      <h3><i class="fas fa-code" style="color: var(--primary-color); margin-right: 10px;"></i>Skills</h3>
-      <ul class="interests-list">
-        <li><i class="fas fa-users"></i> Leadership</li>
-        <li><i class="fas fa-square-root-alt"></i> Mathematics/Modeling</li>
-        <li><i class="fas fa-laptop-code"></i> Computational Tools (Mathematica, Python, LaTeX)</li>
-        <li><i class="fas fa-brain"></i> Machine Learning (Supervised, Unsupervised, Reinforcement Learning)</li>
-        <li><i class="fas fa-magic"></i> Prompt Engineering</li>
-        <li><i class="fas fa-chart-pie"></i> Blockchain/Cryptocurrency Analytics</li>
-      </ul>
-    </div>
-    
-    <div class="interests-section">
-      <h3><i class="fas fa-users-cog" style="color: var(--primary-color); margin-right: 10px;"></i>Community/Development Platforms</h3>
-      <ul class="interests-list">
-        <li><i class="fab fa-google"></i> Google Developers</li>
-        <li><i class="fab fa-github"></i> GitHub</li>
-        <li><i class="fas fa-dice-d6"></i> Kaggle</li>
-        <li><i class="fas fa-project-diagram"></i> Jupyter Lab</li>
-      </ul>
-    </div>
-    
-    <div class="collaboration">
-      <i class="fas fa-handshake" style="font-size: 1.5rem; margin-right: 10px; color: var(--primary-color);"></i>
-      <span>Open to collaborations in applied mathematics research.</span>
-    </div>
-    
-    <p class="hobbies">
-      <i class="fas fa-chess-knight" style="color: var(--primary-color); margin-right: 8px;"></i>
-      Outside of work: Play Chess · Analyze Cryptocurrency Market
-    </p>
   </main>
 
   <!-- ===== FOOTER (matching main site) ===== -->
