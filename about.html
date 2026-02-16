@@ -2,113 +2,156 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-45W1075T2G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-45W1075T2G');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-45W1075T2G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-45W1075T2G');
+  </script>
+  
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>About — Charles Ugbosu</title>
 
-  <meta name="description" content="Learn more about Ugbosu Charles, his background, mathematics research, and projects.">
-  <meta name="keywords" content="Mathematics, Research, Tutorials, Ugbosu, Portfolio, About">
-  <meta name="author" content="Ugbosu Charles">
+  <meta name="description" content="Learn more about Ugbosu Charles, his background, mathematics research, and projects." />
+  <meta name="keywords" content="Mathematics, Research, Optimization, Operations Research, AI, About" />
+  <meta name="author" content="Charles Ugbosu" />
 
-  <link rel="canonical" href="https://ugbosu.name.ng/about">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="canonical" href="https://ugbosu.name.ng/about" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" href="/images/site-logo.jpg" type="image/jpg" />
 </head>
 
 <body>
-  <header class="site-header"><div class="wrap"><h1><a href="/" style="display: inline-block; padding: 8px; transition: all 0.3s ease;" 
-      onmouseover="this.style.opacity='0.7'" 
-      onmouseout="this.style.opacity='1'">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
-    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-  </svg>
-</a></h1>
-  </div></header>
+  <!-- ===== HEADER (matching main site) ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="mobile-header-group">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <div class="site-title">
+          <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img" />
+          <a href="/">Charles Ugbosu</a>
+        </div>
+      </div>
 
-  <!-- ===== THEME TOGGLE ===== -->
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
- <main class="wrap">
-    <div class="about-content">
-        <h2>About </h2>
+      <nav id="primary-nav" class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blogs.html">Blog</a>
+        <a href="/about.html" class="active">About</a>
+        <a href="/contact.html">Contact</a>
         
-        <p class="about-intro">Researcher; Graduate Assistant at Southern Delta University, Ozoro, Nigeria.</p>
-        
-        <div class="interests-section">
-            <h3>Key Interests</h3>
-            <ul class="interests-list">
-                <li>Optimization & Operations Research</li>
-                <li>Mathematical & Statistical Modeling</li>
-                <li>AI/ML Research</li>
-            </ul>
-        </div>
-        <div class="interests-section">
-            <h3>Skills</h3>
-            <ul class="interests-list">
-                <li>Leadership</li>
-                <li>Mathematics/Modeling</li>
-                <li>Computational Tools (Mathematica, Python, Latex)</li>
-                <li>Machine Learning (Supervised, Unsupervised and Reinforement Learning)</li>
-                <li>Prompt Engineering</li>
-                <li>Blockchain/Cryptocurrency Analytics</li>
-            </ul>
-        </div>
-      <div class="interests-section">
-            <h3>Community/Development Platforms</h3>
-            <ul class="interests-list">
-                <li>Google Developers</li>
-                <li>GitHub</li>
-                <li>Kaggle</li>
-                <li>Jupyter Lab</li>
-            </ul>
-        </div>
-        <div class="collaboration">
-            <p>Open to collaborations in applied mathematics research.</p>
-        </div>
-        
-        <p class="hobbies">Outside of work: Play Chess; Analyze Cryptocurrency Market</p>
+        <!-- Theme Toggle as 5th menu item -->
+        <button class="nav-theme-toggle" id="navThemeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+          <span class="theme-text">Dark Mode</span>
+        </button>
+      </nav>
     </div>
-</main>
+    
+    <div class="nav-overlay"></div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="about-content">
+    <h2>About Me</h2>
+    
+    <p class="about-intro">
+      Researcher · Graduate Assistant at Southern Delta University, Ozoro, Nigeria.
+    </p>
+    
+    <div class="interests-section">
+      <h3><i class="fas fa-heart" style="color: var(--primary-color); margin-right: 10px;"></i>Key Interests</h3>
+      <ul class="interests-list">
+        <li><i class="fas fa-chart-line"></i> Optimization & Operations Research</li>
+        <li><i class="fas fa-calculator"></i> Mathematical & Statistical Modeling</li>
+        <li><i class="fas fa-robot"></i> AI/ML Research</li>
+      </ul>
+    </div>
+    
+    <div class="interests-section">
+      <h3><i class="fas fa-code" style="color: var(--primary-color); margin-right: 10px;"></i>Skills</h3>
+      <ul class="interests-list">
+        <li><i class="fas fa-users"></i> Leadership</li>
+        <li><i class="fas fa-square-root-alt"></i> Mathematics/Modeling</li>
+        <li><i class="fas fa-laptop-code"></i> Computational Tools (Mathematica, Python, LaTeX)</li>
+        <li><i class="fas fa-brain"></i> Machine Learning (Supervised, Unsupervised, Reinforcement Learning)</li>
+        <li><i class="fas fa-magic"></i> Prompt Engineering</li>
+        <li><i class="fas fa-chart-pie"></i> Blockchain/Cryptocurrency Analytics</li>
+      </ul>
+    </div>
+    
+    <div class="interests-section">
+      <h3><i class="fas fa-users-cog" style="color: var(--primary-color); margin-right: 10px;"></i>Community/Development Platforms</h3>
+      <ul class="interests-list">
+        <li><i class="fab fa-google"></i> Google Developers</li>
+        <li><i class="fab fa-github"></i> GitHub</li>
+        <li><i class="fas fa-dice-d6"></i> Kaggle</li>
+        <li><i class="fas fa-project-diagram"></i> Jupyter Lab</li>
+      </ul>
+    </div>
+    
+    <div class="collaboration">
+      <i class="fas fa-handshake" style="font-size: 1.5rem; margin-right: 10px; color: var(--primary-color);"></i>
+      <span>Open to collaborations in applied mathematics research.</span>
+    </div>
+    
+    <p class="hobbies">
+      <i class="fas fa-chess-knight" style="color: var(--primary-color); margin-right: 8px;"></i>
+      Outside of work: Play Chess · Analyze Cryptocurrency Market
+    </p>
+  </main>
+
+  <!-- ===== FOOTER (matching main site) ===== -->
   <footer class="site-footer">
     <div class="wrap">
-        <div class="footer-content">
-            <div class="social-icons">
-                <!-- Replace # with your actual profile URLs -->
-                <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="social-icon researchgate" target="_blank" title="ResearchGate">
-                    <i class="fab fa-researchgate"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="social-icon linkedin" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-            <small class="copyright">© <span id="current-year"></span> ugbosu.name.ng. All rights reserved</small>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" 
+             class="social-icon researchgate" 
+             target="_blank" 
+             title="ResearchGate">
+            <i class="fab fa-researchgate"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" 
+             class="social-icon linkedin" 
+             target="_blank" 
+             title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
         </div>
+        <small class="copyright">
+          © <span id="current-year"></span> ugbosu.name.ng. All rights reserved
+        </small>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     // Update the current year in the copyright notice
-document.addEventListener('DOMContentLoaded', function() {
-    const yearElement = document.getElementById('current-year');
-    if (yearElement) {
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
-    }
-});
+      }
+    });
   </script>
 
-<script src="/assets/javascripts/theme-toggle.js"></script>
-
+  <script src="/assets/javascripts/hamburger-button.js"></script>
+  <script src="/assets/javascripts/theme-toggle.js"></script>
 </body>
 </html>
