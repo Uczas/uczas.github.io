@@ -257,6 +257,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
   // Display
-  document.getElementById('quote-text').textContent = `"${randomQuote.text}"`;
+  document.getElementById('quote-text').textContent = `${randomQuote.text}`;
   document.getElementById('quote-author').textContent = `— ${randomQuote.author}`;
 });
