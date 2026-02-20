@@ -1,92 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <url>
-    <loc>https://ugbosu.name.ng/</loc>
-    <lastmod>2025-10-09T01:29:58+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://ugbosu.name.ng/about.html</loc>
-    <lastmod>2025-10-09T01:29:58+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://ugbosu.name.ng/contact.html</loc>
-    <lastmod>2025-10-09T01:29:58+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://ugbosu.name.ng/blogs.html</loc>
-    <lastmod>2025-10-14T15:55:15+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://ugbosu.name.ng/blogs/nigeria-at-65-a-new-path-to-sustainability-powered-by-AI</loc>
-    <lastmod>2025-10-14T15:55:15+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Opens-Admissions-for-2025-2026-Academic-Session</loc>
-    <lastmod>2025-10-14T15:55:15+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://ugbosu.name.ng/blogs/michael-okpara-university-job-vacancies-2025</loc>
-    <lastmod>2025-10-14T15:55:15+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
 
 <url>
-  <loc>https://ugbosu.name.ng/blogs/FUMHSK-Kwale-Admission-Portal-Now-Fully-Functional</loc>
-  <lastmod>2025-10-18T08:07:54+00:00</lastmod>
+  <loc>https://ugbosu.com/</loc>
+  <lastmod>2026-02-20T09:33:10+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ugbosu.com/blogs.html</loc>
+  <lastmod>2026-02-20T09:33:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ugbosu.com/about.html</loc>
+  <lastmod>2026-02-20T09:33:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ugbosu.com/contact.html</loc>
+  <lastmod>2026-02-20T09:33:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
-<url>
-  <loc>https://ugbosu.name.ng/blogs/should-mathematics-be-optional-for-arts-students</loc>
-  <lastmod>2025-10-20T23:32:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
- <loc>https://ugbosu.name.ng/blogs/how-to-ascertain-that-students-genuinely-comprehend-what-they-are-being-taught-in-the-age-of-artificial-intelligence</loc>
-  <lastmod>2025-11-08T17:07:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-<loc>https://ugbosu.name.ng/blogs/automation-is-coming</loc>
-<lastmod>2025-12-02T07:22:01+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-
-<url>
-<loc>https://ugbosu.name.ng/blogs/When-AI-and-Quantum-Computing-Meet-Blockchain-Security</loc>
-<lastmod>2026-01-27T17:09:05+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-
-<url>
-<loc>https://ugbosu.name.ng/blogs/mathematics-of-ruin</loc>
-<lastmod>2026-02-12T02:43:05+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-
-<url>
-<loc>https://ugbosu.name.ng/blogs/man-who-knew-infinity</loc>
-<lastmod>2026-02-14T11:18:41+00:00</lastmod>
-<priority>0.80</priority>
-</url>
 
 </urlset>
