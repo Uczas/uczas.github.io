@@ -1,1 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-45W1075T2G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-45W1075T2G');
+</script> 
+	-->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Mathematics of Ruin · Gambler's Ruin & Trading</title>
+  
+  <!-- MathJax configuration & load -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+    <!-- modern, readable serif – clean academic style -->
+    </script>
+
+  <meta name="description" content="Why do retail traders always lose? The 17th-century mathematics of Pascal, Fermat, and Huygens has the answer" />
+  <meta name="author" content="Ugbosu Charles" />
+  <link rel="canonical" href="https://ugbosu.name.ng/blogs/mathematics-of-ruin" />
+
+  <!-- 🌐 Open Graph (for Facebook, X, WhatsApp, etc.) -->
+  <meta property="og:title" content="The Mathematics of Ruin · Gambler's Ruin & Trading" />
+  <meta property="og:description" content="Why do retail traders always lose? The 17th-century mathematics of Pascal, Fermat, and Huygens has the answer" />
+  <meta property="og:image" content="https://ugbosu.name.ng/images/gambler.png"/>
+  <meta property="og:url" content="https://ugbosu.name.ng/blogs/mathematics-of-ruin" />
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Ugbosu.name.ng"/>
+
+  <!-- 🧠 Schema.org BlogPosting (for Google rich snippets) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Mathematics of Ruin: Why Retail Traders Are Destined to Lose Against the House",
+    "description": "Why do retail traders always lose? The 17th-century mathematics of Pascal, Fermat, and Huygens has the answer",
+    "author": {
+      "@type": "Person",
+      "name": "Ugbosu Charles"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ugbosu.name.ng",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ugbosu.name.ng/images/site-logo.jpg"
+      }
+    },
+    "image": "https://ugbosu.name.ng/images/gambler.png",
+    "url": "https://ugbosu.name.ng/blogs/mathematics-of-ruin",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ugbosu.name.ng/blogs/mathematics-of-ruin"
+    }
+  }
+  </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/testblogpost.css">
+
+</head>
+<body>
+ <!-- ===== HEADER ===== -->
+  <header class="site-header">
+        <div class="header-inner">
+            <!-- Hamburger button and site title grouped together for mobile -->
+            <div class="mobile-header-group">
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Site title -->
+                <div class="site-title">
+                    <img src="/images/site-logo.jpg" alt="Charles Ugbosu" class="profile-img">
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav id="primary-nav" class="nav-links" role="navigation">
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/blogs.html">Blogs</a>
+            </nav>
+        </div>
+
+        <!-- Overlay for mobile menu -->
+        <div class="nav-overlay"></div>
+    </header>
+
+  <!-- ===== THEME TOGGLE ===== -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+  <i class="fas fa-moon"></i>
+</button>
+
+<div class="container">
+
+<h1>The Mathematics of Ruin: Why Retail Traders Are Destined to Lose Against the House</h1>
+
+     <img src="/images/gambler.png" alt="gambler" class="article-image">
+
+
+<div style="text-align: center;">
+    <div class="reading-time" id="readingTime">
+        <i class="far fa-clock"></i> Estimated reading time: <span id="timeValue">9 minutes</span>
+    </div>
+</div>
+<p><strong>How a 1656 letter between Pascal and Fermat explains why your trading account keeps hitting zero.</strong></p>
+
+<p>If you have ever lost money in the stock market, you have likely blamed bad luck, poor timing, or maybe a bad indicator. But the real reason you lost money may have been decided 368 years ago, by two Frenchmen arguing about dice.</p>
+
+<p>This is the story of the <strong>Gambler’s Ruin problem</strong>, and why it acts as an invisible tax on retail traders that simply does not apply to institutional investors. By the end of this post, you will understand the exact mathematical formula that determines whether you go broke—and why the "house" (or the institution) almost never does.</p>
+
+<h2>1. The Origin: Pascal, Fermat, and a Letter from 1656</h2>
+
+<p>The earliest known mention of the gambler's ruin problem appears in a 1656 letter from <strong>Pierre de Carcavi</strong> to the Dutch mathematician <strong>Christiaan Huygens</strong>. Carcavi was summarizing correspondence between <strong>Blaise Pascal</strong> and <strong>Pierre de Fermat</strong> regarding a complex dice game .</p>
+
+<p>Huygens was so intrigued that he reformulated the problem and published it in his 1657 treatise, <em>De ratiociniis in ludo aleae</em> ("On Reasoning in Games of Chance"). The problem was simple yet profound:</p>
+
+<blockquote style="font-style: italic; margin: 1.2em 2em; color: #2b4c5e; background: #ecf2f5; padding: 1em 1.5em; border-radius: 4px;">
+"Two players begin with fixed stakes, transferring points until one reaches zero. What is the probability of victory for each player?" .
+</blockquote>
+
+<p>This was the birth of the Gambler’s Ruin theorem. Later, <strong>Abraham de Moivre</strong> (1711) and <strong>Nicholas Bernoulli</strong> independently solved the general case, formalizing what we now know as the <em>random walk</em> with absorbing barriers .</p>
+
+<h2>2. The Core Mathematics: Fair vs. Unfair Games</h2>
+
+<p>Let us define the model. Two players, <strong>A</strong> and <strong>B</strong>, have finite wealth. They engage in a sequence of independent bets. Player A wins a dollar from B with probability \(p\), and loses a dollar to B with probability \(q = 1-p\)
+
+The game ends when one player reaches zero (ruin).</p>
+
+<h3>2.1 The Fair Game (\(p = q = 0.5\))</h3>
+<p>If the coin is fair, the probability that Player A is ruined given they start with \(n_1\) dollars, and Player B starts with \(n_2\) dollars, is:</p>
+
+<div class="formula-block">
+\[
+P_{\text{ruin, A}} = \frac{n_2}{n_1 + n_2}
+\]
+</div>
+
+<p>Conversely, the probability Player B is ruined is:</p>
+
+<div class="formula-block">
+\[
+P_{\text{ruin, B}} = \frac{n_1}{n_1 + n_2}
+\]
+</div>
+
+<div class="example">
+  <strong>Example:</strong> If you start trading with 5,000 dollars and a hedge fund has 100,000 dollars (which is 5,000 vs 100,000), your probability of ruin is:
+  <div class="equation-container">
+    <span class="equation">P<sub>ruin</sub> = 100,000/(5,000 + 100,000)</span>
+    <span class="equation">= 100,000/105,000</span>
+    <span class="equation">≈ 95.2%</span>
+  </div>
+</div>
+
+<p><strong>Even in a fair game, the player with less money is almost certain to lose.</strong> This is not a conspiracy; it is stochastic calculus.</p>
+
+<h3>2.2 The Unfair Game (\(p \neq q\))</h3>
+<p>In the real world, markets are not perfectly efficient. Sometimes you have an edge; sometimes you don’t. If \(p \neq q\), the ruin probability for Player A is:</p>
+
+<div class="formula-block">
+\[
+P_{\text{ruin, A}} = 
+\begin{cases}
+\frac{1 - (p/q)^{n_2}}{1 - (p/q)^{n_1 + n_2}}, & p \neq q \\[1em]
+\frac{n_2}{n_1 + n_2}, & p = q
+\end{cases}
+\]
+</div>
+
+<p>Where:</p>
+<ul>
+<li>\(n_1\) = Your starting capital</li>
+<li>\(n_2\) = Opponent’s starting capital</li>
+<li>\(p\) = Probability you win a given trade</li>
+<li>\(q\) = Probability you lose (1 - p)</li>
+</ul>
+
+<p><strong>Note:</strong> If the game is unfavorable to you (\(p < q\)), ruin is <em>certain</em> in the long run (\(P_{\text{ruin}} = 1\)). But crucially, <strong>even if you have an edge (\(p > q\)), you can still go broke if your capital is small relative to the opponent.</strong></p>
+
+<p>This was Huygens’ great insight: <em>Capital disparity is a stronger force than skill disparity.</em></p>
+
+<h2>3. Extending the Model: The "Infinitely Rich Adversary"</h2>
+
+<p>Institutional traders and casinos do not operate like Player B in the classic two-player game. They operate with <strong>effectively infinite capital</strong>.</p>
+
+<p><strong>Guy Katriel</strong> of ORT Braude College generalized the ruin probability for a gambler playing against an infinitely-rich adversary. If the gambler’s payoff distribution has a maximum possible loss of \(\nu\), and their initial wealth is \(M\), the ruin probability is:</p>
+
+<div class="formula-block">
+\[
+P_{\text{ruin}}(M) = \sum_{j=1}^{\nu} \eta_j^M \prod_{i \neq j} \frac{1 - \eta_i}{\eta_j - \eta_i}
+\]
+</div>
+
+<p>Where \(\eta_j\) are the roots of the generating function \(p(z) = \sum_{k=-\nu}^{\infty} p_k z^k = 1\) that lie inside the unit disk .</p>
+
+<p><strong>What this means practically:</strong> For a coin-toss game (win/loss of 1 unit), this simplifies to the famous result:</p>
+
+<div class="formula-block">
+\[
+P_{\text{ruin}}(M) = \left( \frac{p_{\text{loss}}}{p_{\text{win}}} \right)^M
+\]
+</div>
+
+<p>If your win probability is 50% and loss probability is 50% (fair game), this equals 1. But if you have a slight edge—say 51% win, 49% loss—the ratio is \(0.49/0.51 \approx 0.9608\). If you start with $1,000 and bet $1 each time:</p>
+
+\[
+P_{\text{ruin}} = (0.9608)^{1000} \approx 1.44 \times 10^{-17}
+\]
+
+<p><strong>You are effectively immortal. So why do retail traders still die?</strong></p>
+
+<h2>4. The Kelly Criterion and Simultaneous Risk</h2>
+
+<p>Here is where the retail trader diverges from the mathematician.</p>
+
+<p>If you have an edge, the optimal way to grow your wealth is to bet a fixed <em>fraction</em> of your bankroll, not a fixed dollar amount. This is the <strong>Kelly Criterion</strong>, formalized by <strong>John L. Kelly Jr.</strong> in 1956 .</p>
+
+<p>For a binary bet with win probability \(p\) and even odds, the optimal fraction \(f^*\) to wager is:</p>
+
+<div class="formula-block">
+\[
+f^* = p - q = 2p - 1
+\]
+</div>
+
+<p>If \(p = 0.60\), you should bet 20% of your bankroll. This maximizes long-term logarithmic growth.</p>
+
+<p><strong>However:</strong> Retail traders rarely place one bet at a time. They trade multiple positions simultaneously. This is the "simultaneous coin toss" problem.</p>
+
+<p><strong>Andrew Grant</strong> of the University of Sydney analyzed this exact scenario. If you toss \(M\) identical, independent, favorable coins simultaneously, and bet the same fraction \(f\) on each, your growth rate is:</p>
+
+<div class="formula-block">
+\[
+G = \sum_{w=0}^{M} \binom{M}{w} p^w (1-p)^{M-w} \ln\left[1 + (2w - M)f\right]
+\]
+</div>
+
+<p>Where \(w\) is the number of winning tosses .</p>
+
+<p><strong>The result:</strong> For \(M=2\) coins, the optimal bet size reduces to:</p>
+
+<div class="formula-block">
+\[
+f^* = \frac{2p-1}{(2p-1)^2 + 1}
+\]
+</div>
+
+<p>If \(p=0.60\), your single-game Kelly bet is 20%. Your two-game simultaneous bet drops to approximately <strong>16.7%</strong>. If you ignore this and bet 20% on each, you massively increase your risk of ruin.</p>
+
+<p><strong>Why this kills retail:</strong> Retail traders open 5 correlated tech stocks, 3 crypto positions, and 2 options spreads. They treat them as separate "bets," but mathematically, they are flipping 10 coins simultaneously. Their effective bet size is astronomical relative to their capital.</p>
+
+<p>Institutions, by contrast, use <strong>Value-at-Risk (VaR)</strong> models and portfolio-level risk limits to ensure they never violate this constraint .</p>
+
+<h2>5. The Skew Problem: R. Michael Canjar and the Jackpot Fallacy</h2>
+
+<p><strong>R. Michael Canjar</strong> (University of Detroit Mercy) identified another critical flaw in retail risk management: <strong>skew</strong>.</p>
+
+<p>The standard approximation for risk of ruin, used by many unsophisticated traders, is the "normal approximation":</p>
+
+<div class="formula-block">
+\[
+\text{RoR} \approx \exp\left(-\frac{2\mu B}{\sigma^2}\right)
+\]
+</div>
+
+<p>Where \(\mu\) is expected return, \(\sigma^2\) is variance, and \(B\) is bankroll.</p>
+
+<p>Canjar proved that this formula <strong>fails catastrophically</strong> in games (or trading strategies) with high positive skew—i.e., strategies where you lose small amounts frequently but win large amounts rarely (think: selling options, buying lottery tickets, or "meme stock" gambles) .</p>
+
+<p><strong>His finding:</strong> In high-skew scenarios, the standard formula underestimates risk of ruin. However, a variant replacing variance with the <em>second moment</em> creates a conservative (safe) upper bound.</p>
+
+<p><strong>Retail implication:</strong> Traders are drawn to strategies with "lottery-like" payoffs (1000% gains on Dogecoin). They perceive these as high-return strategies. Mathematically, they are actually high-ruin strategies.</p>
+
+<h2>6. Why Institutions Don't Lose: The Taranto & Khan Grid Theory</h2>
+
+<p>Recent work by <strong>Aldo Taranto</strong> and <strong>Shahjahan Khan</strong> (University of Southern Queensland) reframes the Gambler’s Ruin problem for modern financial markets .</p>
+
+<p>They introduce the <strong>Bi-directional Grid Absorption Barrier</strong> model. Instead of a simple random walk, institutions engage in <em>grid trading</em>—placing orders at multiple price levels simultaneously.</p>
+
+<p><strong>Key Theorem:</strong> While grid trading is still subject to ruin, the <em>expected time to ruin</em> is significantly longer than in classical Gambler’s Ruin. Moreover, institutions use <strong>two absorption barriers</strong>:</p>
+<ol>
+<li><strong>Zero balance</strong> (ruin).</li>
+<li><strong>Profit target</strong> (take-profit).</li>
+</ol>
+<p>By defining a stopping condition at a profit target, the institution converts an infinite-horizon ruin problem into a finite-horizon problem with a probability of success .</p>
+
+<p><strong>Retail traders do the opposite.</strong> They move their stop-losses further away ("it will come back") and take profits early. This effectively <em>removes</em> the profit-target barrier and <em>lengthens</em> the distance to the ruin barrier. They transform a winnable finite game into an unwinnable infinite game.</p>
+
+<h2>7. The Synthesis: A Tale of Two Bankrolls</h2>
+
+<p>Let us assemble the evidence.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Factor</th>
+            <th>Retail Trader</th>
+            <th>Institutional Trader</th>
+            <th>Mathematical Consequence</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bankroll</td>
+            <td>Finite ($5k – $50k)</td>
+            <td>Finite but massive ($100M+)</td>
+            <td>Retail ruin probability ~ \( \frac{B_{\text{inst}}}{B_{\text{retail}}+B_{\text{inst}}} \) → 1</td>
+        </tr>
+        <tr>
+            <td>Adversary</td>
+            <td>Visible (market)</td>
+            <td>Invisible (other traders)</td>
+            <td>Retail plays against "infinite wealth" of market</td>
+        </tr>
+        <tr>
+            <td>Bet Correlation</td>
+            <td>High (all tech stocks)</td>
+            <td>Diversified</td>
+            <td>Retail violates Grant's simultaneous coin toss limit</td>
+        </tr>
+        <tr>
+            <td>Risk Formula</td>
+            <td>"I feel lucky"</td>
+            <td>VaR / Stress Testing</td>
+            <td>Retail uses no valid risk model</td>
+        </tr>
+        <tr>
+            <td>Skew Preference</td>
+            <td>Positive (lottery)</td>
+            <td>Negative (hedging)</td>
+            <td>Retail plays Canjar's high-ruin skew games</td>
+        </tr>
+        <tr>
+            <td>Stopping Time</td>
+            <td>"HODL"</td>
+            <td>Profit target</td>
+            <td>Retail removes absorption barrier (Taranto & Khan)</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>The result is deterministic chaos for the retail trader.</strong></p>
+
+<h2>8. The Only Way to Beat the House</h2>
+
+<p>The Gambler’s Ruin problem is not a metaphor. It is a hard mathematical constraint, as immutable as gravity. <strong>Christiaan Huygens</strong> proved in 1657 that capital disparity is a death sentence in a fair game. <strong>John Kelly</strong> proved in 1956 that over-betting is a death sentence in a favorable game. <strong>Andrew Grant</strong> proved in 2013 that correlated simultaneous bets are a death sentence. <strong>Canjar</strong> proved in 2007 that jackpot-chasing is a death sentence.</p>
+
+<p>So how does a retail trader survive?</p>
+
+<ol>
+<li><strong>Acknowledge the adversary.</strong> You are not trading against "the market." You are trading against infinite capital. You are Player A. The institution is Player B. Your \(n_1\) is $5,000. Their \(n_2\) is infinity. Your probability of winning the "game" is zero unless you change the game.</li>
+<li><strong>Use fractional Kelly.</strong> Never bet more than 1-2% of capital on any single idea. If you have 10 ideas, you are flipping 10 coins. Your effective bet size is 10-20%. This is mathematically ruinous.</li>
+<li><strong>Set profit targets.</strong> Taranto and Khan prove that a profit-target barrier converts infinite ruin risk into finite probability of success.</li>
+<li><strong>Avoid high-skew strategies.</strong> If your strategy wins big rarely and loses small often, you are playing a game where the normal approximation lies to you. Your actual risk of ruin is much higher than you think.</li>
+</ol>
+
+<p>The mathematics is not hopeful. It tells us that most retail traders will, with probability approaching 1, eventually go to zero. This is not opinion; it is the corollary of a theorem proven by <strong>Christiaan Huygens</strong> 368 years ago.</p>
+
+<p>The only rational response is to either (a) increase your bankroll to institutional size (impossible for most), (b) find games where the house does not have an infinite bankroll (arbitrage, market-making), or (c) accept that trading is entertainment, not wealth creation, and size your bets accordingly.</p>
+
+<p><strong>Mathematics always wins.</strong></p>
+
+<hr style="margin: 2.5em 0 1.5em; border: 0; border-top: 2px solid #d0dbdf;" />
+
+<!-- REFERENCES – FULL CREDIT AS WRITTEN -->
+<div class="ref">
+<p><strong>References and Further Reading:</strong></p>
+<p>– <span class="author-credit">Pascal, Fermat, Huygens (1656-1657):</span> Original formulation of the ruin problem .</p>
+<p>– <span class="author-credit">De Moivre (1711), Bernoulli (1711):</span> General solution to the two-player case .</p>
+<p>– <span class="author-credit">Kelly, J.L. (1956):</span> A new interpretation of information rate. <em>Bell System Technical Journal</em>. .</p>
+<p>– <span class="author-credit">Canjar, R.M. (2007):</span> Gambler’s ruin revisited: the effects of skew and large jackpots. <em>Optimal Play</em>. .</p>
+<p>– <span class="author-credit">Katriel, G. (2012):</span> Gambler’s ruin probability – a general formula. <em>arXiv:1209.4203</em>. .</p>
+<p>– <span class="author-credit">Grant, A. (2013):</span> Betting on Simultaneous Events. <em>Oxford Handbook of the Economics of Gambling</em>. .</p>
+<p>– <span class="author-credit">Taranto, A., & Khan, S. (2020):</span> Bi-directional grid absorption barrier constrained stochastic processes. <em>Risk Governance and Control</em>. .</p>
+</div>
+
+<!-- END: absolutely no alteration, all math in MathJax, full original text -->
+
+</div> <!-- end container -->
+
+<!-- ===== ABOUT THE AUTHOR ===== -->
+<section class="author-section">
+    <div class="author-header">
+        <img src="/images/site-logo.jpg" alt="Ugbosu Charles" class="author-avatar">
+        <div class="author-info">
+            <h3>Ugbosu Charles</h3>
+            <p class="author-title">Optimization and AI Researcher</p>
+        </div>
+    </div>
+
+    <p class="author-bio">
+        Charles is a passionate researcher and writer with a focus on optimization, operations research, and artificial intelligence. He explores how emerging technologies 
+        intersect and shape our digital future.
+    </p>
+
+    <div class="author-links">
+		<a href="https://www.facebook.com/share/1bmoFREvV6/" class="author-link" target="_blank">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="author-link" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="author-link" target="_blank">
+            <i class="fab fa-researchgate"></i> ResearchGate
+        </a>
+    </div>
+
+</section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+
+    <div class="wrap">
+        <div class="footer-content">
+
+            <small class="copyright">© <span id="current-year"></span> ugbosu.name.ng. All rights reserved</small>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Update the current year in the copyright notice
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
+    </script>
+
+  <script src="/assets/javascripts/hamburger-button.js"></script>
+
+  <!-- External Scripts -->
+  <script src="/assets/javascripts/blogs2.js"></script>
+
+<script>
+    // Theme toggle for this specific page
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+
+        // Check if theme is already set
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            icon.className = 'fas fa-sun';
+        } else {
+            icon.className = 'fas fa-moon';
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+
+            if (isDark) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Update current year
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    });
+</script>
+
+<script>
+    // Calculate and display estimated reading time
+    document.addEventListener('DOMContentLoaded', function() {
+        // Look for the main content container instead of article tag
+        const contentContainer = document.querySelector('.container') || document.querySelector('main') || document.body;
+        
+        if (contentContainer) {
+            // Get all text content, excluding script and style tags
+            const clone = contentContainer.cloneNode(true);
+            const scripts = clone.querySelectorAll('script, style, .reading-time, .author-section, .site-header, .site-footer');
+            scripts.forEach(el => el.remove());
+            
+            const text = clone.textContent || '';
+            const wordCount = text.trim().split(/\s+/).length;
+            const readingTime = Math.ceil(wordCount / 200); // 200 words per minute
+            
+            const timeElement = document.getElementById('timeValue');
+            if (timeElement) {
+                timeElement.textContent = `${readingTime} minute${readingTime !== 1 ? 's' : ''}`;
+            }
+        } else {
+            // Fallback: set a default reading time
+            const timeElement = document.getElementById('timeValue');
+            if (timeElement) {
+                timeElement.textContent = '9 minutes';
+            }
+        }
+    });
+</script>
+</body>
+</html>
