@@ -108,8 +108,6 @@
   line-height: 1.7;
   color: var(--text-dark);
   transition: color 0.4s ease;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .terms-section ul, 
@@ -123,8 +121,6 @@
 .terms-section li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .terms-section li::marker {
@@ -172,8 +168,6 @@
   font-size: 0.9rem;
   color: var(--text-light);
   margin-bottom: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 /* Blog categories */
@@ -228,7 +222,6 @@
   color: var(--primary-color);
   font-size: 1.2rem;
   transition: color 0.4s ease;
-  flex-shrink: 0;
 }
 
 .warning-card {
@@ -249,7 +242,6 @@
 .warning-card i {
   color: #ef4444;
   font-size: 1.2rem;
-  flex-shrink: 0;
 }
 
 /* Intellectual property */
@@ -286,8 +278,6 @@
   font-size: 0.9rem;
   color: var(--text-light);
   margin-bottom: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 /* Contact card */
@@ -338,14 +328,11 @@
   margin: 1rem 0;
   gap: 1rem;
   transition: background-color 0.4s ease;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
 .terms-email-container i {
   color: #DB4437;
   font-size: 1.8rem;
-  flex-shrink: 0;
 }
 
 .terms-email-link {
@@ -354,7 +341,6 @@
   font-size: 1.2rem;
   font-weight: 500;
   word-break: break-all;
-  overflow-wrap: break-word;
   transition: color 0.3s ease;
 }
 
@@ -383,14 +369,11 @@
   text-align: center;
   border: 2px dashed var(--primary-color);
   transition: background-color 0.4s ease;
-  box-sizing: border-box;
 }
 
 .agreement-box p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 500;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .agreement-buttons {
@@ -403,7 +386,6 @@
 .btn-agree {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 2rem;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -415,8 +397,6 @@
   box-shadow: var(--shadow-md);
   border: none;
   cursor: pointer;
-  min-width: 180px;
-  box-sizing: border-box;
 }
 
 .btn-agree:hover {
@@ -458,197 +438,55 @@
   }
 }
 
-/* ===== FIXED MOBILE RESPONSIVENESS ===== */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  /* Ensure header stays fixed on mobile */
-  .site-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    background: rgba(var(--bg-light-rgb), 0.98);
-  }
-  
-  .header-inner {
-    padding: 0.75rem 1rem;
-  }
-  
-  /* Fix content spacing to account for fixed header */
   .terms-content {
-    margin: 1rem auto 2rem;
+    margin: 2rem auto;
     padding: 0 1rem;
-    width: 100%;
-    box-sizing: border-box;
   }
   
   .terms-content h2 {
     font-size: 2rem;
-    margin-top: 0.5rem;
   }
   
   .terms-section {
-    padding: 1.25rem;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 1.5rem;
   }
   
   .terms-section h3 {
     font-size: 1.3rem;
-    gap: 0.5rem;
-  }
-  
-  .terms-section h3 i {
-    font-size: 1.5rem;
   }
   
   .services-grid-terms {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
   
   .ip-section {
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 1rem;
   }
   
   .blog-categories {
     justify-content: center;
   }
   
-  .category-badge {
-    padding: 0.4rem 1rem;
-    font-size: 0.85rem;
-  }
-  
-  /* FIX: Email container on mobile - no encroachment */
   .terms-email-container {
     flex-direction: column;
-    gap: 0.75rem;
-    padding: 1.25rem 1rem;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    border-radius: 24px;
+    gap: 0.5rem;
+    padding: 1rem;
   }
   
   .terms-email-link {
     font-size: 1rem;
-    width: 100%;
-    text-align: center;
-    word-break: break-all;
-  }
-  
-  .terms-email-container i {
-    font-size: 2rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  /* FIX: Agreement box on mobile - no encroachment */
-  .agreement-box {
-    padding: 1.25rem;
-    margin: 1.5rem 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .agreement-box p {
-    font-size: 0.95rem;
-    margin-bottom: 1.25rem;
   }
   
   .agreement-buttons {
     flex-direction: column;
-    gap: 0.75rem;
-    width: 100%;
   }
   
   .btn-agree {
     width: 100%;
     justify-content: center;
-    padding: 0.875rem 1rem;
-    min-width: unset;
-    font-size: 1rem;
-  }
-  
-  /* Fix info cards on mobile */
-  .info-card p,
-  .warning-card p {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-  }
-  
-  .info-card i,
-  .warning-card i {
-    margin-bottom: 0.25rem;
-  }
-  
-  /* Fix lists on mobile */
-  .terms-section ul, 
-  .terms-section ol {
-    padding-left: 1.5rem;
-  }
-  
-  .terms-section li {
-    font-size: 0.95rem;
-  }
-  
-  /* Fix last updated badge on mobile */
-  .last-updated {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
-  }
-  
-  .last-updated-badge {
-    margin-left: 0;
-  }
-  
-  /* Fix contact section spacing */
-  .terms-contact-card {
-    padding: 1.5rem 1rem;
-    margin-top: 2rem;
-  }
-  
-  .terms-contact-card h3 {
-    font-size: 1.3rem;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
-  .terms-content {
-    padding: 0 0.75rem;
-  }
-  
-  .terms-section {
-    padding: 1rem;
-  }
-  
-  .terms-section h3 {
-    font-size: 1.2rem;
-  }
-  
-  .category-badge {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .btn-agree {
-    padding: 0.75rem 1rem;
-  }
-  
-  .terms-email-container {
-    padding: 1rem 0.75rem;
-  }
-  
-  .terms-email-link {
-    font-size: 0.95rem;
   }
 }
 
