@@ -1,0 +1,551 @@
+/* privacy-policy.css - Additional styles for Privacy Policy page */
+
+/* Main content area */
+.privacy-content {
+  max-width: var(--max);
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.privacy-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.privacy-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Last updated badge */
+.last-updated {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  transition: color 0.4s ease;
+}
+
+.last-updated i {
+  color: var(--primary-color);
+  transition: color 0.4s ease;
+}
+
+.last-updated-badge {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Privacy sections */
+.privacy-section {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid transparent;
+}
+
+.privacy-section:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-lg);
+  border-left: 4px solid var(--primary-color);
+}
+
+.privacy-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 2px solid var(--bg-gray);
+  padding-bottom: 0.75rem;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.privacy-section h3 i {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  transition: color 0.4s ease;
+}
+
+.privacy-section p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  transition: color 0.4s ease;
+}
+
+.privacy-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.privacy-section ul li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.75rem;
+  position: relative;
+  color: var(--text-dark);
+  transition: color 0.4s ease;
+}
+
+.privacy-section ul li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0.5rem;
+  transition: color 0.4s ease;
+}
+
+/* Nested lists */
+.privacy-section ul ul {
+  margin: 0.75rem 0 0.75rem 1.5rem;
+}
+
+.privacy-section ul ul li::before {
+  content: "◦";
+  color: var(--secondary-color);
+}
+
+/* Data collection checklist */
+.data-checklist {
+  background: var(--bg-gray);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+  transition: background-color 0.4s ease;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.checklist-item:hover {
+  background: var(--bg-light);
+}
+
+.checklist-item i {
+  width: 24px;
+  color: var(--primary-color);
+  transition: color 0.4s ease;
+}
+
+.checklist-item i.fa-check-circle {
+  color: #10b981;
+}
+
+.checklist-item i.fa-times-circle {
+  color: #ef4444;
+}
+
+/* Info cards */
+.info-card {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--primary-color);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.info-card p {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.info-card i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: color 0.4s ease;
+}
+
+/* Analytics notice */
+.analytics-notice {
+  background: var(--bg-gray);
+  padding: 1.25rem;
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: background-color 0.4s ease;
+}
+
+.analytics-notice i {
+  font-size: 2rem;
+  color: #f4b400; /* Google colors */
+}
+
+.analytics-notice .analytics-content {
+  flex: 1;
+}
+
+.analytics-notice h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  transition: color 0.4s ease;
+}
+
+.analytics-notice p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.analytics-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.analytics-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Cookie card */
+.cookie-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.cookie-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.cookie-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cookie-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.cookie-content {
+  flex: 1;
+}
+
+.cookie-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  transition: color 0.4s ease;
+}
+
+.cookie-content p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Third-party notice */
+.third-party-note {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 3px solid #ef4444;
+}
+
+.third-party-note i {
+  color: #ef4444;
+  font-size: 1.2rem;
+}
+
+/* Rights cards grid */
+.rights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.right-card {
+  background: var(--bg-gray);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.4s ease;
+  border: 1px solid var(--border-color);
+}
+
+.right-card:hover {
+  transform: translateY(-5px);
+  background: var(--bg-light);
+}
+
+.right-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  transition: color 0.4s ease;
+}
+
+.right-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+  transition: color 0.4s ease;
+}
+
+.right-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: var(--text-light);
+  transition: color 0.4s ease;
+}
+
+/* Law badges */
+.law-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  justify-content: center;
+}
+
+.law-badge {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.law-badge i {
+  font-size: 1rem;
+}
+
+/* Contact card */
+.privacy-contact-card {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  margin-top: 3rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.privacy-contact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: color 0.4s ease;
+}
+
+.privacy-contact-card h3 i {
+  color: var(--primary-color);
+  transition: color 0.4s ease;
+}
+
+.privacy-email-container {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-gray);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  margin: 1rem 0;
+  gap: 1rem;
+  transition: background-color 0.4s ease;
+}
+
+.privacy-email-container i {
+  color: #DB4437;
+  font-size: 1.8rem;
+}
+
+.privacy-email-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  word-break: break-all;
+  transition: color 0.3s ease;
+}
+
+.privacy-email-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.privacy-response-time {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  transition: color 0.4s ease;
+}
+
+/* Print styles */
+@media print {
+  .site-header,
+  .site-footer,
+  .nav-overlay,
+  .menu-toggle,
+  .social-icons {
+    display: none !important;
+  }
+  
+  .privacy-content {
+    margin: 1rem auto;
+  }
+  
+  .privacy-section {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    break-inside: avoid;
+  }
+  
+  .privacy-section:hover {
+    transform: none;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .privacy-content {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .privacy-content h2 {
+    font-size: 2rem;
+  }
+  
+  .privacy-section {
+    padding: 1.5rem;
+  }
+  
+  .privacy-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .rights-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cookie-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .analytics-notice {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .privacy-email-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .privacy-email-link {
+    font-size: 1rem;
+  }
+  
+  .law-badges {
+    justify-content: center;
+  }
+}
+
+/* Dark theme specific overrides */
+body.dark-theme .analytics-notice {
+  background: var(--bg-light);
+}
+
+body.dark-theme .cookie-card {
+  background: var(--bg-gray);
+}
+
+body.dark-theme .right-card {
+  background: var(--bg-light);
+}
+
+body.dark-theme .right-card:hover {
+  background: var(--bg-gray);
+}
+
+body.dark-theme .privacy-email-container {
+  background: var(--bg-light);
+}
