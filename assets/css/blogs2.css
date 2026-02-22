@@ -809,3 +809,28 @@ body.dark-theme .author-title {
         max-width: 1000px;
     }
 }
+
+/* Post meta row consistency */
+.post-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0 2rem 0;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--blog-container-border);
+    border-bottom: 1px solid var(--blog-container-border);
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.post-meta-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post-meta-row i {
+    color: var(--primary-color);
+}
