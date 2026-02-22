@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
 	{
+    title: "The Hidden Mental Toll of Using AI for Complex Projects: A Personal Experience",
+    date: "February 22, 2026",
+    description:
+      "Let me take you back to December 2024, when I started writing my dissertation. I began with a popular AI chatbot to get a clearer direction on what to research. My first query asked for suggestions on areas in optimization I could explore. The chatbot returned a long list of options! I reluctantly picked one, even though many others also looked promising. Next, I asked for possible topics within that area. Again, I received another long list. Choosing a specific topic became difficult because almost every option seemed exciting. Whenever I picked ...",
+    image: "/images/ai-mental-stress.png",
+   tags: ["Blog"],
+    link: "https://ugbosu.name.ng/blogs/can-you-trust-ai-for-research"
+  },
+	{
     title: "The Man Who Knew Infinity: The Enduring Legacy of Srinivasa Ramanujan",
     date: "February 14, 2026",
     description:
