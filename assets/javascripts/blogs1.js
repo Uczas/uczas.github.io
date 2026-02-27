@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
 	{
+    title: "The 'First Class' Trap: Why Your Degree Might Not Be Enough Anymore",
+    date: "February 27, 2026",
+    description:
+      "If I told you there are no jobs in the Nigerian oil sector, you’d probably laugh and call me a liar. And you’d be right. The jobs are still there. But let’s sit on the real question, the one that keeps many of us up at night: who is getting them? It’s not like we are lacking qualified people. Walk through any Nigerian university town—Nsukka, Benin, Zaria, Ile-Ife, Abraka—and you’ll see them. The graduates. Every single year, our system celebrates a record number of First Class and Second Class Upper honourees. We take pictures ...",
+    image: "/images/skill-required.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.name.ng/blogs/the-first-class-trap-why-your-degree-might-not-be-enough-anymore"
+  },
+	{
     title: "The Hidden Mental Toll of Using AI for Complex Projects: A Personal Experience",
     date: "February 22, 2026",
     description:
