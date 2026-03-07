@@ -4,8 +4,7 @@ const blogs = [
     title: "If You Must Be Relevant!",
     date: "March 7, 2026",
     description:
-      "We have all been there. You watch someone struggle to swipe, tap, or find a setting, and a wave of impatience washes over you. To you, the interface feels intuitive, almost second nature. But here is the hard truth: it appears easy to you not because the app itself is inherently simple, but because you likely started using it when its features were still few and far between. You grew with the technology.This is the invisible barrier between generations of tech users...
-",
+      "We have all been there. You watch someone struggle to swipe, tap, or find a setting, and a wave of impatience washes over you. To you, the interface feels intuitive, almost second nature. But here is the hard truth: it appears easy to you not because the app itself is inherently simple, but because you likely started using it when its features were still few and far between. You grew with the technology.This is the invisible barrier between generations of tech users...",
     image: "/images/typewriter.jpg",
    tags: ["Blog"],
     link: "https://ugbosu.name.ng/blogs/if-you-must-be-relevant"
