@@ -23,7 +23,7 @@ const blogs = [
     date: "February 22, 2026",
     description:
       "Let me take you back to December 2024, when I started writing my dissertation. I began with a popular AI chatbot to get a clearer direction on what to research. My first query asked for suggestions on areas in optimization I could explore. The chatbot returned a long list of options! I reluctantly picked one, even though many others also looked promising. Next, I asked for possible topics within that area. Again, I received another long list. Choosing a specific topic became difficult because almost every option seemed exciting. Whenever I picked ...",
-    image: "/images/ai-mental-stress.png",
+    image: "/images/ai-mental-stress.jpg",
    tags: ["Blog"],
     link: "https://ugbosu.name.ng/blogs/can-you-trust-ai-for-research"
   },
@@ -59,7 +59,7 @@ const blogs = [
     date: "December 2, 2025",
     description:
       "At this point, it is time we quit the debate of whether AI is better at reasoning or solving problems than human beings or vice versa. No single human currently can outperform the technology generally, except for some very specific and deep areas not fed to it yet. Most people, especially the young folks, now rely on AI chatbots to do even the littlest things like generating a birthday wish, new month messages, love texts, and so on. Then at the workplace, chatbots are the new letter-writing tools. The so-called Gen Z, and even people from previous generations who are aware of the technology, no longer ...",
-    image: "/images/humanoids.png",
+    image: "/images/humanoids.jpg",
    tags: ["Blog"],
     link: "https://ugbosu.name.ng/blogs/automation-is-coming"
   },
