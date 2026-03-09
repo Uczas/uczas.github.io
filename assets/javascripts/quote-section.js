@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
   const quotes = [
+ { "text": "Wrong does not cease to be wrong because the majority share in it", "author": "Leo Tolstoy" },
   { "text": "One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man", "author": "Elbert Hubbard" },
   { "text": "Pure mathematics is, in its way, the poetry of logical ideas.", "author": "Albert Einstein" },
   { "text": "Mathematics is a universal language, and its truths are independent of time and place.", "author": "David Hilbert" },
