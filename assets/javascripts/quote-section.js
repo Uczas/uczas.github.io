@@ -261,69 +261,58 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById('quote-text').textContent = `${randomQuote.text}`;
   document.getElementById('quote-author').textContent = `— ${randomQuote.author}`;
 
-  // ====== IMAGE-BASED SHARE FUNCTIONALITY ======
+  // ====== IMAGE-BASED SHARE FUNCTIONALITY (FIXED) ======
   const shareButton = document.getElementById('share-quote-btn');
+  let isProcessing = false; // Prevent multiple clicks
   
   async function shareQuoteAsImage() {
+    // Prevent multiple simultaneous shares
+    if (isProcessing) return;
+    isProcessing = true;
+    
     const quoteSection = document.querySelector('.quote-section');
-    const quoteText = document.getElementById('quote-text').innerText;
-    const quoteAuthor = document.getElementById('quote-author').innerText;
     
-    // Save original button content
+    // Temporarily hide the share button for clean capture
+    const originalButtonDisplay = shareButton.style.visibility;
+    shareButton.style.visibility = 'hidden';
+    
+    // Show loading state on button (but button is hidden, so this is just for after)
     const originalButtonHTML = shareButton.innerHTML;
-    
-    // Show loading state with spinner
-    shareButton.innerHTML = `
-        <svg class="share-icon spinner-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.4 31.4"/>
-            <path d="M12 2 L12 6 M12 18 L12 22 M2 12 L6 12 M18 12 L22 12" stroke="currentColor" stroke-width="2" fill="none"/>
-        </svg>
-        <span class="share-text">Generating...</span>
-    `;
-    shareButton.disabled = true;
     
     try {
       // Make sure html2canvas is loaded
       if (typeof html2canvas === 'undefined') {
-        throw new Error('html2canvas not loaded. Please check your internet connection and reload the page.');
+        throw new Error('html2canvas not loaded. Please check your internet connection.');
       }
       
-      // Add a temporary class to ensure proper capture
-      quoteSection.style.transform = 'translateZ(0)'; // Hardware acceleration
+      // Add hardware acceleration for better capture
+      quoteSection.style.transform = 'translateZ(0)';
       
-      // Capture the quote section as canvas with high quality
+      // Capture the quote section WITHOUT the share button
       const canvas = await html2canvas(quoteSection, {
-        scale: 2.5, // Higher quality for social media
-        backgroundColor: null, // Preserve transparency/background image
-        useCORS: true, // Allow cross-origin images (if your background image is from a CDN)
+        scale: 2.5,
+        backgroundColor: null,
+        useCORS: true,
         logging: false,
         allowTaint: false,
         windowWidth: quoteSection.scrollWidth,
-        windowHeight: quoteSection.scrollHeight,
-        onclone: (clonedDoc, element) => {
-          // Ensure cloned element has all styles
-          const clonedSection = clonedDoc.querySelector('.quote-section');
-          if (clonedSection) {
-            clonedSection.style.transform = 'none';
-          }
-        }
+        windowHeight: quoteSection.scrollHeight
       });
       
-      // Remove temporary class
+      // Remove temporary style
       quoteSection.style.transform = '';
       
       // Convert canvas to blob
       const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png', 0.95));
       
-      // Create a file from blob
+      // Create file from blob
       const file = new File([blob], 'quote-of-the-day.png', { type: 'image/png' });
       
-      // Share or download based on device capability
+      // Share image ONLY (no text) on mobile
       if (navigator.share && /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
         try {
           await navigator.share({
             title: 'Quote of the Day',
-            text: `${quoteText} ${quoteAuthor}`,
             files: [file]
           });
         } catch (err) {
@@ -333,28 +322,27 @@ document.addEventListener("DOMContentLoaded", async () => {
           }
         }
       } else {
-        // Desktop fallback: download the image
+        // Desktop: download the image
         downloadImage(canvas);
       }
       
     } catch (err) {
       console.error('Image generation failed:', err);
-      alert('Unable to generate shareable image. Please try again or take a screenshot.\n\nError: ' + err.message);
-      
-      // Reset button
-      shareButton.innerHTML = originalButtonHTML;
-      shareButton.disabled = false;
+      alert('Unable to generate shareable image. Please try again or take a screenshot.');
+    } finally {
+      // Restore share button visibility
+      shareButton.style.visibility = originalButtonDisplay;
+      isProcessing = false;
     }
   }
   
   function downloadImage(canvas) {
-    // Create download link
     const link = document.createElement('a');
     link.download = `quote-${Date.now()}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
     
-    // Show success feedback
+    // Show temporary success feedback on button
     const originalHTML = shareButton.innerHTML;
     shareButton.innerHTML = `
         <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -365,11 +353,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     setTimeout(() => {
       shareButton.innerHTML = originalHTML;
-      shareButton.disabled = false;
     }, 2000);
   }
   
-  // Add click event listener to share button
+  // Add click event listener
   if (shareButton) {
     shareButton.addEventListener('click', shareQuoteAsImage);
   }
