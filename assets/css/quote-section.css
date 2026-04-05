@@ -95,8 +95,8 @@
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 2rem;
-    padding: 0.25rem 0.6rem;
-    margin: 1.5rem auto 0 auto;
+    padding: 0.3rem 0.7rem;
+    margin: 0.8rem auto 0.3rem auto;  /* ← ADJUST THIS */
     cursor: pointer;
     font-size: 0.85rem;
     font-weight: 500;
@@ -106,7 +106,6 @@
     font-family: system-ui, -apple-system, sans-serif;
     width: fit-content;
 }
-
 .share-quote-btn:hover {
     background: rgba(255, 255, 255, 0.35);
     transform: scale(1.02);
@@ -145,8 +144,8 @@
 /* Mobile adjustment */
 @media (max-width: 768px) {
     .share-quote-btn {
-        padding: 0.3rem 0.6rem;
-        margin: 1rem auto 0 auto;
+        padding: 0.3rem 0.7rem;
+        margin: 0.6rem auto 0.2rem auto;
     }
     
     .share-icon {
