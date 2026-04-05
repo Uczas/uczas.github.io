@@ -84,3 +84,79 @@
         font-size: 1.2rem;
     }
 }
+
+/* ====== Share Button Styles ====== */
+.share-quote-btn {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 2;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.share-quote-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.02);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.share-quote-btn:active {
+    transform: scale(0.98);
+}
+
+.share-quote-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.share-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.share-text {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Loading state spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.share-quote-btn .spinner-icon {
+    animation: spin 1s linear infinite;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .share-quote-btn {
+        bottom: 1rem;
+        left: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .share-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .share-text {
+        font-size: 0.7rem;
+    }
+}
