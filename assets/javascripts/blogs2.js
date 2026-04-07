@@ -60,6 +60,14 @@ function renderBlogs() {
   renderPagination();
 }
 
+// ====== SCROLL TO TOP FUNCTION ======
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
 // ====== RENDER PAGINATION ======
 function renderPagination() {
   const totalPages = Math.ceil(filteredBlogs.length / postsPerPage);
@@ -74,6 +82,7 @@ function renderPagination() {
       e.preventDefault();
       currentPage = i;
       renderBlogs();
+      scrollToTop(); // Add this line to scroll to top
     });
     pagination.appendChild(a);
   }
