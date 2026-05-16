@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
 {
+    title: "The Paradox of Infinite Knowledge: Why We're Not Smarter Despite Having Everything",
+    date: "May 16, 2026",
+    description:
+      "For the first time in human history, we carry nearly unlimited information in the palm of our hand. A small device with an internet connection, a screen, and a browser is all it takes to access the vast accumulated knowledge of civilization. The cloud has become our collective memory. One would assume this abundance would forge the sharpest, most knowledgeable generation to ever walk the earth. But that assumption is proving false...",
+    image: "/images/paradox-of-infinite-knowledge.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/The-Paradox-of-Infinite-Knowledge"
+  },
+{
     title: "If You Must Be Relevant!",
     date: "March 7, 2026",
     description:
