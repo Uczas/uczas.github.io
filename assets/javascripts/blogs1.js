@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
 {
+    title: ">What Will You Offer When The Jobs Are Gone?",
+    date: "June 7, 2026",
+    description:
+      "I hope you aren’t getting certificates just to hide under them, waiting to be employed? If that’s your plan, it’s time to think again—because the ground is shifting beneath our feet. The world is moving toward almost complete automation. We’re heading toward a reality where multi-million and even billion-dollar companies will be run by a handful of individuals, supported by intelligent systems that never sleep, never demand a raise, and ...",
+    image: "/images/what-will-you-offer.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/what-will-you-offer-when-the-jobs-are-gone"
+  },
+{
     title: "The Paradox of Infinite Knowledge: Why We're Not Smarter Despite Having Everything",
     date: "May 16, 2026",
     description:
