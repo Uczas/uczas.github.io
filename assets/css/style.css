@@ -263,18 +263,162 @@ body {
     transition: color 0.4s ease;
 }
 
+/* ===== HERO NAME WITH HANDWRITTEN FONT ===== */
 .hero-name {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
-    position: relative;
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-dark);
+    transition: color 0.4s ease;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+
+/* Handwritten last name */
+.hero-name .handwritten {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    transition: background 0.4s ease;
+    position: relative;
+    display: inline-block;
+    font-size: 3.8rem; /* Slightly larger for handwritten feel */
+    line-height: 1.1;
+}
+
+/* First name - keep clean sans-serif with gradient */
+.hero-name {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Override for handwritten to keep its gradient */
+.hero-name .handwritten {
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Pen icon styling */
+.hero-name .pen-icon {
+    display: inline-block;
+    font-size: 2.2rem;
+    -webkit-text-fill-color: initial;
+    background: none;
+    animation: penFloat 3s ease-in-out infinite;
+    transform-origin: bottom center;
+    margin-left: 0.1rem;
+    line-height: 1;
+}
+
+/* Pen floating animation */
+@keyframes penFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) rotate(8deg) scale(1.1);
+    }
+}
+
+/* Hover effect - pen writes when hovering over name */
+.hero-name:hover .pen-icon {
+    animation: penWrite 0.8s ease-in-out;
+}
+
+@keyframes penWrite {
+    0% {
+        transform: translateY(0) rotate(-5deg) scale(1);
+    }
+    30% {
+        transform: translateY(-15px) rotate(20deg) scale(1.2);
+    }
+    60% {
+        transform: translateY(-5px) rotate(-10deg) scale(1.1);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+}
+
+/* Dark theme adjustments */
+body.dark-theme .hero-name {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body.dark-theme .hero-name .handwritten {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 2.5rem;
+        gap: 0.1rem;
+        justify-content: center;
+    }
+    
+    .hero-name .handwritten {
+        font-size: 2.8rem;
+    }
+    
+    .hero-name .pen-icon {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-name {
+        font-size: 2rem;
+        gap: 0.05rem;
+    }
+    
+    .hero-name .handwritten {
+        font-size: 2.2rem;
+    }
+    
+    .hero-name .pen-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .hero-name .pen-icon {
+        animation: none;
+    }
+    
+    .hero-name:hover .pen-icon {
+        animation: none;
+    }
+}
+/* Subtle hand-drawn underline effect */
+.hero-name .handwritten::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), transparent);
+    border-radius: 2px;
+    opacity: 0.3;
+    transform: scaleX(0.8);
+    transform-origin: left;
 }
 
 .hero-tagline {
