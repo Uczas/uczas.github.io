@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
 {
+    title: "The Art of Business Optimization: Why 'Good Enough' Is Not Enough",
+    date: "July 13, 2026",
+    description:
+      "Every business, regardless of its size or industry, is constantly engaged in one fundamental exercise: optimization. At its core, optimization is beautifully simple—we are either trying to minimize something or maximize something. Every company across the globe, whether consciously or not, operates between these two poles: minimizing business costs on one hand, and maximizing revenue on the other ...",
+    image: "/images/optimization_gradient.png",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/business-optimization-why-good-enough-is-not-enough"
+  },
+{
     title: "What Will You Offer When The Jobs Are Gone?",
     date: "June 7, 2026",
     description:
