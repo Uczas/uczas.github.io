@@ -4,8 +4,7 @@ const blogs = [
     title: "How NERD Might Reshape Nigeria's Education Sector",
     date: "July 17, 2026",
     description:
-      "Nigeria's higher education sector is currently undergoing a subtle technological revolution. The government, since the year 2025 began, commenced the roll out of the Nigeria Education Repository and Databank (NERD). This may not be another piece of administrative paperwork; It is a hint of a  fundamental shift in how the country validates academic achievement going forward. 
-The scheme ...",
+      "Nigeria's higher education sector is currently undergoing a subtle technological revolution. The government, since the year 2025 began, commenced the roll out of the Nigeria Education Repository and Databank (NERD). This may not be another piece of administrative paperwork; It is a hint of a  fundamental shift in how the country validates academic achievement going forward. The scheme ...",
     image: "/images/nerd-nigeria.png",
    tags: ["Blog"],
     link: "https://ugbosu.com/blogs/nerd-nigeria-education-sector"
