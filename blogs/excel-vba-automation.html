@@ -116,11 +116,17 @@
 
 <p>The problem is that most times, real-world data layouts don't arrange themselves to suit a clean formula. The data wasn't arranged in a neat, formula-friendly grid. Member names ran down a column, which was fine. But the particulars—<strong>SHARES</strong>, <strong>THRIFT SAVINGS</strong>, <strong>DEPOSIT</strong>, and so on—were arranged row-wise. And underneath each particular, like SHARES, sat two sub-rows: <strong>CASH</strong> and <strong>BANK</strong>. To get the total for SHARES, you needed to sum CASH and BANK first, then carry that result into the membership card. Dragging a cell formula across, the normal way people automate Excel, produced incorrect results. The relative references would shift in ways that didn't match the data structure. So my client was stuck doing it manually. Cell by cell. Member by member. Month after month.</p>
 
-<img src="/images/monthly_account_sheet.png" alt="Monthly account sheet showing CASH and BANK sub-rows for each member" style="max-width:100%; margin: 20px 0;">
+<figure style="margin: 20px 0;">
+    <img src="monthly_account_sheet.png" alt="Monthly account sheet showing CASH and BANK sub-rows for each member" style="max-width:100%;">
+    <figcaption><em>The monthly account sheet—notice the CASH and BANK sub-rows under each particular. This layout breaks standard Excel formulas.</em></figcaption>
+</figure>
 
 <p>The second challenge was the Personal Ledger sheet. At year-end, every member's financial standing needed to be summarized from their membership card—brought forward balance plus twelve months of contributions, savings, deposits, and loan activity. Again, a formula that worked for one member wouldn't drag cleanly to the next. The layout broke the automation. So the ledger update, which should have been a quick calculation, became another manual marathon.</p>
 
-<img src="/images/brought_forward_2025.png" alt="2025 brought forward balances for each member" style="max-width:100%; margin: 20px 0;">
+<figure style="margin: 20px 0;">
+    <img src="brought_forward_2025.png" alt="2025 brought forward balances for each member" style="max-width:100%;">
+    <figcaption><em>The brought-forward balances from 2025—each member's starting point for the new year.</em></figcaption>
+</figure>
 
 <p>When my client explained this to me, I didn't just hear a technical problem. I heard fatigue. I heard the quiet frustration of someone who knew what needed to be done, understood Excel well enough to attempt it, and yet was still spending hours on work that a properly designed system should handle in seconds.</p>
 
@@ -130,11 +136,17 @@
 
 <p>The VBA solution does what a dragged formula could never do reliably with that data structure. It programmatically locates each member, reads their monthly contributions across all particulars, correctly sums the CASH and BANK sub-rows, pulls the brought-forward balance, and populates a professionally formatted membership card. <strong>All with a single click.</strong> For one member. Or for all members at once.</p>
 
-<img src="/images/membership_cards.png" alt="Membership cards showing monthly contributions across all 12 months" style="max-width:100%; margin: 20px 0;">
+<figure style="margin: 20px 0;">
+    <img src="membership_cards.png" alt="Membership cards showing monthly contributions across all 12 months" style="max-width:100%;">
+    <figcaption><em>The automated membership card—monthly contributions, brought-forward balance, and year-end totals all populated with one click.</em></figcaption>
+</figure>
 
 <p>The same logic extends to the Personal Ledger. The system calculates year-end totals, loan balances, and total assets for each member automatically. No manual summing. No dragging formulas and praying they reference the right cells. No staying up late the night before a general meeting trying to finish reports that should have been ready days ago.</p>
 
-<img src="/images/personal_ledger_2026.png" alt="Personal ledger showing year-end totals for all members" style="max-width:100%; margin: 20px 0;">
+<figure style="margin: 20px 0;">
+    <img src="personal_ledger_2026.png" alt="Personal ledger showing year-end totals for all members" style="max-width:100%;">
+    <figcaption><em>The year-end personal ledger—all calculations automated, from total assets to dividends.</em></figcaption>
+</figure>
 
 <p>What makes this solution work isn't that I used VBA instead of formulas. It's that <strong>I respected the actual structure of the client's data</strong> and built logic that adapts to it, rather than forcing the client to restructure years of records to suit a formula. The automation bends to the human reality, not the other way around.</p>
 
