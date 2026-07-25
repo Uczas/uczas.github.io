@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-45W1075T2G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-45W1075T2G');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Excel Problem That Formulas Can't Solve (But VBA Can)</title>
+
+  <meta name="description" content="From hours of manual spreadsheet work to one-click automation. See how VBA solved a cooperative society's Excel formula nightmare." />
+  <meta name="author" content="Charles Ugbosu" />
+  <link rel="canonical" href="https://ugbosu.com/blogs/excel-vba-automation" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Excel Problem That Formulas Can't Solve (But VBA Can)" />
+  <meta property="og:description" content="From hours of manual spreadsheet work to one-click automation. See how VBA solved a cooperative society's Excel formula nightmare." />
+  <meta property="og:image" content="https://ugbosu.com/images/excel-VBA-solution.png" />
+  <meta property="og:url" content="https://ugbosu.com/blogs/excel-vba-automation" />
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="ugbosu.com"/>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Excel Problem That Formulas Can't Solve (But VBA Can)",
+    "description": "From hours of manual spreadsheet work to one-click automation. See how VBA solved a cooperative society's Excel formula nightmare.",
+    "author": {
+      "@type": "Person",
+      "name": "Charles Ugbosu"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ugbosu.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ugbosu.com/android-chrome-512x512.png"
+      }
+    },
+    "image": "https://ugbosu.com/images/excel-VBA-solution.png",
+    "url": "https://ugbosu.com/blogs/excel-vba-automation",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ugbosu.com/blogs/excel-vba-automation"
+    }
+  }
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="/assets/css/blogs2.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="mobile-header-group">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="site-title">
+          <img src="/android-chrome-512x512.png" alt="Charles Ugbosu" class="profile-img">
+          <a href="/">Charles Ugbosu</a>
+        </div>
+      </div>
+      <nav id="primary-nav" class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blogs.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <button class="nav-theme-toggle" id="navThemeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+          <span class="theme-text">Dark Mode</span>
+        </button>
+      </nav>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <div class="blog-post-content">
+    <h1>The Excel Problem That Formulas Can't Solve (But VBA Can)</h1>
+
+    <div style="text-align: center;">
+      <div class="reading-time" id="readingTime">
+        <i class="far fa-clock"></i> Estimated reading time: <span id="timeValue">9 minutes</span>
+        <span style="display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="far fa-calendar-alt" style="color: var(--primary-color);"></i>Published: July 25, 2026
+        </span>
+      </div>
+    </div>
+
+    <p>Recently, I delivered a solution to a client—a financial secretary to a small cooperative society. It wasn't the kind of project that makes headlines, but it was the kind that quietly transforms someone's daily life. And honestly, those are my favorite.</p>
+
+<p>The challenge was straightforward to describe but punishing to live with. Every month, my client had to generate membership cards from a monthly contribution sheet for each member. Then, at the end of the year, he had to update a personal ledger sheet using the sum of the balance brought forward from the previous year and each month of the current year. On paper, this sounds like a job for a simple <code>=SUM()</code> formula. And my client, who already knew his way around Excel, had tried exactly that.</p>
+
+<p>The problem is that most times, real-world data layouts don't arrange themselves to suit a clean formula. The data wasn't arranged in a neat, formula-friendly grid. Member names ran down a column, which was fine. But the particulars—<strong>SHARES</strong>, <strong>THRIFT SAVINGS</strong>, <strong>DEPOSIT</strong>, and so on—were arranged row-wise. And underneath each particular, like SHARES, sat two sub-rows: <strong>CASH</strong> and <strong>BANK</strong>. To get the total for SHARES, you needed to sum CASH and BANK first, then carry that result into the membership card. Dragging a cell formula across, the normal way people automate Excel, produced incorrect results. The relative references would shift in ways that didn't match the data structure. So my client was stuck doing it manually. Cell by cell. Member by member. Month after month.</p>
+
+<img src="/images/monthly_account_sheet.png" alt="Monthly account sheet showing CASH and BANK sub-rows for each member" style="max-width:100%; margin: 20px 0;">
+
+<p>The second challenge was the Personal Ledger sheet. At year-end, every member's financial standing needed to be summarized from their membership card—brought forward balance plus twelve months of contributions, savings, deposits, and loan activity. Again, a formula that worked for one member wouldn't drag cleanly to the next. The layout broke the automation. So the ledger update, which should have been a quick calculation, became another manual marathon.</p>
+
+<img src="/images/brought_forward_2025.png" alt="2025 brought forward balances for each member" style="max-width:100%; margin: 20px 0;">
+
+<p>When my client explained this to me, I didn't just hear a technical problem. I heard fatigue. I heard the quiet frustration of someone who knew what needed to be done, understood Excel well enough to attempt it, and yet was still spending hours on work that a properly designed system should handle in seconds.</p>
+
+<p>That's where I come in. Not just with code, but with a way of looking at the problem differently.</p>
+
+<p>I developed a <strong>Visual Basic Application (VBA)</strong> solution embedded right inside his existing Excel workbook. I didn't ask him to migrate to a new platform or learn a new tool. His data stayed where it was. His sheets kept their familiar names. I simply added intelligence on top of what he already had.</p>
+
+<p>The VBA solution does what a dragged formula could never do reliably with that data structure. It programmatically locates each member, reads their monthly contributions across all particulars, correctly sums the CASH and BANK sub-rows, pulls the brought-forward balance, and populates a professionally formatted membership card. <strong>All with a single click.</strong> For one member. Or for all members at once.</p>
+
+<img src="/images/membership_cards.png" alt="Membership cards showing monthly contributions across all 12 months" style="max-width:100%; margin: 20px 0;">
+
+<p>The same logic extends to the Personal Ledger. The system calculates year-end totals, loan balances, and total assets for each member automatically. No manual summing. No dragging formulas and praying they reference the right cells. No staying up late the night before a general meeting trying to finish reports that should have been ready days ago.</p>
+
+<img src="/images/personal_ledger_2026.png" alt="Personal ledger showing year-end totals for all members" style="max-width:100%; margin: 20px 0;">
+
+<p>What makes this solution work isn't that I used VBA instead of formulas. It's that <strong>I respected the actual structure of the client's data</strong> and built logic that adapts to it, rather than forcing the client to restructure years of records to suit a formula. The automation bends to the human reality, not the other way around.</p>
+
+<p>This project, like many I deliver, sits at the intersection of <strong>listening and building</strong>. The technical solution is almost always the easier part. The harder part—the part I take pride in—is truly understanding the workflow, the data structure, the existing skill level of the people involved, and designing something that feels less like a software implementation and more like a natural, welcome upgrade to how things already work.</p>
+
+<p>I build these solutions using whatever tool fits the context. Sometimes it's Excel VBA, because the client lives inside Excel and the solution should meet them where they are. Sometimes it's Python, when data processing needs to happen at scale or on a schedule. Sometimes it's Google Apps Script, when the team is distributed and cloud-native. Sometimes it's a custom web application. <strong>The technology serves the problem. Never the other way around.</strong></p>
+
+<p>If your organization is wrestling with processes that should be simple but have been made complicated by messy data layouts, manual repetition, or tools that almost—but don't quite—work, I'd be glad to have a conversation. I don't lead with a pitch. I lead with questions. I want to understand what you're dealing with before I suggest anything.</p>
+
+<p><strong>Feel free to reach out at <a href="mailto:charles@ugbosu.com">charles@ugbosu.com</a>. I'd love to hear about the process that's been quietly stealing your team's time.</strong></p>
+
+    <img src="https://ugbosu.com/images/excel-VBA-solution.png" alt="VBA Solution" class="article-image">
+
+    <p style="color: red; text-decoration: none;">
+    <a href="/blogs/business-optimization-why-good-enough-is-not-enough" style="color: red; text-decoration: none;">
+        📖 ALSO READ: The Art of Business Optimization: Why 'Good Enough' Is Not Enough
+    </a>
+</p>
+<p style="color: red; text-decoration: none;">
+    <a href="/blogs/The-Paradox-of-Infinite-Knowledge" style="color: red; text-decoration: none;">
+        📖 ALSO READ: The Paradox of Infinite Knowledge
+    </a>
+</p>
+<p style="color: red; text-decoration: none;">
+    <a href="/blogs/if-you-must-be-relevant" style="color: red; text-decoration: none;">
+        📖 ALSO READ: If You Must Be Relevant!
+    </a>
+</p>
+  </div>
+
+  <section class="author-section">
+    <div class="author-header">
+      <img src="/images/site-logo.jpg" alt="Ugbosu Charles" class="author-avatar">
+      <div class="author-info">
+        <h3>Charles Ugbosu</h3>
+        <p class="author-title">Optimization and AI Researcher</p>
+      </div>
+    </div>
+    <p class="author-bio">
+      Charles is a passionate researcher and writer with a focus on optimization, operations research, and artificial intelligence. He explores how emerging technologies intersect and shape our digital future.
+    </p>
+    <div class="author-links">
+      <a href="https://www.facebook.com/share/1bmoFREvV6/" class="author-link" target="_blank">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+      <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="author-link" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="author-link" target="_blank">
+        <i class="fab fa-researchgate"></i> ResearchGate
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-content">
+        <div class="newsletter-wrapper">
+          <div class="newsletter-container">
+            <div class="newsletter-content">
+              <i class="fas fa-envelope-open-text newsletter-icon"></i>
+              <h4 class="newsletter-title">Never miss an article</h4>
+              <p class="newsletter-text">Get notified via email whenever I publish new insights on AI, optimization, and career growth.</p>
+              <form action="https://buttondown.com/api/emails/embed-subscribe/ugbosu" method="post" class="newsletter-form" referrerpolicy="unsafe-url">
+                <div class="form-group">
+                  <input type="email" name="email" id="bd-email" class="newsletter-input" placeholder="Enter your email address" required>
+                  <button type="submit" class="newsletter-button">
+                    Subscribe <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+                <p class="newsletter-footer">
+                  No spam, unsubscribe anytime.
+                  <a href="https://buttondown.com/refer/ugbosu" target="_blank" class="newsletter-link">Powered by Buttondown</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="social-icon researchgate" target="_blank" title="ResearchGate">
+            <i class="fab fa-researchgate"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="social-icon linkedin" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div style="margin: 1rem 0; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem;">
+          <a href="/privacy-policy.html" style="color: var(--text-light); text-decoration: none; transition: color 0.3s ease;">Privacy Policy</a>
+          <span style="color: var(--text-light);">|</span>
+          <a href="/terms-of-service.html" style="color: var(--text-light); text-decoration: none; transition: color 0.3s ease;">Terms of Service</a>
+        </div>
+        <small class="copyright">
+          © <span id="current-year"></span> ugbosu.com. All rights reserved
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) yearElement.textContent = new Date().getFullYear();
+    });
+  </script>
+  <script src="/assets/javascripts/hamburger-button.js"></script>
+  <script src="/assets/javascripts/theme-toggle.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.blog-post-content');
+      if (container) {
+        const clone = container.cloneNode(true);
+        const scripts = clone.querySelectorAll('script, style, .reading-time');
+        scripts.forEach(el => el.remove());
+        const text = clone.textContent || '';
+        const words = text.trim().split(/\s+/).length;
+        const time = Math.ceil(words / 200);
+        const el = document.getElementById('timeValue');
+        if (el) el.textContent = time + ' minute' + (time !== 1 ? 's' : '');
+      }
+    });
+  </script>
+</body>
+</html>
