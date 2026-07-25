@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
 {
+    title: "The Excel Problem That Formulas Can't Solve (But VBA Can)",
+    date: "July 25, 2026",
+    description:
+      "Recently, I delivered a solution to a client—a financial secretary to a small cooperative society. It wasn't the kind of project that makes headlines, but it was the kind that quietly transforms someone's daily life. And honestly, those are my favorite. The challenge was straightforward to describe but punishing to live with. Every month, my client had to generate membership cards from ...",
+    image: "/images/excel-VBA-solution.png",
+   tags: ["Project"],
+    link: "https://ugbosu.com/blogs/excel-vba-automation"
+  },
+{
     title: "How NERD Might Reshape Nigeria's Education Sector",
     date: "July 17, 2026",
     description:
