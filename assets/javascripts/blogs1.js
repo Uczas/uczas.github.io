@@ -1,6 +1,15 @@
 // ====== BLOG DATA ======
 const blogs = [
 {
+    title: "From Snake to Startups: Why We Shouldn't Lock Students Out of Social Media and Chatbots",
+    date: "August 26, 2026",
+    description:
+      "I will begin with a personal experience. Back in 2010, while I was still in secondary school, I wrestled with a question that still haunts educators today. Around that period, Chinese phone manufacturers began releasing devices that could easily access the internet. However, the challenge back then was that the internet wasn't nearly as popular as mobile phone games. Every child or youth ...",
+    image: "/images/students-and-chatbots.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/why-not-lock-students-out-of-social-media-and-chatbots"
+  },
+{
     title: "The Excel Problem That Formulas Can't Solve (But VBA Can)",
     date: "July 25, 2026",
     description:
