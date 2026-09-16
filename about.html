@@ -19,7 +19,7 @@
   <meta name="keywords" content="Mathematics, Research, Optimization, Operations Research, AI, About" />
   <meta name="author" content="Charles Ugbosu" />
 
-  <link rel="canonical" href="https://ugbosu.com/about" />
+  <link rel="canonical" href="https://ugbosu.com/about.html" />
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,6 +38,68 @@
 
   <!-- Android / PWA -->
   <link rel="manifest" href="/site.webmanifest">
+<style>
+
+/* Page-only layout: shared stylesheets and shared scripts remain unchanged. */
+.profile-page {max-width:1160px;margin:0 auto;padding:0 28px 64px;}
+.profile-page * {box-sizing:border-box;}
+.profile-page section[id] {scroll-margin-top:110px;}
+.profile-page h1,.profile-page h2,.profile-page h3,.profile-page p {margin-top:0;}
+.profile-page h1 {font-size:clamp(2.6rem,5.3vw,4.6rem);line-height:1.08;letter-spacing:-.055em;margin-bottom:24px;}
+.profile-page h2 {font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.2;letter-spacing:-.035em;margin-bottom:16px;}
+.profile-page h3 {font-size:1.16rem;line-height:1.45;margin-bottom:12px;}
+.profile-page a {color:var(--primary-color);text-underline-offset:4px;}
+.profile-page a:focus-visible {outline:3px solid var(--primary-color);outline-offset:5px;}
+.profile-page .pp-eyebrow {font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--primary-color);margin-bottom:18px;}
+.profile-page .pp-muted {color:var(--text-light);}
+.profile-page .pp-lead {font-size:1.13rem;line-height:1.85;max-width:650px;color:var(--text-light);}
+.profile-page .pp-hero {display:grid;grid-template-columns:1.55fr 1fr;gap:64px;align-items:center;padding:70px 0 60px;}
+.profile-page .pp-portrait {background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:24px;padding:28px;position:relative;}
+.profile-page .pp-portrait img {display:block;width:100%;max-width:300px;aspect-ratio:1;object-fit:cover;border-radius:18px;margin:auto;background:var(--bg-gray);}
+.profile-page .pp-caption {margin:22px 0 0;font-size:.9rem;line-height:1.8;}
+.profile-page .pp-actions {display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;align-items:center;}
+.profile-page .pp-button {display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:12px 20px;border-radius:8px;background:var(--primary-color);color:white;text-decoration:none;font-weight:600;}
+.profile-page .pp-button:hover {background:var(--primary-dark);}
+.profile-page .pp-secondary {background:var(--bg-light);color:var(--text-dark);border:1px solid var(--bg-gray);}
+.profile-page .pp-secondary:hover {background:var(--bg-gray);}
+.profile-page .pp-section {padding:50px 0;border-top:1px solid var(--bg-gray);}
+.profile-page .pp-heading {display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px;}
+.profile-page .pp-heading h2 {margin-bottom:0;}
+.profile-page .pp-heading>a {flex-shrink:0;font-size:.9rem;font-weight:600;}
+.profile-page .pp-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.profile-page .pp-card {background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:14px;overflow:hidden;}
+.profile-page .pp-card-content {padding:24px;}
+.profile-page .pp-card p {font-size:.93rem;color:var(--text-light);margin-bottom:0;}
+.profile-page .pp-card h3 a,.profile-page .pp-reading h3 a {color:var(--text-dark);text-decoration:none;}
+.profile-page .pp-card h3 a:hover,.profile-page .pp-reading h3 a:hover {color:var(--primary-color);text-decoration:underline;}
+.profile-page .pp-card img {width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--bg-gray);}
+.profile-page .pp-meta {display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.75rem;color:var(--text-light);margin-bottom:14px;}
+.profile-page .pp-tag {border:1px solid var(--bg-gray);border-radius:4px;padding:2px 7px;}
+.profile-page .pp-icon {font-size:1.35rem;color:var(--primary-color);margin-bottom:22px;}
+.profile-page .pp-feature {display:grid;grid-template-columns:1fr 2fr;gap:36px;background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:16px;padding:36px;}
+.profile-page .pp-feature h3 {font-size:1.5rem;letter-spacing:-.025em;}
+.profile-page .pp-feature p {color:var(--text-light);}
+.profile-page .pp-reading {list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding:0;margin:0;counter-reset:reading;}
+.profile-page .pp-reading li {counter-increment:reading;border-top:2px solid var(--primary-color);padding-top:20px;}
+.profile-page .pp-reading li:before {content:'0' counter(reading);display:block;color:var(--primary-color);font-size:1.4rem;font-weight:600;margin-bottom:18px;}
+.profile-page .pp-callout {background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:16px;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:30px;}
+.profile-page .pp-callout p {margin-bottom:0;color:var(--text-light);}
+.profile-page .pp-callout .pp-button {flex-shrink:0;}
+.profile-page .pp-jump {display:flex;flex-wrap:wrap;gap:10px;margin-bottom:42px;}
+.profile-page .pp-jump a {padding:8px 14px;background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:6px;font-size:.85rem;text-decoration:none;}
+.profile-page .pp-bio {display:grid;grid-template-columns:1fr 2fr;gap:45px;}
+.profile-page .pp-bio p {color:var(--text-light);line-height:1.9;}
+.profile-page .pp-chips {display:flex;gap:9px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0 0;}
+.profile-page .pp-chips li {background:var(--bg-gray);border-radius:6px;padding:7px 12px;font-size:.85rem;}
+.profile-page .pp-year {display:grid;grid-template-columns:90px 1fr;gap:26px;margin-top:28px;}
+.profile-page .pp-year>h3 {color:var(--primary-color);font-size:1.35rem;}
+.profile-page .pp-citations {list-style:none;margin:0;padding:0;}
+.profile-page .pp-citations li {padding:0 0 25px;margin-bottom:25px;border-bottom:1px solid var(--bg-gray);line-height:1.85;}
+.profile-page .pp-citations a {display:inline-block;margin-top:8px;font-size:.86rem;font-weight:600;}
+@media(max-width:800px){.profile-page .pp-hero{grid-template-columns:1fr;gap:32px;padding:44px 0;}.profile-page .pp-portrait{max-width:420px;}.profile-page .pp-grid,.profile-page .pp-reading{grid-template-columns:1fr;}.profile-page .pp-card{display:grid;grid-template-columns:1fr 1.4fr;}.profile-page .pp-card img{height:100%;min-height:210px;}.profile-page .pp-feature,.profile-page .pp-bio{grid-template-columns:1fr;gap:18px;}.profile-page .pp-heading,.profile-page .pp-callout{align-items:start;flex-direction:column;}.profile-page .pp-section{padding:36px 0;}}
+@media(max-width:480px){.profile-page{padding:0 20px 40px;}.profile-page .pp-card{display:block;}.profile-page .pp-card img{min-height:0;}.profile-page .pp-feature,.profile-page .pp-callout{padding:24px;}.profile-page .pp-year{grid-template-columns:1fr;gap:0;}.profile-page .pp-actions{align-items:stretch;}.profile-page .pp-actions a{width:100%;}}
+
+</style>
 </head>
 
 <body>
@@ -60,7 +122,7 @@
       <nav id="primary-nav" class="nav-links">
         <a href="/">Home</a>
         <a href="/blogs.html">Blog</a>
-        <a href="/about.html" class="active">About</a>
+        <a href="/about.html" class="active" aria-current="page">About</a>
         <a href="/contact.html">Contact</a>
         
         <!-- Theme Toggle as 5th menu item -->
@@ -75,54 +137,68 @@
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <main class="about-content">
-    <h2>About Me</h2>
-    
-    <p class="about-intro">
-    Founder, Aileum Technologies Ltd. • Researcher • Academic at Southern Delta University, Ozoro, Nigeria.
-    </p>
-    
-    <div class="interests-section">
-      <h3><i class="fas fa-heart" style="color: var(--primary-color); margin-right: 10px;"></i>Key Interests</h3>
-      <ul class="interests-list">
-        <li><i class="fas fa-chart-line"></i> Optimization & Operations Research</li>
-        <li><i class="fas fa-calculator"></i> Mathematical & Statistical Modeling</li>
-        <li><i class="fas fa-robot"></i> AI/ML Research</li>
-      </ul>
-    </div>
-    
-    <div class="interests-section">
-      <h3><i class="fas fa-code" style="color: var(--primary-color); margin-right: 10px;"></i>Skills</h3>
-      <ul class="interests-list">
-        <li><i class="fas fa-users"></i> Leadership</li>
-        <li><i class="fas fa-square-root-alt"></i> Mathematics/Modeling</li>
-        <li><i class="fas fa-laptop-code"></i> Computational Tools (Mathematica, Python, LaTeX)</li>
-        <li><i class="fas fa-brain"></i> Machine Learning (Supervised, Unsupervised, Reinforcement Learning)</li>
-        <li><i class="fas fa-magic"></i> Prompt Engineering</li>
-        <li><i class="fas fa-chart-pie"></i> Blockchain/Cryptocurrency Analytics</li>
-      </ul>
-    </div>
-    
-    <div class="interests-section">
-      <h3><i class="fas fa-users-cog" style="color: var(--primary-color); margin-right: 10px;"></i>Community/Development Platforms</h3>
-      <ul class="interests-list">
-        <li><i class="fab fa-google"></i> Google Developers</li>
-        <li><i class="fab fa-github"></i> GitHub</li>
-        <li><i class="fas fa-dice-d6"></i> Kaggle</li>
-        <li><i class="fas fa-project-diagram"></i> Jupyter Lab</li>
-      </ul>
-    </div>
-    
-    <div class="collaboration">
-      <i class="fas fa-handshake" style="font-size: 1.5rem; margin-right: 10px; color: var(--primary-color);"></i>
-      <span>Open to collaborations in applied mathematics research.</span>
-    </div>
-    
-    <p class="hobbies">
-      <i class="fas fa-chess-knight" style="color: var(--primary-color); margin-right: 8px;"></i>
-      Outside of work: Play Chess · Analyze Cryptocurrency Market
-    </p>
-  </main>
+  <main class="profile-page" id="main-content"><section class="pp-hero" aria-labelledby="about-title"><div><p class="pp-eyebrow">About me</p><h1 id="about-title">Mathematical thinking.<br>Practical purpose.</h1><p class="pp-lead">I’m Charles Ugbosu—a researcher, educator, and founder working across applied mathematics, optimization, and artificial intelligence.</p><p class="pp-muted">Academic at Southern Delta University, Ozoro, Nigeria.<br>Founder of Aileum Technologies Ltd.</p><div class="pp-actions"><a class="pp-button" href="/contact.html">Let’s collaborate ↗</a><a href="#publications">Explore my publications ↓</a></div></div><div class="pp-portrait"><img src="/android-chrome-512x512.png" alt="Charles Ugbosu" width="300" height="300"><p class="pp-caption"><strong>Connecting research with everyday problems.</strong><br><span class="pp-muted">Mathematics · Technology · Education</span></p></div></section><nav class="pp-jump" aria-label="On this page"><a href="#background">Background</a><a href="#expertise">Expertise</a><a href="#publications">Journal articles</a><a href="#conference-papers">Conference papers</a><a href="#beyond-work">Beyond work</a></nav>
+<section class="pp-section pp-bio" id="background"><div><p class="pp-eyebrow">My approach</p><h2>From questions to useful solutions.</h2></div><div><p>My work brings together mathematical modeling, optimization, and machine learning. I am interested in how these tools can explain complex systems, improve decisions, and support meaningful research.</p><p>As an educator, I help students develop a clearer understanding of mathematics and its applications. As a researcher, I explore problems in operations research and AI, including reinforcement learning and optimal control.</p><p>Through Aileum Technologies Ltd., I bring this practical mindset to technology and business. My writing explores education, emerging technology, and what it means to keep learning in a changing world.</p><a href="https://aileum.com" target="_blank" rel="noopener noreferrer">Visit Aileum Technologies ↗</a></div></section>
+<section class="pp-section" id="expertise"><div class="pp-heading"><div><p class="pp-eyebrow">Expertise &amp; interests</p><h2>The tools and ideas behind my work.</h2></div></div><div class="pp-grid"><article class="pp-card"><div class="pp-card-content"><h3>Applied mathematics</h3><p>Optimization and operations research; mathematical and statistical modeling; computational problem solving.</p></div></article><article class="pp-card"><div class="pp-card-content"><h3>Artificial intelligence</h3><p>Supervised, unsupervised, and reinforcement learning; prompt engineering; blockchain and cryptocurrency analytics.</p></div></article><article class="pp-card"><div class="pp-card-content"><h3>Research & leadership</h3><p>Academic research support, mathematics education, collaboration, and leadership.</p></div></article></div><ul class="pp-chips" aria-label="Tools and platforms"><li>Python</li><li>Mathematica</li><li>LaTeX</li><li>Excel</li><li>JupyterLab</li><li>GitHub</li><li>Kaggle</li><li>Google Developers</li></ul></section>
+<section class="pp-section" id="publications" aria-labelledby="publications-title"><p class="pp-eyebrow">Research record</p><h2 id="publications-title">Journal articles</h2><p class="pp-muted">Publications organized by year, with links to the original articles.</p><div class="pp-year"><h3>2026</h3><ul class="pp-citations"><li>
+                    <strong>Ugbosu, C.</strong>, Panya,A. L., Apanapudor, J. S. (2026). 
+                    "Fitted Q-Iteration for Scalar Linear Quadratic Regulator Problems" 
+                    <em>Journal of Science, Technology and Environmental Studies</em>, 2(1), 112-129.
+                    <br>
+                    <a href="https://sdujostes.org/jostes/article/view/24" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> View Article
+                    </a>
+                </li><li>
+                    <strong>Ugbosu, C.</strong>, Panya,A. L., Apanapudor, J. S. (2026). 
+                    "Reinforcement Learning versus the Simplex Method: Towards Intelligent Solutions for Linear Programming." 
+                    <em>Journal of Advance and Future Research</em>, 4(1), 482-490.
+                    <br>
+                    <a href="https://rjwave.org/jaafr/viewpaperforall.php?paper=JAAFR2601193" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> View Article
+                    </a>
+                </li></ul></div><div class="pp-year"><h3>2025</h3><ul class="pp-citations"><li>
+                    <strong>Ugbosu, C.</strong>, Apanapudor, J.S. (2025). 
+                    "Optimizing Perishable Inventory Systems: A Double-Order Policy with Weibull-Distributed Demand." 
+                    <em>Science World Journal</em>, 20(2), 659-665.
+                    <br>
+                    <a href="https://scienceworldjournal.org/article/view/24311" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> View Article
+                    </a>
+                </li><li>
+                    Ogumeyo, S.A., <strong>Ugbosu, C.</strong>, Omole, C.E. (2025). 
+                    "Mathematical Modeling of HIV Transmission Dynamics Using the Concepts of Probability Distributions and Kolmogorov Differential Equations." 
+                    <em>Bayero Journal of Physics and Mathematical Sciences</em>, 16(1), 116-127.
+                    <br>
+                    <a href="https://bajopmas.com/view-paper?id=3&signature=373440731ac40329ed1c23536f97b099d2f447e350a12d65a219968bf9dde6fa" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> View Article
+                    </a>
+                </li></ul></div><div class="pp-year"><h3>2024</h3><ul class="pp-citations"><li>
+                    E.J. Atajeromavwo, R.E. Yoro, O.D. Ofuyekpone, D. Ukpenusiowho, <strong>C. Ugbosu</strong> (2024). 
+                    "Python-based Population Forecasting for Delta State: Trapezoidal and Integration Method." 
+                    <em>FUDMA Journal of Sciences</em>, 8(3), 112-118.
+                    <br>
+                    <a href="https://fjs.fudutsinma.edu.ng/index.php/fjs/article/view/2372" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> View Article
+                    </a>
+                </li><li>
+                    S.A. Ogumeyo, <strong>C. Ugbosu</strong> (2024). 
+                    "Effects of restricting waste to only staff who reach the peak of their career in manpower planning models." 
+                    <em>Nigeria Journal of Oil, Gas & Eng Technology</em>, 1(1), 66-72.
+                    <br>
+                    <a href="https://www.nijoget.org/fullPost.php?id=36" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i> View Article
+                    </a>
+                </li></ul></div></section><section class="pp-section" id="conference-papers"><p class="pp-eyebrow">Conferences</p><h2>Conference papers</h2><div class="pp-year"><h3>2024</h3><ul class="pp-citations"><li>
+                    Panya, A.L., <strong>Ugbosu, C.</strong>, Ekeh, K.I. (2024). 
+                    "MHD Stability in Channel Flow with Darcy-Forchheimer Modifications into the Orr-Sommerfeld Analysis through Porous Media."
+                    <br>
+                    <em>1st Annual Conference of Faculty of Science, Delta State University of Science and Technology, Ozoro, Nigeria</em> (7–10 May, 2024).
+                </li><li>
+                    S.A. Ogumeyo, <strong>C. Ugbosu</strong>, C.E.O. Omole (2024). 
+                    "The Role of Mathematics in National and Economic Development and Sustainability."
+                    <br>
+                    <em>1st Annual Conference of Faculty of Science, Delta State University of Science and Technology, Ozoro, Nigeria</em> (7–10 May, 2024).
+                </li></ul></div></section><section class="pp-section pp-bio" id="beyond-work"><div><p class="pp-eyebrow">Beyond the desk</p><h2>Curiosity continues.</h2></div><div><p>Outside of work, I enjoy playing chess and analyzing cryptocurrency markets. Both connect with my interest in strategy, patterns, and decision-making.</p><p>I’m open to collaborations in applied mathematics research, teaching, and practical applications of AI.</p><a href="/blogs.html">Read my latest thoughts →</a></div></section><section class="pp-section"><div class="pp-callout"><div><h2>Let’s work on something meaningful.</h2><p>Have a research question, a data challenge, or a learning goal?</p></div><a class="pp-button" href="/contact.html">Start a conversation ↗</a></div></section></main>
 
   <!-- ===== FOOTER (matching main site) ===== -->
   <footer class="site-footer">

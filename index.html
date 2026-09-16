@@ -54,6 +54,68 @@
 <!-- html2canvas library for screenshot generation -->
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     
+<style>
+
+/* Page-only layout: shared stylesheets and shared scripts remain unchanged. */
+.profile-page {max-width:1160px;margin:0 auto;padding:0 28px 64px;}
+.profile-page * {box-sizing:border-box;}
+.profile-page section[id] {scroll-margin-top:110px;}
+.profile-page h1,.profile-page h2,.profile-page h3,.profile-page p {margin-top:0;}
+.profile-page h1 {font-size:clamp(2.6rem,5.3vw,4.6rem);line-height:1.08;letter-spacing:-.055em;margin-bottom:24px;}
+.profile-page h2 {font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.2;letter-spacing:-.035em;margin-bottom:16px;}
+.profile-page h3 {font-size:1.16rem;line-height:1.45;margin-bottom:12px;}
+.profile-page a {color:var(--primary-color);text-underline-offset:4px;}
+.profile-page a:focus-visible {outline:3px solid var(--primary-color);outline-offset:5px;}
+.profile-page .pp-eyebrow {font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--primary-color);margin-bottom:18px;}
+.profile-page .pp-muted {color:var(--text-light);}
+.profile-page .pp-lead {font-size:1.13rem;line-height:1.85;max-width:650px;color:var(--text-light);}
+.profile-page .pp-hero {display:grid;grid-template-columns:1.55fr 1fr;gap:64px;align-items:center;padding:70px 0 60px;}
+.profile-page .pp-portrait {background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:24px;padding:28px;position:relative;}
+.profile-page .pp-portrait img {display:block;width:100%;max-width:300px;aspect-ratio:1;object-fit:cover;border-radius:18px;margin:auto;background:var(--bg-gray);}
+.profile-page .pp-caption {margin:22px 0 0;font-size:.9rem;line-height:1.8;}
+.profile-page .pp-actions {display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;align-items:center;}
+.profile-page .pp-button {display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:12px 20px;border-radius:8px;background:var(--primary-color);color:white;text-decoration:none;font-weight:600;}
+.profile-page .pp-button:hover {background:var(--primary-dark);}
+.profile-page .pp-secondary {background:var(--bg-light);color:var(--text-dark);border:1px solid var(--bg-gray);}
+.profile-page .pp-secondary:hover {background:var(--bg-gray);}
+.profile-page .pp-section {padding:50px 0;border-top:1px solid var(--bg-gray);}
+.profile-page .pp-heading {display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px;}
+.profile-page .pp-heading h2 {margin-bottom:0;}
+.profile-page .pp-heading>a {flex-shrink:0;font-size:.9rem;font-weight:600;}
+.profile-page .pp-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.profile-page .pp-card {background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:14px;overflow:hidden;}
+.profile-page .pp-card-content {padding:24px;}
+.profile-page .pp-card p {font-size:.93rem;color:var(--text-light);margin-bottom:0;}
+.profile-page .pp-card h3 a,.profile-page .pp-reading h3 a {color:var(--text-dark);text-decoration:none;}
+.profile-page .pp-card h3 a:hover,.profile-page .pp-reading h3 a:hover {color:var(--primary-color);text-decoration:underline;}
+.profile-page .pp-card img {width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--bg-gray);}
+.profile-page .pp-meta {display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.75rem;color:var(--text-light);margin-bottom:14px;}
+.profile-page .pp-tag {border:1px solid var(--bg-gray);border-radius:4px;padding:2px 7px;}
+.profile-page .pp-icon {font-size:1.35rem;color:var(--primary-color);margin-bottom:22px;}
+.profile-page .pp-feature {display:grid;grid-template-columns:1fr 2fr;gap:36px;background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:16px;padding:36px;}
+.profile-page .pp-feature h3 {font-size:1.5rem;letter-spacing:-.025em;}
+.profile-page .pp-feature p {color:var(--text-light);}
+.profile-page .pp-reading {list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding:0;margin:0;counter-reset:reading;}
+.profile-page .pp-reading li {counter-increment:reading;border-top:2px solid var(--primary-color);padding-top:20px;}
+.profile-page .pp-reading li:before {content:'0' counter(reading);display:block;color:var(--primary-color);font-size:1.4rem;font-weight:600;margin-bottom:18px;}
+.profile-page .pp-callout {background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:16px;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:30px;}
+.profile-page .pp-callout p {margin-bottom:0;color:var(--text-light);}
+.profile-page .pp-callout .pp-button {flex-shrink:0;}
+.profile-page .pp-jump {display:flex;flex-wrap:wrap;gap:10px;margin-bottom:42px;}
+.profile-page .pp-jump a {padding:8px 14px;background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:6px;font-size:.85rem;text-decoration:none;}
+.profile-page .pp-bio {display:grid;grid-template-columns:1fr 2fr;gap:45px;}
+.profile-page .pp-bio p {color:var(--text-light);line-height:1.9;}
+.profile-page .pp-chips {display:flex;gap:9px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0 0;}
+.profile-page .pp-chips li {background:var(--bg-gray);border-radius:6px;padding:7px 12px;font-size:.85rem;}
+.profile-page .pp-year {display:grid;grid-template-columns:90px 1fr;gap:26px;margin-top:28px;}
+.profile-page .pp-year>h3 {color:var(--primary-color);font-size:1.35rem;}
+.profile-page .pp-citations {list-style:none;margin:0;padding:0;}
+.profile-page .pp-citations li {padding:0 0 25px;margin-bottom:25px;border-bottom:1px solid var(--bg-gray);line-height:1.85;}
+.profile-page .pp-citations a {display:inline-block;margin-top:8px;font-size:.86rem;font-weight:600;}
+@media(max-width:800px){.profile-page .pp-hero{grid-template-columns:1fr;gap:32px;padding:44px 0;}.profile-page .pp-portrait{max-width:420px;}.profile-page .pp-grid,.profile-page .pp-reading{grid-template-columns:1fr;}.profile-page .pp-card{display:grid;grid-template-columns:1fr 1.4fr;}.profile-page .pp-card img{height:100%;min-height:210px;}.profile-page .pp-feature,.profile-page .pp-bio{grid-template-columns:1fr;gap:18px;}.profile-page .pp-heading,.profile-page .pp-callout{align-items:start;flex-direction:column;}.profile-page .pp-section{padding:36px 0;}}
+@media(max-width:480px){.profile-page{padding:0 20px 40px;}.profile-page .pp-card{display:block;}.profile-page .pp-card img{min-height:0;}.profile-page .pp-feature,.profile-page .pp-callout{padding:24px;}.profile-page .pp-year{grid-template-columns:1fr;gap:0;}.profile-page .pp-actions{align-items:stretch;}.profile-page .pp-actions a{width:100%;}}
+
+</style>
 </head>
   
 <body>
@@ -73,7 +135,7 @@
             </div>
 
             <nav id="primary-nav" class="nav-links">
-                <a href="/">Home</a>
+                <a href="/" class="active" aria-current="page">Home</a>
                 <a href="/blogs.html">Blog</a>
                 <a href="/about.html">About</a>
                 <a href="/contact.html">Contact</a>
@@ -106,159 +168,7 @@
     </div>
 </section>
 
-    <main>
-        <section class="hero">
-    <div class="hero-content-wrapper">
-        <div class="hero-text-content">
-            <p class="hero-greeting">👋 Hello, I'm</p>
-           <h2 class="hero-name">Charles
-     <span class="handwritten">  Ugbosu</span>
-    <span class="pen-icon">🖊️</span>
-</h2>
-            <p class="hero-tagline">I specialize in Mathematical Optimization, AI, and Machine Learning. Additionally, I am a writer focused on education and AI.</p>
-            <p class="hero-description">I help businesses optimize with AI and machine learning, researchers advance their work, and students master mathematics. Rooted in optimization and operations research, I turn theory into practical results.</p>
-            
-            <div class="services-grid">
-                <div class="service-item">
-                    <i class="fas fa-flask"></i>
-                    <h3>Research Assistant</h3>
-                    <p>Supporting academic research with mathematical modeling, data analysis, and literature reviews</p>
-                </div>
-                
-                <div class="service-item">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <h3>Remote Tutoring</h3>
-                    <p>Mathematics, statistics, and optimization for adult students</p>
-                </div>
-                
-                <div class="service-item">
-                    <i class="fas fa-chart-bar"></i>
-                    <h3>Statistical Solutions</h3>
-                    <p>Data analysis, forecasting, and statistical modeling for research and business</p>
-                </div>
-                
-                <div class="service-item">
-                    <i class="fas fa-calculator"></i>
-                    <h3>Mathematical Consulting</h3>
-                    <p>Building custom mathematical models with Excel, Mathematica, and Python</p>
-                </div>
-            </div>
-            
-            <div class="hero-cta">
-                <a href="/about.html" class="btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                <a href="/contact.html" class="btn btn-outline">Work With Me <i class="fas fa-handshake"></i></a>
-            </div>
-        </div>
-        
-        <div class="hero-image-wrapper">
-            <div class="hero-image-container">
-                <img src="/android-chrome-512x512.png" alt="Charles Ugbosu - Professional Portrait" class="hero-profile-image">
-                <div class="hero-image-glow"></div>
-                <div class="hero-image-ring"></div>
-                <div class="floating-badge badge-1">
-                    <i class="fas fa-brain"></i>
-                    <span>AI/ML Expert</span>
-                </div>
-                <div class="floating-badge badge-2">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Optimization</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <section class="publications">
-            <h3>Publications</h3>
-
-            <!-- Journal Articles -->
-            <h4>
-                <i class="fas fa-book-open"></i>
-                Journal Articles
-            </h4>
-            <ul>
-<li>
-                    <strong>Ugbosu, C.</strong>, Panya,A. L., Apanapudor, J. S. (2026). 
-                    "Fitted Q-Iteration for Scalar Linear Quadratic Regulator Problems" 
-                    <em>Journal of Science, Technology and Environmental Studies</em>, 2(1), 112-129.
-                    <br>
-                    <a href="https://sdujostes.org/jostes/article/view/24" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> View Article
-                    </a>
-                </li>
-
-                <li>
-                    <strong>Ugbosu, C.</strong>, Panya,A. L., Apanapudor, J. S. (2026). 
-                    "Reinforcement Learning versus the Simplex Method: Towards Intelligent Solutions for Linear Programming." 
-                    <em>Journal of Advance and Future Research</em>, 4(1), 482-490.
-                    <br>
-                    <a href="https://rjwave.org/jaafr/viewpaperforall.php?paper=JAAFR2601193" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> View Article
-                    </a>
-                </li>
-
-                <li>
-                    <strong>Ugbosu, C.</strong>, Apanapudor, J.S. (2025). 
-                    "Optimizing Perishable Inventory Systems: A Double-Order Policy with Weibull-Distributed Demand." 
-                    <em>Science World Journal</em>, 20(2), 659-665.
-                    <br>
-                    <a href="https://scienceworldjournal.org/article/view/24311" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> View Article
-                    </a>
-                </li>
-
-                <li>
-                    Ogumeyo, S.A., <strong>Ugbosu, C.</strong>, Omole, C.E. (2025). 
-                    "Mathematical Modeling of HIV Transmission Dynamics Using the Concepts of Probability Distributions and Kolmogorov Differential Equations." 
-                    <em>Bayero Journal of Physics and Mathematical Sciences</em>, 16(1), 116-127.
-                    <br>
-                    <a href="https://bajopmas.com/view-paper?id=3&signature=373440731ac40329ed1c23536f97b099d2f447e350a12d65a219968bf9dde6fa" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> View Article
-                    </a>
-                </li>
-
-                <li>
-                    E.J. Atajeromavwo, R.E. Yoro, O.D. Ofuyekpone, D. Ukpenusiowho, <strong>C. Ugbosu</strong> (2024). 
-                    "Python-based Population Forecasting for Delta State: Trapezoidal and Integration Method." 
-                    <em>FUDMA Journal of Sciences</em>, 8(3), 112-118.
-                    <br>
-                    <a href="https://fjs.fudutsinma.edu.ng/index.php/fjs/article/view/2372" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> View Article
-                    </a>
-                </li>
-
-                <li>
-                    S.A. Ogumeyo, <strong>C. Ugbosu</strong> (2024). 
-                    "Effects of restricting waste to only staff who reach the peak of their career in manpower planning models." 
-                    <em>Nigeria Journal of Oil, Gas & Eng Technology</em>, 1(1), 66-72.
-                    <br>
-                    <a href="https://www.nijoget.org/fullPost.php?id=36" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> View Article
-                    </a>
-                </li>
-            </ul>
-
-            <!-- Conference Papers -->
-            <h4>
-                <i class="fas fa-chalkboard-teacher"></i>
-                Conference Papers
-            </h4>
-            <ul>
-                <li>
-                    Panya, A.L., <strong>Ugbosu, C.</strong>, Ekeh, K.I. (2024). 
-                    "MHD Stability in Channel Flow with Darcy-Forchheimer Modifications into the Orr-Sommerfeld Analysis through Porous Media."
-                    <br>
-                    <em>1st Annual Conference of Faculty of Science, Delta State University of Science and Technology, Ozoro, Nigeria</em> (7–10 May, 2024).
-                </li>
-
-                <li>
-                    S.A. Ogumeyo, <strong>C. Ugbosu</strong>, C.E.O. Omole (2024). 
-                    "The Role of Mathematics in National and Economic Development and Sustainability."
-                    <br>
-                    <em>1st Annual Conference of Faculty of Science, Delta State University of Science and Technology, Ozoro, Nigeria</em> (7–10 May, 2024).
-                </li>
-            </ul>
-        </section>
-    </main>
+    <main class="profile-page" id="main-content"><section class="pp-hero" aria-labelledby="intro-title"><div><p class="pp-eyebrow">Mathematics · Research · Artificial intelligence</p><h1 id="intro-title">Charles Ugbosu</h1><p class="pp-lead">Turning mathematical ideas into practical solutions.</p><p class="pp-muted">I work at the intersection of optimization, machine learning, and education—helping researchers make progress, businesses make informed decisions, and students build confidence in mathematics.</p><div class="pp-actions"><a class="pp-button" href="/contact.html">Work with me <span aria-hidden="true">↗</span></a><a class="pp-button pp-secondary" href="/about.html">More about me</a></div></div><aside class="pp-portrait"><img src="/android-chrome-512x512.png" alt="Charles Ugbosu" width="300" height="300" fetchpriority="high"><p class="pp-caption"><strong>Researcher. Educator. Founder.</strong><br><span class="pp-muted">Southern Delta University, Ozoro<br>Aileum Technologies Ltd.</span></p></aside></section><section class="pp-section" aria-labelledby="work-title"><div class="pp-heading"><div><p class="pp-eyebrow">How I can help</p><h2 id="work-title">Ideas, evidence, and practical support.</h2></div></div><div class="pp-grid"><article class="pp-card"><div class="pp-card-content"><i class="fas fa-flask pp-icon" aria-hidden="true"></i><h3>Research & modeling</h3><p>Mathematical modeling, optimization, literature reviews, and computational support for academic research.</p></div></article><article class="pp-card"><div class="pp-card-content"><i class="fas fa-chart-line pp-icon" aria-hidden="true"></i><h3>Data & intelligent solutions</h3><p>Statistical analysis, forecasting, and custom models using Python, Mathematica, and Excel for research and business.</p></div></article><article class="pp-card"><div class="pp-card-content"><i class="fas fa-chalkboard-teacher pp-icon" aria-hidden="true"></i><h3>Teaching & speaking</h3><p>Mathematics, statistics, and optimization tutoring, alongside conversations on education, AI, and the future of work.</p></div></article></div></section><section class="pp-section" aria-labelledby="recent-title"><div class="pp-heading"><div><p class="pp-eyebrow">From the blog</p><h2 id="recent-title">Recent writing</h2></div><a href="/blogs.html">Explore all posts →</a></div><div class="pp-grid" id="home-recent-posts"><article class="pp-card"><img src="/images/students-and-chatbots.jpg" alt="" loading="lazy" width="640" height="400"><div class="pp-card-content"><div class="pp-meta"><span class="pp-tag">Blog</span><time datetime="2026-08-26">August 26, 2026</time></div><h3><a href="https://ugbosu.com/blogs/why-not-lock-students-out-of-social-media-and-chatbots">From Snake to Startups: Why We Shouldn&#x27;t Lock Students Out of Social Media and Chatbots</a></h3><p>I will begin with a personal experience. Back in 2010, while I was still in secondary school, I wrestled with a question that still haunts educators…</p></div></article><article class="pp-card"><img src="/images/excel-VBA-solution.png" alt="" loading="lazy" width="640" height="400"><div class="pp-card-content"><div class="pp-meta"><span class="pp-tag">Project</span><time datetime="2026-07-25">July 25, 2026</time></div><h3><a href="https://ugbosu.com/blogs/excel-vba-automation">The Excel Problem That Formulas Can&#x27;t Solve (But VBA Can)</a></h3><p>Recently, I delivered a solution to a client—a financial secretary to a small cooperative society. It wasn&#x27;t the kind of project that makes headlines, but…</p></div></article><article class="pp-card"><img src="/images/nerd-scheme.jpg" alt="" loading="lazy" width="640" height="400"><div class="pp-card-content"><div class="pp-meta"><span class="pp-tag">Blog</span><time datetime="2026-07-17">July 17, 2026</time></div><h3><a href="https://ugbosu.com/blogs/nerd-nigeria-education-sector-html">How NERD Might Reshape Nigeria&#x27;s Education Sector</a></h3><p>Nigeria&#x27;s higher education sector is currently undergoing a subtle technological revolution. The government, since the year 2025 began, commenced the roll…</p></div></article></div></section><section class="pp-section" aria-labelledby="research-title"><div class="pp-feature"><div><p class="pp-eyebrow">Latest publication · 2026</p><h2 id="research-title">Research in focus</h2><p>Reinforcement learning &amp; optimal control</p></div><article><h3>Fitted Q-Iteration for Scalar Linear Quadratic Regulator Problems</h3><p>Ugbosu, C., Panya, A. L., &amp; Apanapudor, J. S.</p><p><em>Journal of Science, Technology and Environmental Studies</em>, 2(1), 112–129.</p><div class="pp-actions"><a class="pp-button" href="https://sdujostes.org/jostes/article/view/24" target="_blank" rel="noopener noreferrer">Read the article ↗</a><a href="/about.html#publications">All publications →</a></div></article></div></section><section class="pp-section" aria-labelledby="reading-title"><div class="pp-heading"><div><p class="pp-eyebrow">Explore more ideas</p><h2 id="reading-title">Recommended reading</h2></div><a href="/blogs.html">Browse the blog →</a></div><ol class="pp-reading" id="home-most-read"><li><div class="pp-meta">July 13, 2026</div><h3><a href="https://ugbosu.com/blogs/business-optimization-why-good-enough-is-not-enough">The Art of Business Optimization: Why &#x27;Good Enough&#x27; Is Not Enough</a></h3></li><li><div class="pp-meta">June 7, 2026</div><h3><a href="https://ugbosu.com/blogs/what-will-you-offer-when-the-jobs-are-gone">What Will You Offer When The Jobs Are Gone?</a></h3></li><li><div class="pp-meta">March 7, 2026</div><h3><a href="https://ugbosu.name.ng/blogs/if-you-must-be-relevant">If You Must Be Relevant!</a></h3></li></ol></section><section class="pp-section"><div class="pp-callout"><div><h2>Let’s work on something meaningful.</h2><p>Have a research question, a data challenge, or a learning goal?</p></div><a class="pp-button" href="/contact.html">Start a conversation ↗</a></div></section></main>
 
     <footer class="site-footer">
         <div class="wrap">
@@ -305,5 +215,45 @@
     <script src="/assets/javascripts/hamburger-button.js"></script>
     <script src="/assets/javascripts/quote-section.js?v=6"></script>
     <script src="/assets/javascripts/theme-toggle.js"></script>
+
+<script src="/assets/javascripts/blogs1.js"></script>
+<script>
+(() => {
+  'use strict';
+  // Paste up to three verified blog URLs here, in descending readership order.
+  // Use your analytics report; never put API keys or credentials in this file.
+  const mostReadLinks = [];
+  const data = typeof blogs !== 'undefined' && Array.isArray(blogs) ? blogs : [];
+  if (!data.length) return;
+  const safeURL = value => {
+    try { const u = new URL(value, location.origin); return ['http:', 'https:'].includes(u.protocol) ? u.href : ''; }
+    catch { return ''; }
+  };
+  const valid = data.filter(b => b && b.title && safeURL(b.link) && Number.isFinite(Date.parse(b.date)));
+  const make = (tag, cls, text) => { const el = document.createElement(tag); if (cls) el.className = cls; if (text) el.textContent = text; return el; };
+  const dateNode = b => {const t = make('time', '', b.date); const d = new Date(b.date); t.dateTime = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; return t;};
+  const titleNode = b => {const h = make('h3'); const a = make('a', '', b.title); a.href = safeURL(b.link); h.append(a); return h;};
+  const recent = [...valid].filter(b => Date.parse(b.date) <= Date.now()).sort((a,b) => Date.parse(b.date)-Date.parse(a.date)).slice(0,3);
+  if (recent.length) {
+    const cards = recent.map(b => {
+      const article = make('article','pp-card'); const img = make('img');
+      if (b.image && safeURL(b.image)) img.src = safeURL(b.image);
+      img.alt = ''; img.loading = 'lazy'; img.width = 640; img.height = 400;
+      const content = make('div','pp-card-content'); const meta = make('div','pp-meta');
+      meta.append(make('span','pp-tag',b.tags?.[0] || 'Blog'),dateNode(b));
+      const description = String(b.description || '');
+      content.append(meta,titleNode(b),make('p','',description.length > 160 ? description.slice(0,155).replace(/\s+\S*$/, '')+'…' : description));
+      article.append(img,content); return article;
+    });
+    document.getElementById('home-recent-posts').replaceChildren(...cards);
+  }
+  const key = link => {try {return new URL(link,location.origin).pathname.replace(/\/$/,'');} catch {return '';}};
+  const ranked = [...new Set(mostReadLinks.map(key))].map(path => valid.find(b => key(b.link) === path)).filter(Boolean).slice(0,3);
+  if (ranked.length) {
+    document.getElementById('reading-title').textContent = 'Most read';
+    document.getElementById('home-most-read').replaceChildren(...ranked.map(b => {const li = make('li'); const meta = make('div','pp-meta'); meta.append(dateNode(b)); li.append(meta,titleNode(b)); return li;}));
+  }
+})();
+</script>
 </body>
 </html>
