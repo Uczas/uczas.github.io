@@ -275,37 +275,21 @@
   
 <body>
   <!-- ===== HEADER (matching main site) ===== -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="mobile-header-group">
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        
-        <div class="site-title">
-          <img src="/android-chrome-512x512.png" alt="Charles Ugbosu" class="profile-img">
-          <a href="/">Charles Ugbosu</a>
-        </div>
-      </div>
-
-      <nav id="primary-nav" class="nav-links">
-        <a href="/">Home</a>
-        <a href="/blogs.html">Blog</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html" class="active">Contact</a>
-        
-        <!-- Theme Toggle as 5th menu item -->
-        <button class="nav-theme-toggle" id="navThemeToggle" aria-label="Toggle theme">
-          <i class="fas fa-moon"></i>
-          <span class="theme-text">Dark Mode</span>
-        </button>
-      </nav>
+<header class="site-header modern-header">
+  <div class="header-inner">
+    <div class="mobile-header-group">
+      <div class="site-title"><img src="/android-chrome-512x512.png" alt="" class="profile-img" width="40" height="40"><a href="/">Charles Ugbosu<span class="brand-detail">RESEARCH · TECHNOLOGY · IDEAS</span></a></div>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     </div>
-    
-    <div class="nav-overlay"></div>
-  </header>
+    <nav id="primary-nav" class="nav-links" aria-label="Main navigation">
+      <a href="/" data-page="home"><i class="fas fa-house" aria-hidden="true"></i>Home</a>
+      <a href="/blogs.html"><i class="fas fa-pen-nib" aria-hidden="true"></i>Writing</a>
+      <a href="/about.html" data-page="about"><i class="fas fa-user" aria-hidden="true"></i>About</a>
+      <a href="/contact.html"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>Let’s talk</a>
+      <button class="nav-theme-toggle" id="navThemeToggle" aria-label="Toggle theme"><i class="fas fa-moon" aria-hidden="true"></i><span class="theme-text">Dark Mode</span></button>
+    </nav>
+  </div>
+</header>
 
   <!-- ===== MAIN CONTENT ===== -->
   <main class="contact-content">
@@ -353,37 +337,21 @@
   </main>
 
   <!-- ===== FOOTER (matching main site) ===== -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-content">
-        <div class="social-icons">
-          <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" 
-             class="social-icon researchgate" 
-             target="_blank" 
-             title="ResearchGate">
-            <i class="fab fa-researchgate"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" 
-             class="social-icon linkedin" 
-             target="_blank" 
-             title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-
-         <!-- Legal Links -->
-        <div style="margin: 1rem 0; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem;">
-          <a href="/privacy-policy.html" style="color: var(--text-light); text-decoration: none; transition: color 0.3s ease;">Privacy Policy</a>
-          <span style="color: var(--text-light);">|</span>
-          <a href="/terms-of-service.html" style="color: var(--text-light); text-decoration: none; transition: color 0.3s ease;">Terms of Service</a>
-        </div>
-        
-        <small class="copyright">
-          © <span id="current-year"></span> ugbosu.com. All rights reserved
-        </small>
-      </div>
+ <footer class="site-footer modern-footer">
+  <div class="mf-shell">
+    <div class="mf-invite"><div><p class="mf-eyebrow">GOOD QUESTIONS. NEW POSSIBILITIES.</p><h2>Let’s turn ideas<br>into <span>something useful.</span></h2></div><a class="mf-contact" href="/contact.html" aria-label="Start a conversation">Let’s talk <span aria-hidden="true">↗</span></a></div>
+    <div class="mf-grid">
+      <div class="mf-brand"><a href="/" class="mf-name">Charles Ugbosu<span aria-hidden="true">.</span></a><p>Mathematical thinking, intelligent solutions,<br>and ideas for a changing world.</p><div class="mf-socials">
+        <a href="https://github.com/Uczas" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate"><i class="fab fa-researchgate" aria-hidden="true"></i></a>
+      </div></div>
+      <nav aria-label="Footer quick links"><h3>Explore</h3><a href="/">Home</a><a href="/about.html">About me</a><a href="/blogs.html">Writing &amp; ideas</a><a href="/about.html#publications">Publications</a><a href="/contact.html">Contact</a></nav>
+      <nav aria-label="Elsewhere"><h3>Elsewhere</h3><a href="https://aileum.com" target="_blank" rel="noopener noreferrer">Aileum Technologies ↗</a><a href="https://github.com/Uczas" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a></nav>
     </div>
-  </footer>
+    <div class="mf-bottom"><small>© <span id="current-year"></span> Charles Ugbosu. All rights reserved.</small><nav aria-label="Legal"><a href="/privacy-policy.html">Privacy policy</a><a href="/terms-of-service.html">Terms of service</a></nav><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
 
   <script>
     // Update the current year in the copyright notice
