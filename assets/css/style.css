@@ -1504,3 +1504,21 @@ body.dark-theme .profile-page .pp-caption,body.dark-theme .profile-page .pp-capt
 @media(max-width:900px){.profile-page .pp-hero{gap:30px;}.profile-page .pp-portrait{padding:30px 20px 22px;}.profile-page .pp-feature{padding:30px;gap:25px;}}
 @media(max-width:800px){.profile-page{padding:0 24px 40px;}.profile-page .pp-hero{grid-template-columns:1fr;padding:45px 0;gap:40px;}.profile-page .pp-portrait{width:100%;max-width:420px;margin:auto;box-sizing:border-box;transform:none;}.profile-page .pp-portrait img,.profile-page .pp-caption{transform:none;}.profile-page .pp-section{padding:40px 0;}.profile-page .pp-feature{grid-template-columns:1fr;}.profile-page .pp-year{grid-template-columns:1fr;gap:0;}.profile-page .pp-card-content{padding:23px;}}
 @media(prefers-reduced-motion:reduce){.modern-header *,.modern-footer *,.profile-page *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+
+/* Show the complete recent-post images at every screen size. */
+.profile-page #home-recent-posts .pp-card {
+    display: flex;
+    flex-direction: column;
+}
+.profile-page #home-recent-posts .pp-card > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+.profile-page #home-recent-posts .pp-card-content {
+    flex: 1;
+}
