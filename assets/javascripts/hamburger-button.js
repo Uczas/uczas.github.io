@@ -1,66 +1,38 @@
-// Mobile Menu Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const overlay = document.querySelector('.nav-overlay');
-    const navThemeToggle = document.getElementById('navThemeToggle');
-    
-    if (!menuToggle || !navLinks || !overlay) return;
-    
-    function closeMenu() {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-        overlay.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-    }
-    
-    function openMenu() {
-        menuToggle.classList.add('active');
-        navLinks.classList.add('active');
-        overlay.classList.add('active');
-        menuToggle.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    menuToggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const isExpanded = menuToggle.classList.contains('active');
-        if (isExpanded) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
+/* Shared compact navigation. Replace the previous hamburger-button.js. */
+(() => {
+  function setupNavigation() {
+    const header = document.querySelector('.modern-header');
+    if (!header) return;
+    const button = header.querySelector('.menu-toggle');
+    const nav = header.querySelector('#primary-nav');
+    if (!button || !nav) return;
+    const mobile = window.matchMedia('(max-width: 768px)');
+    const links = [...nav.querySelectorAll('a')];
+    // Automatically mark the current page when reusing the header snippet.
+    const pathname = location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/$/, '') || '/';
+    links.forEach(link => {
+      const target = new URL(link.href).pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+      if (pathname === target) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
     });
-    
-    // Close menu when clicking overlay
-    overlay.addEventListener('click', closeMenu);
-    
-    // Close menu when clicking a link (except theme toggle)
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', closeMenu);
+    const setOpen = (open, restoreFocus = false) => {
+      open = Boolean(open && mobile.matches);
+      nav.classList.toggle('active', open);
+      button.classList.toggle('active', open);
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      if (restoreFocus) button.focus();
+    };
+    button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+    document.addEventListener('click', event => { if (!header.contains(event.target)) setOpen(false); });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') setOpen(false, true);
     });
-    
-    // Don't close menu when clicking theme toggle on mobile
-    if (navThemeToggle) {
-        navThemeToggle.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.stopPropagation();
-            }
-        });
-    }
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-            closeMenu();
-        }
-    });
-    
-    // Handle window resize
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
-            closeMenu();
-        }
-    });
-});
+    document.addEventListener('focusin', event => { if (!header.contains(event.target)) setOpen(false); });
+    links.forEach(link => link.addEventListener('click', () => setOpen(false)));
+    mobile.addEventListener('change', () => setOpen(false));
+    setOpen(false);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setupNavigation);
+  else setupNavigation();
+})();
