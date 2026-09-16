@@ -733,3 +733,28 @@ body.dark-theme .newsletter-input:focus {
     font-size: 0.8rem;
   }
 }
+
+/* Blog archive theme refresh; retains existing filter, pagination and card hooks. */
+.blog-hero{background:radial-gradient(ellipse at top right,#245a64,transparent 65%),#122b3b;color:#f4f8fc;padding:65px 28px;}
+.blog-hero::before{display:none;}
+.blog-hero h1{font-weight:500;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:-.055em;line-height:1.1;}
+.blog-hero p{color:#bbccda;line-height:1.85;font-size:1rem;}
+.filter-bar{background:var(--bg-light);border:1px solid var(--bg-gray);border-radius:17px;box-shadow:none;}
+.filter-bar input,.filter-bar select{border-radius:10px;border-color:var(--bg-gray);}
+.filter-bar input:focus,.filter-bar select:focus{border-color:#237b72;box-shadow:0 0 0 3px #237b7218;}
+.blog-card{border-radius:19px;border:1px solid var(--bg-gray);box-shadow:0 9px 28px #183c3210;}
+.blog-card img{width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;display:block;}
+.blog-card:hover img{transform:none;}
+.blog-content h3{letter-spacing:-.035em;font-weight:600;line-height:1.4;}
+.blog-meta .category,.tags span{background:#e6f1ec;color:#237b72;border-radius:100px;}
+.read-more,.blog-meta .date i{color:#237b72;}
+.pagination a.active,.pagination a:hover{background:#183e38;border-color:#183e38;color:white;}
+body.dark-theme .blog-meta .category,body.dark-theme .tags span{background:#183b3b;color:#79decf;}
+body.dark-theme .read-more,body.dark-theme .blog-meta .date i{color:#79decf;}
+.newsletter-container{background:#e0eee8;border-color:#cfe2da;box-shadow:none;}
+.newsletter-title,.newsletter-icon{color:#183e38;background:none;-webkit-text-fill-color:currentColor;}
+.newsletter-text,.newsletter-footer{color:#476b60;}
+.newsletter-button{background:#183e38;}.newsletter-button:hover{background:#28665b;}.newsletter-link{color:#235e50;}
+body.dark-theme .newsletter-container{background:#183b3b;border-color:#2a5550;}
+body.dark-theme .newsletter-title,body.dark-theme .newsletter-icon{color:#d2ede6;}
+body.dark-theme .newsletter-text,body.dark-theme .newsletter-footer,body.dark-theme .newsletter-link{color:#a8d3c7;}

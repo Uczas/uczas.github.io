@@ -63,7 +63,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- SINGLE stylesheet - consolidated blog styles -->
-  <link rel="stylesheet" href="/assets/css/blogs2.css">
+  <link rel="stylesheet" href="/assets/css/blogs2.css?v=20260916">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -75,54 +75,26 @@
   <link rel="manifest" href="/site.webmanifest">
 </head>
 
-<body>
+<body id="top">
   <!-- ===== HEADER (matching main site) ===== -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="mobile-header-group">
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        
-        <div class="site-title">
-          <img src="/android-chrome-512x512.png" alt="Charles Ugbosu" class="profile-img">
-          <a href="/">Charles Ugbosu</a>
-        </div>
-      </div>
-
-      <nav id="primary-nav" class="nav-links">
-        <a href="/">Home</a>
-        <a href="/blogs.html">Blog</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        
-        <!-- Theme Toggle as 5th menu item -->
-        <button class="nav-theme-toggle" id="navThemeToggle" aria-label="Toggle theme">
-          <i class="fas fa-moon"></i>
-          <span class="theme-text">Dark Mode</span>
-        </button>
-      </nav>
+  <header class="site-header modern-header">
+  <div class="header-inner">
+    <div class="mobile-header-group">
+      <div class="site-title"><img src="/android-chrome-512x512.png" alt="" class="profile-img" width="40" height="40"><a href="/">Charles Ugbosu<span class="brand-detail">RESEARCH · TECHNOLOGY · IDEAS</span></a></div>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     </div>
-    
-    <div class="nav-overlay"></div>
-  </header>
+    <nav id="primary-nav" class="nav-links" aria-label="Main navigation">
+      <a href="/" data-page="home"><i class="fas fa-house" aria-hidden="true"></i>Home</a>
+      <a href="/blogs.html" aria-current="location"><i class="fas fa-pen-nib" aria-hidden="true"></i>Writing</a>
+      <a href="/about.html" data-page="about"><i class="fas fa-user" aria-hidden="true"></i>About</a>
+      <a href="/contact.html"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>Let’s talk</a>
+      <button class="nav-theme-toggle" id="navThemeToggle" aria-label="Toggle theme"><i class="fas fa-moon" aria-hidden="true"></i><span class="theme-text">Dark Mode</span></button>
+    </nav>
+  </div>
+</header>
 
   <!-- Blog Post Content - using blog-post-content class for specific styling -->
-  <div class="blog-post-content">
-    <h1>If You Must Be Relevant!</h1>
-
-    <img src="/images/typewriter.jpg" alt="Typewriter" class="article-image">
-
-   <div style="text-align: center;">
-      <div class="reading-time" id="readingTime">
-        <i class="far fa-clock"></i> Estimated reading time: <span id="timeValue">9 minutes  </span>
-        <span style="display: inline-flex; align-items: center; gap: 0.5rem;">
-        <i class="far fa-calendar-alt" style="color: var(--primary-color);"></i>Published: March 7, 2026
-    </span>
-      </div>
-    </div>
+  <main class="article-page" id="main-content"><article aria-labelledby="article-title"><header class="article-masthead"><a class="article-back" href="/blogs.html">← All writing</a><p class="article-eyebrow">Writing &amp; ideas</p><h1 id="article-title">If You Must Be Relevant!</h1><div class="article-byline"><a class="article-author" href="/about.html" rel="author">By Charles Ugbosu</a><div class="reading-time" id="readingTime"><span class="article-date">Published: <time datetime="2026-03-07">March 7, 2026</time></span><span class="article-duration"><i class="far fa-clock" aria-hidden="true"></i> Estimated reading time: <span id="timeValue">9 minutes</span></span></div></div></header><figure class="article-cover"><img src="/images/typewriter.jpg" alt="Typewriter" class="article-image"></figure><div class="blog-post-content">
 
 <p><strong>Have you ever tried to explain how to navigate a popular app to a friend or an older person and felt in your mind that "everyone knows this"?</strong></p>
 
@@ -173,46 +145,17 @@
 
     
 <p>This blog will be shared on my LinkedIn feed, and all engagements are welcome.</p>
-  </div> <!-- end blog-post-content -->
+  </div></article><nav class="article-end" aria-label="Article navigation"><a href="/blogs.html">← Explore more writing</a><a href="#top">Back to top ↑</a></nav></main> <!-- end blog-post-content -->
     
   <!-- ===== ABOUT THE AUTHOR ===== -->
-  <section class="author-section">
-    <div class="author-header">
-      <img src="/images/site-logo.jpg" alt="Ugbosu Charles" class="author-avatar">
-      <div class="author-info">
-        <h3>Charles Ugbosu</h3>
-        <p class="author-title">Optimization and AI Researcher</p>
-      </div>
-    </div>
-
-    <p class="author-bio">
-      Charles is a passionate researcher and writer with a focus on optimization, operations research, and artificial intelligence. He explores how emerging technologies intersect and shape our digital future.
-    </p>
-
-    <div class="author-links">
-      <a href="https://www.facebook.com/share/1bmoFREvV6/" class="author-link" target="_blank">
-        <i class="fab fa-facebook"></i> Facebook
-      </a>
-      <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" class="author-link" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" class="author-link" target="_blank">
-        <i class="fab fa-researchgate"></i> ResearchGate
-      </a>
-    </div>
-  </section>
+  
 
   <!-- ===== FOOTER (matching main site) ===== -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-content">
-
-        <!-- ===== NEWSLETTER SECTION ===== -->
-<div class="newsletter-wrapper">
+  <aside class="article-newsletter" aria-label="Blog newsletter"><div class="newsletter-wrapper">
   <div class="newsletter-container">
     <div class="newsletter-content">
       <i class="fas fa-envelope-open-text newsletter-icon"></i>
-      <h4 class="newsletter-title">Never miss an article</h4>
+      <h2 class="newsletter-title">Never miss an article</h2>
       <p class="newsletter-text">Get notified via email whenever I publish new insights on AI, optimization, and career growth.</p>
       
       <form action="https://buttondown.com/api/emails/embed-subscribe/ugbosu" 
@@ -221,7 +164,7 @@
             referrerpolicy="unsafe-url">
         
         <div class="form-group">
-          <input type="email" 
+          <label class="newsletter-label" for="bd-email">Email address</label><input type="email" 
                  name="email" 
                  id="bd-email" 
                  class="newsletter-input" 
@@ -234,43 +177,29 @@
         
         <p class="newsletter-footer">
           No spam, unsubscribe anytime. 
-          <a href="https://buttondown.com/refer/ugbosu" target="_blank" class="newsletter-link">
+          <a href="https://buttondown.com/refer/ugbosu" target="_blank" class="newsletter-link" rel="noopener noreferrer">
             Powered by Buttondown
           </a>
         </p>
       </form>
     </div>
   </div>
-</div>
-        
-        <div class="social-icons">
-          <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" 
-             class="social-icon researchgate" 
-             target="_blank" 
-             title="ResearchGate">
-            <i class="fab fa-researchgate"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" 
-             class="social-icon linkedin" 
-             target="_blank" 
-             title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-
-       <!-- Legal Links -->
-        <div style="margin: 1rem 0; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 0.9rem;">
-          <a href="/privacy-policy.html" style="color: var(--text-light); text-decoration: none; transition: color 0.3s ease;">Privacy Policy</a>
-          <span style="color: var(--text-light);">|</span>
-          <a href="/terms-of-service.html" style="color: var(--text-light); text-decoration: none; transition: color 0.3s ease;">Terms of Service</a>
-        </div>
-        
-        <small class="copyright">
-          © <span id="current-year"></span> ugbosu.com. All rights reserved
-        </small>
-      </div>
+</div></aside>
+<footer class="site-footer modern-footer">
+  <div class="mf-shell">
+    <div class="mf-invite"><div><p class="mf-eyebrow">GOOD QUESTIONS. NEW POSSIBILITIES.</p><h2>Let’s turn ideas<br>into <span>something useful.</span></h2></div><a class="mf-contact" href="/contact.html" aria-label="Start a conversation">Let’s talk <span aria-hidden="true">↗</span></a></div>
+    <div class="mf-grid">
+      <div class="mf-brand"><a href="/" class="mf-name">Charles Ugbosu<span aria-hidden="true">.</span></a><p>Mathematical thinking, intelligent solutions,<br>and ideas for a changing world.</p><div class="mf-socials">
+        <a href="https://github.com/Uczas" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate"><i class="fab fa-researchgate" aria-hidden="true"></i></a>
+      </div></div>
+      <nav aria-label="Footer quick links"><h3>Explore</h3><a href="/">Home</a><a href="/about.html">About me</a><a href="/blogs.html">Writing &amp; ideas</a><a href="/about.html#publications">Publications</a><a href="/contact.html">Contact</a></nav>
+      <nav aria-label="Elsewhere"><h3>Elsewhere</h3><a href="https://aileum.com" target="_blank" rel="noopener noreferrer">Aileum Technologies ↗</a><a href="https://github.com/Uczas" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/charles-ugbosu-269150221/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.researchgate.net/profile/Charles-Ugbosu?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a></nav>
     </div>
-  </footer>
+    <div class="mf-bottom"><small>© <span id="current-year"></span> Charles Ugbosu. All rights reserved.</small><nav aria-label="Legal"><a href="/privacy-policy.html">Privacy policy</a><a href="/terms-of-service.html">Terms of service</a></nav><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
 
   <script>
     // Update the current year in the copyright notice
@@ -282,7 +211,7 @@
     });
   </script>
 
-  <script src="/assets/javascripts/hamburger-button.js"></script>
+  <script src="/assets/javascripts/hamburger-button.js?v=20260916"></script>
   <script src="/assets/javascripts/theme-toggle.js"></script>
 
   <script>

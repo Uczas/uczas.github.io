@@ -107,3 +107,9 @@ body.dark-theme .author-title {
         height: 70px;
     }
 }
+/* Compact metadata for the redesigned articles. */
+.article-byline .reading-time{display:flex;align-items:center;flex-wrap:wrap;gap:9px 20px;margin:0;text-align:left;font-size:.74rem;line-height:1.7;font-style:normal;color:var(--text-light);}
+.article-byline .article-duration{display:inline-flex;align-items:center;gap:5px;flex-wrap:wrap;}
+.article-byline .reading-time i{color:#237b72;margin:0;}
+body.dark-theme .article-byline .reading-time i{color:#79decf;}
+@media(max-width:580px){.article-byline{align-items:flex-start;flex-direction:column;}.article-byline .reading-time{align-items:flex-start;flex-direction:column;gap:6px;}}
