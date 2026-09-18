@@ -1,173 +1,147 @@
 // ====== BLOG DATA ======
 const blogs = [
-  {
-    "title": "Ten Digital Tools for Solving Mathematical Problems",
-    "date": "September 18, 2026",
-    "description": "Explore ten powerful digital tools for solving mathematical problems, including their uses, strengths, limitations and roles in education and research.",
-    "image": "https://ugbosu.com/images/image-maths-tools.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/ten-digital-tools-for-solving-mathematical-problems"
+{
+    title: "From Snake to Startups: Why We Shouldn't Lock Students Out of Social Media and Chatbots",
+    date: "August 26, 2026",
+    description:
+      "I will begin with a personal experience. Back in 2010, while I was still in secondary school, I wrestled with a question that still haunts educators today. Around that period, Chinese phone manufacturers began releasing devices that could easily access the internet. However, the challenge back then was that the internet wasn't nearly as popular as mobile phone games. Every child or youth ...",
+    image: "/images/students-and-chatbots.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/why-not-lock-students-out-of-social-media-and-chatbots"
+  },
+{
+    title: "The Excel Problem That Formulas Can't Solve (But VBA Can)",
+    date: "July 25, 2026",
+    description:
+      "Recently, I delivered a solution to a client—a financial secretary to a small cooperative society. It wasn't the kind of project that makes headlines, but it was the kind that quietly transforms someone's daily life. And honestly, those are my favorite. The challenge was straightforward to describe but punishing to live with. Every month, my client had to generate membership cards from ...",
+    image: "/images/excel-VBA-solution.png",
+   tags: ["Project"],
+    link: "https://ugbosu.com/blogs/excel-vba-automation"
+  },
+{
+    title: "How NERD Might Reshape Nigeria's Education Sector",
+    date: "July 17, 2026",
+    description:
+      "Nigeria's higher education sector is currently undergoing a subtle technological revolution. The government, since the year 2025 began, commenced the roll out of the Nigeria Education Repository and Databank (NERD). This may not be another piece of administrative paperwork; It is a hint of a  fundamental shift in how the country validates academic achievement going forward. The scheme ...",
+    image: "/images/nerd-scheme.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/nerd-nigeria-education-sector-html"
+  },
+{
+    title: "The Art of Business Optimization: Why 'Good Enough' Is Not Enough",
+    date: "July 13, 2026",
+    description:
+      "Every business, regardless of its size or industry, is constantly engaged in one fundamental exercise: optimization. At its core, optimization is beautifully simple—we are either trying to minimize something or maximize something. Every company across the globe, whether consciously or not, operates between these two poles: minimizing business costs on one hand, and maximizing revenue on the other ...",
+    image: "/images/optimization_gradient.png",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/business-optimization-why-good-enough-is-not-enough"
+  },
+{
+    title: "What Will You Offer When The Jobs Are Gone?",
+    date: "June 7, 2026",
+    description:
+      "I hope you aren’t getting certificates just to hide under them, waiting to be employed? If that’s your plan, it’s time to think again—because the ground is shifting beneath our feet. The world is moving toward almost complete automation. We’re heading toward a reality where multi-million and even billion-dollar companies will be run by a handful of individuals, supported by intelligent systems that never sleep, never demand a raise, and ...",
+    image: "/images/what-will-you-offer.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/what-will-you-offer-when-the-jobs-are-gone"
+  },
+{
+    title: "The Paradox of Infinite Knowledge: Why We're Not Smarter Despite Having Everything",
+    date: "May 16, 2026",
+    description:
+      "For the first time in human history, we carry nearly unlimited information in the palm of our hand. A small device with an internet connection, a screen, and a browser is all it takes to access the vast accumulated knowledge of civilization. The cloud has become our collective memory. One would assume this abundance would forge the sharpest, most knowledgeable generation to ever walk the earth. But that assumption is proving false...",
+    image: "/images/paradox-of-infinite-knowledge.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/The-Paradox-of-Infinite-Knowledge"
+  },
+{
+    title: "If You Must Be Relevant!",
+    date: "March 7, 2026",
+    description:
+      "We have all been there. You watch someone struggle to swipe, tap, or find a setting, and a wave of impatience washes over you. To you, the interface feels intuitive, almost second nature. But here is the hard truth: it appears easy to you not because the app itself is inherently simple, but because you likely started using it when its features were still few and far between. You grew with the technology.This is the invisible barrier between generations of tech users...",
+    image: "/images/typewriter.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/if-you-must-be-relevant"
+  },
+	{
+    title: "The 'First Class' Trap: Why Your Degree Might Not Be Enough Anymore",
+    date: "February 27, 2026",
+    description:
+      "If I told you there are no jobs in the Nigerian oil sector, you’d probably laugh and call me a liar. And you’d be right. The jobs are still there. But let’s sit on the real question, the one that keeps many of us up at night: who is getting them? It’s not like we are lacking qualified people. Walk through any Nigerian university town—Nsukka, Benin, Zaria, Ile-Ife, Abraka—and you’ll see them. The graduates. Every single year, our system celebrates a record number of First Class and Second Class Upper honourees. We take pictures ...",
+    image: "/images/skill-required.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/the-first-class-trap-why-your-degree-might-not-be-enough-anymore"
+  },
+	{
+    title: "The Hidden Mental Toll of Using AI for Complex Projects: A Personal Experience",
+    date: "February 22, 2026",
+    description:
+      "Let me take you back to December 2024, when I started writing my dissertation. I began with a popular AI chatbot to get a clearer direction on what to research. My first query asked for suggestions on areas in optimization I could explore. The chatbot returned a long list of options! I reluctantly picked one, even though many others also looked promising. Next, I asked for possible topics within that area. Again, I received another long list. Choosing a specific topic became difficult because almost every option seemed exciting. Whenever I picked ...",
+    image: "/images/ai-mental-stress.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/can-you-trust-ai-for-research"
+  },
+	{
+    title: "The Man Who Knew Infinity: The Enduring Legacy of Srinivasa Ramanujan",
+    date: "February 14, 2026",
+    description:
+      "Srinivasa Ramanujan Aiyangar was born on December 22, 1887, in the small town of Erode in Tamil Nadu, South India. His father, K. Srinivasa Aiyangar, worked as a clerk in a sari shop, earning a modest wage, while his mother, Komalatammal, was a homemaker who also sang at the local temple. It was a humble, orthodox Brahmin household—the last place one might expect to find a revolutionary mathematician. Ramanujan's genius announced itself quietly but unmistakably. By the age of 11, he had already exhausted the mathematical knowledge of the college students who ...",
+    image: "/images/Ramanujan.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/man-who-knew-infinity"
+  },
+{
+    title: "The Mathematics of Ruin: Why Retail Traders Are Destined to Lose Against the House",
+    date: "February 12, 2026",
+    description:
+      "If you have ever lost money in the stock market, you have likely blamed bad luck, poor timing, or maybe a bad indicator. But the real reason you lost money may have been decided 368 years ago, by two Frenchmen arguing about dice. This is the story of the Gambler’s Ruin problem, and why it acts as an invisible tax on retail traders that simply does not apply to institutional investors. By the end of this post, you will understand the exact mathematical formula that determines whether you go broke—and why the house or the institution almost never does...",
+    image: "/images/gambler.png",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/mathematics-of-ruin"
+  },
+	{
+    title: "When AI and Quantum Computing Meet Blockchain Security",
+    date: "January 27, 2026",
+    description:
+      "For a long time, blockchain has been celebrated as one of the most secure digital innovations of our era. Its promise rests on strong cryptography, decentralization, and incentive driven consensus mechanisms that make tampering extremely difficult. As someone who follows developments in blockchain and emerging technologies closely, I find it increasingly clear that this sense of long term security deserves a more careful re-examination. Two rapidly advancing fields, artificial intelligence and quantum computing, are beginning to challenge some of the core assumptions on which modern blockchains are built. ...",
+    image: "/images/qc-ai.png",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/When-AI-and-Quantum-Computing-Meet-Blockchain-Security"
+  },
+	{
+    title: "Automation Is Coming - Are We Ready?",
+    date: "December 2, 2025",
+    description:
+      "At this point, it is time we quit the debate of whether AI is better at reasoning or solving problems than human beings or vice versa. No single human currently can outperform the technology generally, except for some very specific and deep areas not fed to it yet. Most people, especially the young folks, now rely on AI chatbots to do even the littlest things like generating a birthday wish, new month messages, love texts, and so on. Then at the workplace, chatbots are the new letter-writing tools. The so-called Gen Z, and even people from previous generations who are aware of the technology, no longer ...",
+    image: "/images/humanoids.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/automation-is-coming"
+  },
+     {
+    title: "How to Ascertain That Students Genuinely Comprehend What They Are Being Taught in the Age of Artificial Intelligence?",
+    date: "November 8, 2025",
+    description:
+      "No doubt, we are currently living in an era profoundly influenced by Artificial Intelligence (AI), a time when machines can compose essays, solve mathematical equations, generate research summaries, and even simulate human reasoning. Yet, beneath this technological brilliance lies a pedagogical dilemma: How can educators be certain that students truly understand what they are being taught, rather than merely reproducing answers generated by chatbots?",
+    image: "/images/study-blog1.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/how-to-ascertain-that-students-genuinely-comprehend-what-they-are-being-taught-in-the-age-of-artificial-intelligence"
+  },
+    {
+    title: "Should Mathematics Be Optional for Arts Students?",
+    date: "October 20, 2025",
+    description:
+      "For days now, I have been thinking about how to approach this matter without sounding biased to my readers, especially since all of my degrees are in Mathematics. That being said, concealing the truth due to a fear of appearing prejudiced is also a dangerous path. We may have stumbled either on the news, web blogs, Whatsapp, Facebook, or other social media platforms on the recent announcement by the Federal Ministry of Education regarding the removal of Mathematics as a compulsory admission requirement for Arts and Humanities students which has stirred both excitement and concern across Nigeria’s education community. For some...",
+    image: "/images/maths.jpg",
+   tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/should-mathematics-be-optional-for-arts-students"
   },
   {
-    "title": "From Snake to Startups: Why We Shouldn't Lock Students Out of Social Media and Chatbots",
-    "date": "August 26, 2026",
-    "description": "I will begin with a personal experience. Back in 2010, while I was still in secondary school, I wrestled with a question that still haunts educators today. Around that period, Chinese phone manufacturers began releasing devices that could easily access the internet. However, the challenge back then was that the internet wasn't nearly as popular as mobile phone games. Every child or youth ...",
-    "image": "/images/students-and-chatbots.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/why-not-lock-students-out-of-social-media-and-chatbots"
-  },
-  {
-    "title": "The Excel Problem That Formulas Can't Solve (But VBA Can)",
-    "date": "July 25, 2026",
-    "description": "Recently, I delivered a solution to a client—a financial secretary to a small cooperative society. It wasn't the kind of project that makes headlines, but it was the kind that quietly transforms someone's daily life. And honestly, those are my favorite. The challenge was straightforward to describe but punishing to live with. Every month, my client had to generate membership cards from ...",
-    "image": "/images/excel-VBA-solution.png",
-    "tags": [
-      "Project"
-    ],
-    "link": "https://ugbosu.com/blogs/excel-vba-automation"
-  },
-  {
-    "title": "How NERD Might Reshape Nigeria's Education Sector",
-    "date": "July 17, 2026",
-    "description": "Nigeria's higher education sector is currently undergoing a subtle technological revolution. The government, since the year 2025 began, commenced the roll out of the Nigeria Education Repository and Databank (NERD). This may not be another piece of administrative paperwork; It is a hint of a  fundamental shift in how the country validates academic achievement going forward. The scheme ...",
-    "image": "/images/nerd-scheme.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/nerd-nigeria-education-sector-html"
-  },
-  {
-    "title": "The Art of Business Optimization: Why 'Good Enough' Is Not Enough",
-    "date": "July 13, 2026",
-    "description": "Every business, regardless of its size or industry, is constantly engaged in one fundamental exercise: optimization. At its core, optimization is beautifully simple—we are either trying to minimize something or maximize something. Every company across the globe, whether consciously or not, operates between these two poles: minimizing business costs on one hand, and maximizing revenue on the other ...",
-    "image": "/images/optimization_gradient.png",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/business-optimization-why-good-enough-is-not-enough"
-  },
-  {
-    "title": "What Will You Offer When The Jobs Are Gone?",
-    "date": "June 7, 2026",
-    "description": "I hope you aren’t getting certificates just to hide under them, waiting to be employed? If that’s your plan, it’s time to think again—because the ground is shifting beneath our feet. The world is moving toward almost complete automation. We’re heading toward a reality where multi-million and even billion-dollar companies will be run by a handful of individuals, supported by intelligent systems that never sleep, never demand a raise, and ...",
-    "image": "/images/what-will-you-offer.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/what-will-you-offer-when-the-jobs-are-gone"
-  },
-  {
-    "title": "The Paradox of Infinite Knowledge: Why We're Not Smarter Despite Having Everything",
-    "date": "May 16, 2026",
-    "description": "For the first time in human history, we carry nearly unlimited information in the palm of our hand. A small device with an internet connection, a screen, and a browser is all it takes to access the vast accumulated knowledge of civilization. The cloud has become our collective memory. One would assume this abundance would forge the sharpest, most knowledgeable generation to ever walk the earth. But that assumption is proving false...",
-    "image": "/images/paradox-of-infinite-knowledge.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/The-Paradox-of-Infinite-Knowledge"
-  },
-  {
-    "title": "If You Must Be Relevant!",
-    "date": "March 7, 2026",
-    "description": "We have all been there. You watch someone struggle to swipe, tap, or find a setting, and a wave of impatience washes over you. To you, the interface feels intuitive, almost second nature. But here is the hard truth: it appears easy to you not because the app itself is inherently simple, but because you likely started using it when its features were still few and far between. You grew with the technology.This is the invisible barrier between generations of tech users...",
-    "image": "/images/typewriter.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/if-you-must-be-relevant"
-  },
-  {
-    "title": "The 'First Class' Trap: Why Your Degree Might Not Be Enough Anymore",
-    "date": "February 27, 2026",
-    "description": "If I told you there are no jobs in the Nigerian oil sector, you’d probably laugh and call me a liar. And you’d be right. The jobs are still there. But let’s sit on the real question, the one that keeps many of us up at night: who is getting them? It’s not like we are lacking qualified people. Walk through any Nigerian university town—Nsukka, Benin, Zaria, Ile-Ife, Abraka—and you’ll see them. The graduates. Every single year, our system celebrates a record number of First Class and Second Class Upper honourees. We take pictures ...",
-    "image": "/images/skill-required.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/the-first-class-trap-why-your-degree-might-not-be-enough-anymore"
-  },
-  {
-    "title": "The Hidden Mental Toll of Using AI for Complex Projects: A Personal Experience",
-    "date": "February 22, 2026",
-    "description": "Let me take you back to December 2024, when I started writing my dissertation. I began with a popular AI chatbot to get a clearer direction on what to research. My first query asked for suggestions on areas in optimization I could explore. The chatbot returned a long list of options! I reluctantly picked one, even though many others also looked promising. Next, I asked for possible topics within that area. Again, I received another long list. Choosing a specific topic became difficult because almost every option seemed exciting. Whenever I picked ...",
-    "image": "/images/ai-mental-stress.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/can-you-trust-ai-for-research"
-  },
-  {
-    "title": "The Man Who Knew Infinity: The Enduring Legacy of Srinivasa Ramanujan",
-    "date": "February 14, 2026",
-    "description": "Srinivasa Ramanujan Aiyangar was born on December 22, 1887, in the small town of Erode in Tamil Nadu, South India. His father, K. Srinivasa Aiyangar, worked as a clerk in a sari shop, earning a modest wage, while his mother, Komalatammal, was a homemaker who also sang at the local temple. It was a humble, orthodox Brahmin household—the last place one might expect to find a revolutionary mathematician. Ramanujan's genius announced itself quietly but unmistakably. By the age of 11, he had already exhausted the mathematical knowledge of the college students who ...",
-    "image": "/images/Ramanujan.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/man-who-knew-infinity"
-  },
-  {
-    "title": "The Mathematics of Ruin: Why Retail Traders Are Destined to Lose Against the House",
-    "date": "February 12, 2026",
-    "description": "If you have ever lost money in the stock market, you have likely blamed bad luck, poor timing, or maybe a bad indicator. But the real reason you lost money may have been decided 368 years ago, by two Frenchmen arguing about dice. This is the story of the Gambler’s Ruin problem, and why it acts as an invisible tax on retail traders that simply does not apply to institutional investors. By the end of this post, you will understand the exact mathematical formula that determines whether you go broke—and why the house or the institution almost never does...",
-    "image": "/images/gambler.png",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/mathematics-of-ruin"
-  },
-  {
-    "title": "When AI and Quantum Computing Meet Blockchain Security",
-    "date": "January 27, 2026",
-    "description": "For a long time, blockchain has been celebrated as one of the most secure digital innovations of our era. Its promise rests on strong cryptography, decentralization, and incentive driven consensus mechanisms that make tampering extremely difficult. As someone who follows developments in blockchain and emerging technologies closely, I find it increasingly clear that this sense of long term security deserves a more careful re-examination. Two rapidly advancing fields, artificial intelligence and quantum computing, are beginning to challenge some of the core assumptions on which modern blockchains are built. ...",
-    "image": "/images/qc-ai.png",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/When-AI-and-Quantum-Computing-Meet-Blockchain-Security"
-  },
-  {
-    "title": "Automation Is Coming - Are We Ready?",
-    "date": "December 2, 2025",
-    "description": "At this point, it is time we quit the debate of whether AI is better at reasoning or solving problems than human beings or vice versa. No single human currently can outperform the technology generally, except for some very specific and deep areas not fed to it yet. Most people, especially the young folks, now rely on AI chatbots to do even the littlest things like generating a birthday wish, new month messages, love texts, and so on. Then at the workplace, chatbots are the new letter-writing tools. The so-called Gen Z, and even people from previous generations who are aware of the technology, no longer ...",
-    "image": "/images/humanoids.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/automation-is-coming"
-  },
-  {
-    "title": "How to Ascertain That Students Genuinely Comprehend What They Are Being Taught in the Age of Artificial Intelligence?",
-    "date": "November 8, 2025",
-    "description": "No doubt, we are currently living in an era profoundly influenced by Artificial Intelligence (AI), a time when machines can compose essays, solve mathematical equations, generate research summaries, and even simulate human reasoning. Yet, beneath this technological brilliance lies a pedagogical dilemma: How can educators be certain that students truly understand what they are being taught, rather than merely reproducing answers generated by chatbots?",
-    "image": "/images/study-blog1.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/how-to-ascertain-that-students-genuinely-comprehend-what-they-are-being-taught-in-the-age-of-artificial-intelligence"
-  },
-  {
-    "title": "Should Mathematics Be Optional for Arts Students?",
-    "date": "October 20, 2025",
-    "description": "For days now, I have been thinking about how to approach this matter without sounding biased to my readers, especially since all of my degrees are in Mathematics. That being said, concealing the truth due to a fear of appearing prejudiced is also a dangerous path. We may have stumbled either on the news, web blogs, Whatsapp, Facebook, or other social media platforms on the recent announcement by the Federal Ministry of Education regarding the removal of Mathematics as a compulsory admission requirement for Arts and Humanities students which has stirred both excitement and concern across Nigeria’s education community. For some...",
-    "image": "/images/maths.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/should-mathematics-be-optional-for-arts-students"
-  },
-  {
-    "title": "Nigeria at 65: A New Path to Sustainability Powered by AI",
-    "date": "October 1, 2025",
-    "description": "Nigeria stands at a pivotal moment in its history. As a nation teeming with vibrant human capital and abundant natural resources, the quest for sustainable development is more urgent than ever. The challenges are well-known: a volatile economy, an agricultural sector yearning for modernization, an educational system in need of reinvention, and the profound environmental and economic paradox of its crude oil wealth. Layer onto this the escalating threats of climate change, seen in devastating annual floods, and a transportation network struggling to keep pace with urbanization. In the face of such complexity, a new, powerful tool is emerging that could redefine Nigeria's developmental trajectory - Artificial Intelligence.",
-    "image": "/images/new-pathway.png",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/nigeria-at-65-a-new-path-to-sustainability-powered-by-AI"
+    title: "Nigeria at 65: A New Path to Sustainability Powered by AI",
+    date: "October 1, 2025",
+    description:
+      "Nigeria stands at a pivotal moment in its history. As a nation teeming with vibrant human capital and abundant natural resources, the quest for sustainable development is more urgent than ever. The challenges are well-known: a volatile economy, an agricultural sector yearning for modernization, an educational system in need of reinvention, and the profound environmental and economic paradox of its crude oil wealth. Layer onto this the escalating threats of climate change, seen in devastating annual floods, and a transportation network struggling to keep pace with urbanization. In the face of such complexity, a new, powerful tool is emerging that could redefine Nigeria's developmental trajectory - Artificial Intelligence.",
+    image: "/images/new-pathway.png",
+    tags: ["Blog"],
+    link: "https://ugbosu.com/blogs/nigeria-at-65-a-new-path-to-sustainability-powered-by-AI"
   }
 ];
