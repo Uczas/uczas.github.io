@@ -1,16 +1,6 @@
 // ====== BLOG DATA ======
 const blogs = [
   {
-    "title": "Dangote Refinery IPO: A Fundamental Analysis of the ₦525 Offer Price",
-    "date": "September 20, 2026",
-    "description": "Is the Dangote Refinery IPO an attractive investment opportunity? Explore its valuation, ownership structure and position among global refiners, alongside lessons from the listing and historical performance of Dangote Cement and Dangote Sugar. This analysis examines the potential rewards, key risks and why the offer price matters for investors.",
-    "image": "https://ugbosu.com/images/image-9d4c6b6408eeb9469962edb8d5f640b91edc06cd0cb31adccc1c2493f44ea197.jpg",
-    "tags": [
-      "Blog"
-    ],
-    "link": "https://ugbosu.com/blogs/dangote-refinery-ipo-a-fundamental-analysis-of-the-525-offer-price"
-  },
-  {
     "title": "Ten Digital Tools for Solving Mathematical Problems",
     "date": "September 18, 2026",
     "description": "Explore ten powerful digital tools for solving mathematical problems, including their uses, strengths, limitations and roles in education and research.",
